@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import pe.edu.upc.medlearn.entities.Illness;
 
 @Repository
-public interface IIllnessRepository extends JpaRepository<Illness,Integer> {
+public interface IllnessRepository extends JpaRepository<Illness,Integer> {
 }
