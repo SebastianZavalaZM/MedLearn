@@ -17,4 +17,7 @@ public class UserServiceImplement implements IUserService {
     public List<User> list() {
         return uR.findAll();
     }
+
+
+
 }
