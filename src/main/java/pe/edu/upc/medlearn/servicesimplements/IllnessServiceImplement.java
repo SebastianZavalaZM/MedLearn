@@ -18,6 +18,14 @@ public class IllnessServiceImplement implements IIllnessService {
         return illnessRepository.findAll();
     }
 
+    @Override
+    public void insert(Illness illness) {
+        illnessRepository.save(illness);
+    }
 
+    @Override
+    public Illness listId(int id) {
+        return illnessRepository.findById(id).orElse(new Illness());
+    }
 
 }
