@@ -1,11 +1,11 @@
 package pe.edu.upc.medlearn.servicesinterfaces;
 
-import pe.edu.upc.medlearn.entities.User;
+import pe.edu.upc.medlearn.entities.Users;
 
 import java.util.List;
 
 public interface IUserService {
-    public List<User> list();
+    public List<Users> list();
 
 
 }

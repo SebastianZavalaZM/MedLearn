@@ -3,7 +3,8 @@ package pe.edu.upc.medlearn.entities;
 import jakarta.persistence.*;
 
 @Entity
-public class User {
+@Table(name = "Users")
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUser;
@@ -18,10 +19,10 @@ public class User {
     @Column(name = "certificationUser",nullable = false,length = 200)
     private String certificationUser;
 
-    public User() {
+    public Users() {
     }
 
-    public User(int idUser, String username, String password, boolean enabled, String email, String certificationUser) {
+    public Users(int idUser, String username, String password, boolean enabled, String email, String certificationUser) {
         this.idUser = idUser;
         this.username = username;
         this.password = password;
