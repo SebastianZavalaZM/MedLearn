@@ -18,6 +18,12 @@ public class IllnessServiceImplement implements IIllnessService {
         return illnessRepository.findAll();
     }
 
+    public void update(Illness a) {
+//        cR.save(a);
 
-
+    }
+    @Override
+    public void delete(int id) {
+//        cR.deleteById(id);
+    }
 }

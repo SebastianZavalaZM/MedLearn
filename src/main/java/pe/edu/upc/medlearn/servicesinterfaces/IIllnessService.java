@@ -5,5 +5,8 @@ import java.util.List;
 public interface IIllnessService {
     public List<Illness> list();
 
+    public  void update(Illness a);
+
+    public void  delete(int id);
 
 }

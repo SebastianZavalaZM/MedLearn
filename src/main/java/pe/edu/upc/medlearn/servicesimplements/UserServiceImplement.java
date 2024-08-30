@@ -2,6 +2,7 @@ package pe.edu.upc.medlearn.servicesimplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pe.edu.upc.medlearn.entities.Illness;
 import pe.edu.upc.medlearn.entities.User;
 import pe.edu.upc.medlearn.repositories.IUserRepository;
 import pe.edu.upc.medlearn.servicesinterfaces.IUserService;
@@ -17,6 +18,7 @@ public class UserServiceImplement implements IUserService {
     public List<User> list() {
         return uR.findAll();
     }
+
 
 
 
