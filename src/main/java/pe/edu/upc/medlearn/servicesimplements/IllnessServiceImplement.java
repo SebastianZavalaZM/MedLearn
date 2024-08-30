@@ -17,10 +17,18 @@ public class IllnessServiceImplement implements IIllnessService {
     public List<Illness> list() {
         return illnessRepository.findAll();
     }
-
     @Override
     public void insert(Illness illness) {
         illnessRepository.save(illness);
+    }
+    @Override
+    public void delete(Integer id) {
+        illnessRepository.deleteById(id);
+    }
+
+    @Override
+    public Illness listId(int id) {
+        return illnessRepository.findById(id).orElse(new Illness());
     }
 
     @Override
