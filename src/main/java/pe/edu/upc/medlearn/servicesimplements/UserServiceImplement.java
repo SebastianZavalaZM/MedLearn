@@ -18,6 +18,10 @@ public class UserServiceImplement implements IUserService {
         return uR.findAll();
     }
 
+    @Override
+    public List<User> search(String name) {
+        return uR.findAll();
+    }
 
 
 }
