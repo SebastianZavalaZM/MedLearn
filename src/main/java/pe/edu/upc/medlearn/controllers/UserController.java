@@ -4,7 +4,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.UserDTO;
-import pe.edu.upc.medlearn.entities.User;
 import pe.edu.upc.medlearn.servicesinterfaces.IUserService;
 
 import java.util.List;

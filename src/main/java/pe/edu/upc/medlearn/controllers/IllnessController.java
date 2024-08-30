@@ -30,13 +30,15 @@ public class IllnessController {
     public void modificar(@RequestBody IllnessDTO dto) {
         ModelMapper m = new ModelMapper();
         Illness ci=m.map(dto,Illness.class);
-//        cS.update(ci);
+          iS.update(ci);
 
     }
+
+
 
     @DeleteMapping("/{id}")
 
     public void elminar(@PathVariable("id") Integer id){
-//        cS.delete(id);
+        iS.delete(id);
     }
 }
