@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.IllnessDTO;
+import pe.edu.upc.medlearn.entities.Illness;
 import pe.edu.upc.medlearn.servicesinterfaces.IIllnessService;
 
 import java.util.List;
@@ -21,6 +22,20 @@ public class IllnessController {
             ModelMapper m = new ModelMapper();
             return m.map(y,IllnessDTO.class);
         }).collect(Collectors.toList());
+    }
+
+    @PostMapping("/insertar")
+    public void insert(@RequestBody IllnessDTO dto) {
+        ModelMapper m = new ModelMapper();
+        Illness illness = m.map(dto, Illness.class);
+        iS.insert(illness);
+    }
+
+    @GetMapping("/{id}")
+    public IllnessDTO listId(@PathVariable("id") Integer id) {
+        ModelMapper m = new ModelMapper();
+        IllnessDTO dto = m.map(iS.listId(id), IllnessDTO.class);
+        return dto;
     }
 
 }
