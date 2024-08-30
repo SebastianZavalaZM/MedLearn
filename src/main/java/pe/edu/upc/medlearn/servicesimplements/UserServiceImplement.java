@@ -9,7 +9,8 @@ import pe.edu.upc.medlearn.servicesinterfaces.IUserService;
 import java.util.List;
 
 @Service
-public class UserServiceImplement implements IUserService {
+public class
+UserServiceImplement implements IUserService {
     @Autowired
     private IUserRepository uR;
 
@@ -18,6 +19,14 @@ public class UserServiceImplement implements IUserService {
         return uR.findAll();
     }
 
+    @Override
+    public void insert(Users user) {
+        uR.save(user);
+    }
 
+    @Override
+    public Users listId(int id) {
+        return uR.findById(id).orElse(new Users());
+    }
 
 }
