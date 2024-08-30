@@ -2,7 +2,7 @@ package pe.edu.upc.medlearn.servicesimplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upc.medlearn.entities.User;
+import pe.edu.upc.medlearn.entities.Users;
 import pe.edu.upc.medlearn.repositories.IUserRepository;
 import pe.edu.upc.medlearn.servicesinterfaces.IUserService;
 
@@ -15,17 +15,17 @@ UserServiceImplement implements IUserService {
     private IUserRepository uR;
 
     @Override
-    public List<User> list() {
+    public List<Users> list() {
         return uR.findAll();
     }
     @Override
-    public void insert(User user) {
+    public void insert(Users user) {
         uR.save(user);
     }
 
     @Override
-    public User listId(int id) {
-        return uR.findById(id).orElse(new User());
+    public Users listId(int id) {
+        return uR.findById(id).orElse(new Users());
     }
 
 
