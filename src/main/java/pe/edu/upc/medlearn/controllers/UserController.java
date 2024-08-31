@@ -20,5 +20,12 @@ public class UserController {
             return m.map(x,UserDTO.class);
         }).collect(Collectors.toList());
     }
+    @GetMapping("/buscarpornombre")
+    public List<UserDTO>buscar(String name){
+        return uS.search(name).stream().map(x->{
+            ModelMapper m=new ModelMapper();
+            return m.map(x,UserDTO.class);
+        }).collect(Collectors.toList());
+    }
 
 }
