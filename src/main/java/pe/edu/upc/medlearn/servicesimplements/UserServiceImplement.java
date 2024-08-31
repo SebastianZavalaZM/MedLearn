@@ -17,11 +17,17 @@ public class UserServiceImplement implements IUserService {
     public List<Users> list() {
         return uR.findAll();
     }
-
     @Override
-    public List<User> search(String name) {
-        return uR.findAll();
+    public void insert(Users user) {
+        uR.save(user);
     }
 
-
+    @Override
+    public Users listId(int id) {
+        return uR.findById(id).orElse(new Users());
+    }
+    @Override
+    public List<Users> search(String name) {
+        return uR.findAll();
+    }
 }

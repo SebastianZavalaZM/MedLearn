@@ -9,10 +9,10 @@ import pe.edu.upc.medlearn.entities.Users;
 import java.util.List;
 
 @Repository
-public interface IUserRepository extends JpaRepository<User,Integer> {
+public interface IUserRepository extends JpaRepository<Users,Integer> {
 
-    @Query("select c from User c where c .username like %:name%")
-    public List<User> search(@Param("name") String name);
+    @Query("select c from Users c where c .username like %:name%")
+    public List<Users> search(@Param("name") String name);
 }
 
 
