@@ -1,5 +1,5 @@
 # MedLearn
-Frontend y backend de MedLearn
+Desarrollo del backend de MedLearn API REST
 
 ## Autores
 
