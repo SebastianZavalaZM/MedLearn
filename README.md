@@ -4,7 +4,7 @@ Desarrollo del backend de MedLearn API REST
 ## Autores
 
 * **Andre:** 
-* **Fabrizio:** rama DevFabrizio
+* **Fabrizio Hidalgo:** rama DevFabrizio, username HidalgoFabrizio7
 * **Ana María:** 
 * **Sebastian:** 
 * **Fabian Castro:** 
