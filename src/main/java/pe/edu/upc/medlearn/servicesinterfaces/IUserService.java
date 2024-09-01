@@ -10,5 +10,4 @@ public interface IUserService {
     public Users listId(int id);
     public List<Users> search(String name);
 
-
 }
