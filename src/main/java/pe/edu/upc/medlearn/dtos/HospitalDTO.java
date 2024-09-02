@@ -1,42 +1,19 @@
-package pe.edu.upc.medlearn.entities;
+package pe.edu.upc.medlearn.dtos;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import pe.edu.upc.medlearn.entities.Users;
 
-import javax.naming.Name;
-
-@Entity
-@Table(name = "Hospital")
-public class Hospital {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class HospitalDTO {
     private int idHospital;
-    @Column(name = "nameHospital", nullable = false, length = 25)
     private String nameHospital;
-    @Column(name = "latitud", nullable = false)
     private double latitud;
-    @Column(name = "longitud", nullable = false)
     private double longitud;
-    @Column(name = "direccionHospital", nullable = false, length = 75)
     private String direccionHospital;
-    @Column(name = "contactHospital", nullable = false, length = 15)
     private String contactHospital;
 
-    @OneToOne
-    @JoinColumn(name = "idUser")
     private Users us;
-
-    public Hospital() {
-    }
-
-    public Hospital(int idHospital, String nameHospital, double latitud, double longitud, String direccionHospital, String contactHospital, Users us) {
-        this.idHospital = idHospital;
-        this.nameHospital = nameHospital;
-        this.latitud = latitud;
-        this.longitud = longitud;
-        this.direccionHospital = direccionHospital;
-        this.contactHospital = contactHospital;
-        this.us = us;
-    }
 
     public int getIdHospital() {
         return idHospital;

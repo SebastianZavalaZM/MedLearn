@@ -8,12 +8,12 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String rol;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private Users user;
+
 
     public Long getId() {
         return id;
