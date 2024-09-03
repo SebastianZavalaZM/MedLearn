@@ -5,38 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/MedLearnApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/IllnessController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/IllnessDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/UserDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Illness.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IUserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IllnessRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/IllnessServiceImplement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/UserServiceImplement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IIllnessService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IUserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pe/edu/upc/medlearn/MedLearnApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/IllnessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/IllnessController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/UserServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/UserServiceImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/SympthomsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/SympthomsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Sympthoms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/ISympthomsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/ISymptthomsServiceImplement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/ISympthomsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/IllnessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/IllnessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/IllnessServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/IllnessServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/UserServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/UserServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IIllnessService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IIllnessService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IUserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -50,6 +45,10 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2kzigL8IpvJgH5WV1isy3IhEUxh" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -89,8 +88,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.300" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.300" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
       </set>
     </attachedChunks>
   </component>
@@ -106,6 +105,7 @@
       <workItem from="1724300515636" duration="2743000" />
       <workItem from="1724945856807" duration="1846000" />
       <workItem from="1724990520146" duration="5865000" />
+      <workItem from="1725402684882" duration="784000" />
     </task>
     <task id="LOCAL-00001" summary="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan">
       <option name="closed" value="true" />
