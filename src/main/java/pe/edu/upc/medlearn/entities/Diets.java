@@ -2,7 +2,10 @@ package pe.edu.upc.medlearn.entities;
 
 
 import jakarta.persistence.*;
+import org.springframework.aop.framework.adapter.DefaultAdvisorAdapterRegistry;
+
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Table(name = "Diets")

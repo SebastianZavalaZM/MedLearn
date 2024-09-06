@@ -15,6 +15,3 @@ public interface IUserRepository extends JpaRepository<Users,Integer> {
     public List<Users> search(@Param("name") String name);
 
 }
-
-
-
