@@ -2,12 +2,15 @@ package pe.edu.upc.medlearn.entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "Users")
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUser;
+
     @Column(name = "username",nullable = false,length = 30)
     private String username;
     @Column(name = "nameIllness",nullable = false,length = 30)
@@ -18,6 +21,10 @@ public class Users {
     private String email;
     @Column(name = "certificationUser",nullable = false,length = 200)
     private String certificationUser;
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "idUser")
+    private List<Role> roles;
 
     public Users() {
     }
@@ -77,5 +84,13 @@ public class Users {
 
     public void setIdUser(int idUser) {
         this.idUser = idUser;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 }
