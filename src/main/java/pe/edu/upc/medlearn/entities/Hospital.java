@@ -20,6 +20,8 @@ public class Hospital {
     private String direccionHospital;
     @Column(name = "contactHospital", nullable = false, length = 15)
     private String contactHospital;
+    @Column(name = "counterviewsHospital", nullable = false)
+    private int counterviewsHospital;
 
     @OneToOne
     @JoinColumn(name = "idUser")
@@ -28,13 +30,14 @@ public class Hospital {
     public Hospital() {
     }
 
-    public Hospital(int idHospital, String nameHospital, double latitud, double longitud, String direccionHospital, String contactHospital, Users us) {
+    public Hospital(int idHospital, String nameHospital, double latitud, double longitud, String direccionHospital, String contactHospital, int counterviewsHospital, Users us) {
         this.idHospital = idHospital;
         this.nameHospital = nameHospital;
         this.latitud = latitud;
         this.longitud = longitud;
         this.direccionHospital = direccionHospital;
         this.contactHospital = contactHospital;
+        this.counterviewsHospital = counterviewsHospital;
         this.us = us;
     }
 
@@ -84,6 +87,14 @@ public class Hospital {
 
     public void setContactHospital(String contactHospital) {
         this.contactHospital = contactHospital;
+    }
+
+    public int getCounterviewsHospital() {
+        return counterviewsHospital;
+    }
+
+    public void setCounterviewsHospital(int counterviewsHospital) {
+        this.counterviewsHospital = counterviewsHospital;
     }
 
     public Users getUs() {

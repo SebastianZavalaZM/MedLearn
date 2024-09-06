@@ -1,5 +1,6 @@
 package pe.edu.upc.medlearn.servicesinterfaces;
 
+import org.springframework.data.jpa.repository.Query;
 import pe.edu.upc.medlearn.entities.Hospital;
 
 import java.util.List;
@@ -11,4 +12,5 @@ public interface IHospitalService {
     public Hospital listId(int id);
     public  void update(Hospital h);
     public List<Hospital> buscarporNombre(String nombre);
+    public List<Hospital> ordenarPorVistas();
 }

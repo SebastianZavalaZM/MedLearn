@@ -42,4 +42,9 @@ public class HospitalServiceImplement implements IHospitalService {
     public List<Hospital> buscarporNombre(String nombre) {
         return hR.buscarNombre(nombre);
     }
+
+    @Override
+    public List<Hospital> ordenarPorVistas() {
+        return hR.ordenarPorVistas();
+    }
 }

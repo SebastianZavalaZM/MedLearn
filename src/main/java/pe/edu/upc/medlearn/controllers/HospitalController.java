@@ -54,4 +54,11 @@ public class HospitalController {
         }).collect(Collectors.toList());
     }
 
+    @GetMapping("/listaordenada")
+    public List<HospitalDTO>ordenadoporVistas(){
+        return hS.ordenarPorVistas().stream().map(x->{
+            ModelMapper m = new ModelMapper();
+            return m.map(x,HospitalDTO.class);
+        }).collect(Collectors.toList());
+    }
 }

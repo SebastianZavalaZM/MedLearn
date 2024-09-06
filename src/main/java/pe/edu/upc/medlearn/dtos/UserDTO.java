@@ -1,6 +1,9 @@
 package pe.edu.upc.medlearn.dtos;
 
-import jakarta.persistence.Column;
+import jakarta.persistence.*;
+import pe.edu.upc.medlearn.entities.Role;
+
+import java.util.List;
 
 public class UserDTO {
     private int idUser;
@@ -9,6 +12,8 @@ public class UserDTO {
     private boolean enabled;
     private String email;
     private String certificationUser;
+
+    private List<Role> roles;
 
     public int getIdUser() {
         return idUser;
@@ -56,5 +61,13 @@ public class UserDTO {
 
     public void setCertificationUser(String certificationUser) {
         this.certificationUser = certificationUser;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 }
