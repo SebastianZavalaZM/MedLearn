@@ -14,4 +14,10 @@ public interface IUserRepository extends JpaRepository<Users,Integer> {
     @Query("select c from Users c where c .username like %:name%")
     public List<Users> search(@Param("name") String name);
 
+    @Query(value = "" +
+            "SELECT r.rol as rol, count(*) as usuarios\n" +
+            "from users u inner join roles r\n" +
+            "on u.id_user = r.id_user\n" +
+            "group by r.rol", nativeQuery = true)
+    public List<String[]> cantidadUsuariosPorRol();
 }

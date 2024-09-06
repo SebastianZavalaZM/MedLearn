@@ -31,4 +31,9 @@ public class UserServiceImplement implements IUserService {
         return uR.findAll();
     }
 
+    @Override
+    public List<String[]> cantidadUsuariosPorRol() {
+        return uR.cantidadUsuariosPorRol();
+    }
+
 }

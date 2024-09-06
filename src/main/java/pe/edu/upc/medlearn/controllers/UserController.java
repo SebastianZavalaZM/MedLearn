@@ -3,10 +3,12 @@ package pe.edu.upc.medlearn.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.medlearn.dtos.QuantityUsersByRolDTO;
 import pe.edu.upc.medlearn.dtos.UserDTO;
 import pe.edu.upc.medlearn.entities.Users;
 import pe.edu.upc.medlearn.servicesinterfaces.IUserService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,4 +44,19 @@ public class UserController {
             return m.map(x,UserDTO.class);
         }).collect(Collectors.toList());
     }
+
+    //@GetMapping("controldeusuarios")
+    public List<QuantityUsersByRolDTO> usuariosPorRol(){
+        List<String[]> filaLista = uS.cantidadUsuariosPorRol();
+        List<QuantityUsersByRolDTO> dtoLista = new ArrayList<>();
+        for (String[] columna : filaLista) {
+            QuantityUsersByRolDTO dto = new QuantityUsersByRolDTO();
+            dto.setRol(columna[0]);
+            dto.setUsuarios(Integer.parseInt(columna[1]));
+            dtoLista.add(dto);
+        }
+        return dtoLista;
+    }
+
 }
+
