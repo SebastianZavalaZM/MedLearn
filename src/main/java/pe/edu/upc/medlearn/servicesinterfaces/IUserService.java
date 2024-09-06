@@ -9,4 +9,7 @@ public interface IUserService {
     public void insert(Users user);
     public Users listId(int id);
 
+    Users buscarUsers(String name);
+
+
 }

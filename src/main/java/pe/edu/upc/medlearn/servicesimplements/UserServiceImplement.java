@@ -29,4 +29,10 @@ UserServiceImplement implements IUserService {
         return uR.findById(id).orElse(new Users());
     }
 
+    @Override
+    public Users buscarUsers(String name) {
+        return (Users) uR.buscarUsers(name);
+    }
+
+
 }

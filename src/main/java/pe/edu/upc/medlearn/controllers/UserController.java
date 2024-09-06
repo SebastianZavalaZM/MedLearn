@@ -14,13 +14,15 @@ import java.util.stream.Collectors;
 public class UserController {
     @Autowired
     private IUserService uS;
+
     @GetMapping
-    public List<UserDTO>listar(){
-        return uS.list().stream().map(x->{
-            ModelMapper m=new ModelMapper();
-            return m.map(x,UserDTO.class);
+    public List<UserDTO> listar() {
+        return uS.list().stream().map(x -> {
+            ModelMapper m = new ModelMapper();
+            return m.map(x, UserDTO.class);
         }).collect(Collectors.toList());
     }
+
     @PostMapping("/insertar")
     public void insert(@RequestBody UserDTO dto) {
         ModelMapper m = new ModelMapper();
@@ -34,5 +36,7 @@ public class UserController {
         UserDTO dto = m.map(uS.listId(id), UserDTO.class);
         return dto;
     }
+
+
 
 }
