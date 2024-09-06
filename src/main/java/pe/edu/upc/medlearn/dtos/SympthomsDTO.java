@@ -1,12 +1,21 @@
 package pe.edu.upc.medlearn.dtos;
 import jakarta.persistence.Column;
+import pe.edu.upc.medlearn.entities.Illness;
 
 public class SympthomsDTO {
 
     private int idSympthoms;
-    private int idIllness;
     private String nameSympthoms;
     private String mostSearhCounter;
+    private Illness il;
+
+    public Illness getIl() {
+        return il;
+    }
+
+    public void setIl(Illness il) {
+        this.il = il;
+    }
 
     public int getIdSympthoms() {
         return idSympthoms;
@@ -14,14 +23,6 @@ public class SympthomsDTO {
 
     public void setIdSympthoms(int idSympthoms) {
         this.idSympthoms = idSympthoms;
-    }
-
-    public int getIdIllness() {
-        return idIllness;
-    }
-
-    public void setIdIllness(int idIllness) {
-        this.idIllness = idIllness;
     }
 
     public String getNameSympthoms() {

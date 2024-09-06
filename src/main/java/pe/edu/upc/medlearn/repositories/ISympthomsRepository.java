@@ -6,4 +6,6 @@ import pe.edu.upc.medlearn.entities.Sympthoms;
 @Repository
 public interface ISympthomsRepository extends JpaRepository<Sympthoms,Integer> {
 
+
+
 }

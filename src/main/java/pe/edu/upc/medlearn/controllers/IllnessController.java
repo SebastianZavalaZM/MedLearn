@@ -24,7 +24,7 @@ public class IllnessController {
             return m.map(y,IllnessDTO.class);
         }).collect(Collectors.toList());
     }
-    @PostMapping
+    @PostMapping("/insertar")
     public void insertar(@RequestBody IllnessDTO dto) {
         ModelMapper m = new ModelMapper();
         Illness illness = m.map(dto, Illness.class);
