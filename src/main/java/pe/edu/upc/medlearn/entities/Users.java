@@ -1,5 +1,6 @@
 package pe.edu.upc.medlearn.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -13,15 +14,17 @@ public class Users {
 
     @Column(name = "username",nullable = false,length = 30)
     private String username;
-    @Column(name = "nameIllness",nullable = false,length = 30)
+    @Column(name = "nameIllness",nullable = false,length = 200)
     private String password;
     @Column(name = "enabled",nullable = false)
     private boolean enabled;
+
     @Column(name = "email",nullable = false,length = 70)
     private String email;
     @Column(name = "certificationUser",nullable = false,length = 200)
     private String certificationUser;
 
+    @JsonIgnore
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "idUser")
     private List<Role> roles;
