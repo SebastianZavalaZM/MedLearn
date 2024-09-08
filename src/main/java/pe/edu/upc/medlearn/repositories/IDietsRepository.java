@@ -11,12 +11,9 @@ import java.util.List;
 
 @Repository
 public interface IDietsRepository extends JpaRepository<Diets, Integer> {
-    public List<Diets> buscarCalificacionMax(@Param("calificacion") String calificacion);
-    @Query(value = "SELECT *\n" +
+
+    @Query(value = "SELECT * \n" +
             "FROM diets c\n" +
-            "WHERE c.qualification = (\n" +
-            "SELECT MAX(qualification) \n" +
-            "FROM diets\n" +
-            ")",nativeQuery = true)
+            "WHERE c.qualification = (SELECT MAX(qualification) FROM diets)",nativeQuery = true)
     public List<String[]> cantidad();
 }

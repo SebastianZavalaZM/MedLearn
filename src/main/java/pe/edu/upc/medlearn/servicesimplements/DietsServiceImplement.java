@@ -30,11 +30,6 @@ public class DietsServiceImplement implements IDietsService {
     public void delete(int id) { dR.deleteById(id);}
 
     @Override
-    public List<Diets> buscarCalificacion(int calificacion) {
-        return dR.buscarCalificacionMax(String.valueOf(calificacion));
-    }
-
-    @Override
     public List<String[]> cantidad() {
         return dR.cantidad();
     }

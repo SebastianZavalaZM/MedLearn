@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/Diets")
+@RequestMapping("dietas")
 public class DietsController {
     @Autowired
     private IDietsService dS;
@@ -47,12 +47,6 @@ public class DietsController {
         dS.delete(id);
     }
 
-    @GetMapping("/buscarporcalificacionmaxima")
-    public List<DietsDTO> buscar(@RequestParam int calificacion){
-        return dS.buscarCalificacion(calificacion).stream().map(x->{
-            ModelMapper m= new ModelMapper();
-            return  m.map(x,DietsDTO.class);
-        }).collect(Collectors.toList());
-    }
+
 
 }
