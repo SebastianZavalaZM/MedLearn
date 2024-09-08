@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/Ejercicios")
+@RequestMapping("/ejercicios")
 public class ExercisesController {
     @Autowired
     private IExercisesService exercisesService;

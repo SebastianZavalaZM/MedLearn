@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestController("/Usuario")
+@RestController("/usuario")
 public class UserController {
     @Autowired
     private IUserService uS;

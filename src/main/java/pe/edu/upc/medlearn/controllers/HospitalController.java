@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/Hospitales")
+@RequestMapping("/hospitales")
 public class HospitalController {
     @Autowired
     private IHospitalService hS;
