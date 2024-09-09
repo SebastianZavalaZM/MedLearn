@@ -36,4 +36,9 @@ public class IExercisesImplements implements IExercisesService {
     public List<Exercises> buscarNombre(String nombre) {
         return exercisesRepository.buscarNombre(nombre);
     }
+
+    @Override
+    public List<String[]> totaldeexercisesbyDietas() {
+        return exercisesRepository.totaldeexercisesbydiets();
+    }
 }

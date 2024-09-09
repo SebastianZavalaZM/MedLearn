@@ -11,5 +11,5 @@ public interface IExercisesService  {
     public Exercises listId(int id);
     public void delete(int id);
     public List<Exercises> buscarNombre(String nombre);
-
+    public List<String[]>totaldeexercisesbyDietas();
 }

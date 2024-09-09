@@ -12,15 +12,18 @@ public class Exercises {
     private String nameExercises;
     @Column(name = "setsExercises",nullable = false,length = 100)
     private int setsExercises;
-    //private Diets idDiet;
+    @ManyToOne
+    @JoinColumn(name = "id_diet")
+    private Diets di;
 
     public Exercises() {
     }
 
-    public Exercises(int idExercises, String nameExercises, int setsExercises) {
+    public Exercises(int idExercises, String nameExercises, int setsExercises, Diets di) {
         this.idExercises = idExercises;
         this.nameExercises = nameExercises;
         this.setsExercises = setsExercises;
+        this.di = di;
     }
 
     public int getIdExercises() {
@@ -45,5 +48,13 @@ public class Exercises {
 
     public void setSetsExercises(int setsExercises) {
         this.setsExercises = setsExercises;
+    }
+
+    public Diets getDi() {
+        return di;
+    }
+
+    public void setDi(Diets di) {
+        this.di = di;
     }
 }
