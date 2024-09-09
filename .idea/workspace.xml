@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="security Implement" />
+    <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="Backend MedLearn" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,7 +152,47 @@
       <option name="project" value="LOCAL" />
       <updated>1725924193122</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725924448217</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725924448217</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725924558363</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725924558363</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725924794710</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725924794710</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725925040742</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725925040742</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725925069965</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725925069965</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
