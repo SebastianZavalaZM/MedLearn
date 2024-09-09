@@ -4,7 +4,6 @@ import pe.edu.upc.medlearn.entities.Diets;
 
 import java.util.List;
 
-
 public interface IDietsService {
     public List<Diets> list();
     public void insert(Diets diets);
@@ -12,5 +11,8 @@ public interface IDietsService {
     public void update(Diets a);
     public void delete(int id);
 
-    public List<String[]> cantidad();
+    List<Diets> findByQualification(int qualification);
+    List<Diets> findByDescription(String description);
+
+
 }
