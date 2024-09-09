@@ -11,12 +11,11 @@ import java.util.List;
 
 @Repository
 public interface IDietsRepository extends JpaRepository<Diets, Integer> {
-    public List<Diets> buscarCalificacionMax(@Param("calificacion") String calificacion);
-    @Query(value = "SELECT *\n" +
-            "FROM diets c\n" +
-            "WHERE c.qualification = (\n" +
-            "SELECT MAX(qualification) \n" +
-            "FROM diets\n" +
-            ")",nativeQuery = true)
-    public List<String[]> cantidad();
+
+    @Query("SELECT d FROM Diets d WHERE d.qualification = :qualification")
+    List<Diets> findByQualification(@Param("qualification") int qualification);
+
+    @Query("SELECT d FROM Diets d WHERE d.description LIKE %:description%")
+    List<Diets> findByDescription(@Param("description") String description);
+
 }

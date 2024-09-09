@@ -11,6 +11,8 @@ public interface IDietsService {
     public void update(Diets a);
     public void delete(int id);
 
-    public List<Diets> buscarCalificacion(int calificacion);
-    public List<String[]> cantidad();
+    List<Diets> findByQualification(int qualification);
+    List<Diets> findByDescription(String description);
+
+
 }
