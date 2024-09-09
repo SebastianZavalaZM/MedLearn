@@ -29,9 +29,12 @@ public class DietsServiceImplement implements IDietsService {
     @Override
     public void delete(int id) { dR.deleteById(id);}
 
-    @Override
-    public List<String[]> cantidad() {
-        return dR.cantidad();
+    public List<Diets> findByQualification(int qualification) {
+        return dR.findByQualification(qualification);
+    }
+
+    public List<Diets> findByDescription(String description) {
+        return dR.findByDescription(description);
     }
 
 
