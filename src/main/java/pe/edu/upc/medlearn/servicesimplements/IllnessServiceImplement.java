@@ -12,7 +12,6 @@ public class IllnessServiceImplement implements IIllnessService {
     @Autowired
     private IllnessRepository illnessRepository;
 
-
     @Override
     public List<Illness> list() {
         return illnessRepository.findAll();

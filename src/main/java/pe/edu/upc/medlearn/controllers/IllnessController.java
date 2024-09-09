@@ -1,5 +1,6 @@
 package pe.edu.upc.medlearn.controllers;
 
+import io.swagger.v3.oas.annotations.Operation;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,7 @@ public class IllnessController {
             return m.map(y,IllnessDTO.class);
         }).collect(Collectors.toList());
     }
-    @PostMapping
+    @PostMapping("/insertar")
     public void insertar(@RequestBody IllnessDTO dto) {
         ModelMapper m = new ModelMapper();
         Illness illness = m.map(dto, Illness.class);

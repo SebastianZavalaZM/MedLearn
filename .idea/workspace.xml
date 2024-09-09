@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="arreglado el service implement">
+      <change beforePath="$PROJECT_DIR$/.idea/MedLearn.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/IllnessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/IllnessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/SympthomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/SympthomsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/SympthomsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/SympthomsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Sympthoms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Sympthoms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/ISympthomsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/ISympthomsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/SympthomsServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/SympthomsServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/ISympthomsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/ISympthomsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/IllnessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/IllnessController.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2kzigL8IpvJgH5WV1isy3IhEUxh" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.MedLearnApplication.executor": "Run",
+    "git-widget-placeholder": "DevFabian",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/OneDrive - Universidad Peruana de Ciencias/CICLO 6/Arquitectura de aplicaciones web/PLAYGROUNDS/CityTrafic",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="MedLearnApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="MedLearn" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pe.edu.upc.medlearn.MedLearnApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="" />
+      <created>1724292915726</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724292915726</updated>
+      <workItem from="1724292916758" duration="1546000" />
+      <workItem from="1724300515636" duration="2743000" />
+      <workItem from="1724945856807" duration="1846000" />
+      <workItem from="1724990520146" duration="5865000" />
+      <workItem from="1725402684882" duration="784000" />
+      <workItem from="1725580452657" duration="683000" />
+      <workItem from="1725581404885" duration="10033000" />
+    </task>
+    <task id="LOCAL-00001" summary="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan">
+      <option name="closed" value="true" />
+      <created>1724998331933</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724998331933</updated>
+    </task>
+    <task id="LOCAL-00002" summary="arreglado el service implement">
+      <option name="closed" value="true" />
+      <created>1725581773368</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725581773368</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan" />
+    <MESSAGE value="arreglado el service implement" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglado el service implement" />
+  </component>
+</project>
