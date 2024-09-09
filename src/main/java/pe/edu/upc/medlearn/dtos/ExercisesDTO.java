@@ -6,14 +6,14 @@ public class ExercisesDTO {
     private int idExercises;
     private String nameExercises;
     private int setsExercises;
-    private Diets idDiet;
+    private Diets di;
 
-    public Diets getIdDiet() {
-        return idDiet;
+    public Diets getDi() {
+        return di;
     }
 
-    public void setIdDiet(Diets idDiet) {
-        this.idDiet = idDiet;
+    public void setDi(Diets di) {
+        this.di = di;
     }
 
     public int getIdExercises() {

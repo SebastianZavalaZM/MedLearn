@@ -36,4 +36,9 @@ public class IFoodServiceImplement implements IFoodServiceInterfaces {
     public List<Food> findbyname(String nombre) {
         return iFoodRepository.findbyname(nombre);
     }
+
+    @Override
+    public List<String[]> totaldecaloriesbydiet() {
+        return iFoodRepository.totalbycaloriesbydiet();
+    }
 }
