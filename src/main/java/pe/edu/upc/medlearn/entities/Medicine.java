@@ -1,7 +1,8 @@
 package pe.edu.upc.medlearn.entities;
 
-
 import jakarta.persistence.*;
+import pe.edu.upc.medlearn.entities.Diets;
+import pe.edu.upc.medlearn.entities.Treatments;
 
 @Entity
 @Table(name = "Medicine")
@@ -9,7 +10,8 @@ public class Medicine {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int suple_id;
+    @Column(name = "suple_id")
+    private int supleId;
 
     @Column(name = "suple_description", nullable = false, length = 200)
     private String supleDescription;
@@ -18,11 +20,11 @@ public class Medicine {
     private String supleName;
 
     @ManyToOne
-    @JoinColumn(name = "diet_id", nullable = false)
+    @JoinColumn(name = "Diets_diet_id", nullable = false)
     private Diets diet;
 
     @ManyToOne
-    @JoinColumn(name = "treatments_id", nullable = false)
+    @JoinColumn(name = "Treatments_treatments_id", nullable = false)
     private Treatments treatments;
 
     // Constructor vacío
@@ -30,8 +32,8 @@ public class Medicine {
     }
 
     // Constructor con parámetros
-    public Medicine(int suple_id, String supleDescription, String supleName, Diets diet, Treatments treatments) {
-        this.suple_id = suple_id;
+    public Medicine(int supleId, String supleDescription, String supleName, Diets diet, Treatments treatments) {
+        this.supleId = supleId;
         this.supleDescription = supleDescription;
         this.supleName = supleName;
         this.diet = diet;
@@ -40,11 +42,11 @@ public class Medicine {
 
     // Getters y Setters
     public int getSupleId() {
-        return suple_id;
+        return supleId;
     }
 
-    public void setSupleId(int suple_id) {
-        this.suple_id = suple_id;
+    public void setSupleId(int supleId) {
+        this.supleId = supleId;
     }
 
     public String getSupleDescription() {
@@ -79,4 +81,3 @@ public class Medicine {
         this.treatments = treatments;
     }
 }
-

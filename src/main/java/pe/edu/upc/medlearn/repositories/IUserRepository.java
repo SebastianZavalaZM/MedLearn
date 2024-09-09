@@ -13,7 +13,6 @@ public interface IUserRepository extends JpaRepository<Users,Integer> {
 
     @Query("select c from Users c where c .username like %:name%")
     public List<Users> search(@Param("name") String name);
-
 }
 
 

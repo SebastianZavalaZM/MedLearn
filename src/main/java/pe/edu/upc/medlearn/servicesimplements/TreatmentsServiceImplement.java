@@ -38,4 +38,13 @@ public class TreatmentsServiceImplement implements ITreatmentsService {
     public void delete(int id) {
         tR.deleteById(id);
     }
+
+    @Override
+    public List<String[]> cantidadUsuariosPorTratamiento() {
+        return tR.cantidadUsuariosPorTratamiento();
+    }
+    @Override
+    public List<String[]> topTratamientos() {
+        return tR.topTratamientos();
+    }
 }

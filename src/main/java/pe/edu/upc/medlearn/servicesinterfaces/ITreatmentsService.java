@@ -15,4 +15,6 @@ public interface ITreatmentsService {
     public void update(Treatments treatments);
 
     public void delete(int id);
+    public List<String[]> cantidadUsuariosPorTratamiento();
+    public  List<String[]> topTratamientos();
 }
