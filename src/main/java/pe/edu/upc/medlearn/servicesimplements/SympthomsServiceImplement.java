@@ -32,7 +32,8 @@ public class SympthomsServiceImplement implements ISympthomsService {
 
     @Override
     public void update(Sympthoms ci) {
-        sR.save(ci);
-    }
+        sR.save(ci);}}
 
-}
+
+
+

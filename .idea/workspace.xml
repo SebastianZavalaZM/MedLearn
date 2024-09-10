@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="arreglado el service implement">
-      <change beforePath="$PROJECT_DIR$/.idea/MedLearn.iml" beforeDir="false" />
+    <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/FindIlilnessSymptomsDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/IllnessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/IllnessController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/SympthomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/SympthomsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/SympthomsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/SympthomsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Sympthoms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Sympthoms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/ISympthomsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/ISympthomsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IllnessRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IllnessRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/IllnessServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/IllnessServiceImplement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/SympthomsServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/SympthomsServiceImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/ISympthomsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/ISympthomsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/IIllnessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/IIllnessService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/IllnessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/IllnessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IllnessRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IllnessRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/IllnessServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/IllnessServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IIllnessService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IIllnessService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +53,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Notification.DisplayName-DoNotAsk-Database detector": "Database detector",
+    "Notification.DoNotAsk-Database detector": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -62,13 +64,13 @@
     "Spring Boot.MedLearnApplication.executor": "Run",
     "git-widget-placeholder": "DevFabian",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/OneDrive - Universidad Peruana de Ciencias/CICLO 6/Arquitectura de aplicaciones web/PLAYGROUNDS/CityTrafic",
+    "last_opened_file_path": "/Users/mac6/ejemplo/MedLearn",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -103,8 +105,8 @@
       <workItem from="1724945856807" duration="1846000" />
       <workItem from="1724990520146" duration="5865000" />
       <workItem from="1725402684882" duration="784000" />
-      <workItem from="1725580452657" duration="683000" />
-      <workItem from="1725581404885" duration="10033000" />
+      <workItem from="1725669436610" duration="2648000" />
+      <workItem from="1725926740292" duration="2225000" />
     </task>
     <task id="LOCAL-00001" summary="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan">
       <option name="closed" value="true" />
@@ -114,15 +116,7 @@
       <option name="project" value="LOCAL" />
       <updated>1724998331933</updated>
     </task>
-    <task id="LOCAL-00002" summary="arreglado el service implement">
-      <option name="closed" value="true" />
-      <created>1725581773368</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1725581773368</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,7 +135,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan" />
-    <MESSAGE value="arreglado el service implement" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglado el service implement" />
+    <option name="LAST_COMMIT_MESSAGE" value="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan" />
   </component>
 </project>

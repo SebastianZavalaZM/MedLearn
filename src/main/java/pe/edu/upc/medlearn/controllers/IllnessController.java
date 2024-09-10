@@ -47,4 +47,9 @@ public class IllnessController {
         Illness illness=m.map(illnessDTO,Illness.class);
         iS.insert(illness);
     }
+    @GetMapping("/findIllnessSymptoms")
+    public List<String[]> findIllnessSymptoms(){
+        return iS.findIllnessSymptoms();
+    }
+
 }

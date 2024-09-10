@@ -10,5 +10,7 @@ public interface IIllnessService {
     public void insert(Illness illness);
     public void delete(Integer Id);
     public Illness listId(int id);
+    public List<String[]> findIllnessSymptoms();
+
 
 }
