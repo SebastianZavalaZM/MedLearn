@@ -3,6 +3,7 @@ package pe.edu.upc.medlearn.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.medlearn.dtos.AverageDurationByTreatmentTypeDTO;
 import pe.edu.upc.medlearn.dtos.QuantitysUserxTreatmentsDTO;
 import pe.edu.upc.medlearn.dtos.TopTreatmentsDTO;
 import pe.edu.upc.medlearn.dtos.TreatmentsDTO;
@@ -84,6 +85,18 @@ public class TreatmentsController {
 
             int usersCount = Integer.parseInt(columna[1]);
             dto.setUsersCount(usersCount);
+            listaDTO.add(dto);
+        }
+        return listaDTO;
+    }
+    @GetMapping("/promedioDuracion")
+    public List<AverageDurationByTreatmentTypeDTO> obtenerPromedioDuracion() {
+        List<String[]> lista = tS.obtenerPromedioDuracion();
+        List<AverageDurationByTreatmentTypeDTO> listaDTO = new ArrayList<>();
+        for (String[] columna : lista) {
+            AverageDurationByTreatmentTypeDTO dto = new AverageDurationByTreatmentTypeDTO();
+            dto.setTreatmentDescription((String) columna[0]);
+            dto.setAverageDuration(Double.parseDouble((String) columna[1]));
             listaDTO.add(dto);
         }
         return listaDTO;

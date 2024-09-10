@@ -19,4 +19,9 @@ public interface ITreatmentsRepository extends JpaRepository<Treatments, Integer
             "GROUP BY t.description " +
             "ORDER BY user_count DESC")
     public List<String[]> topTratamientos();
+    @Query("SELECT t.description, AVG(t.duration) " +
+            "FROM Treatments t " +
+            "GROUP BY t.description")
+    public List<String[]> obtenerPromedioDuracion();
+
 }

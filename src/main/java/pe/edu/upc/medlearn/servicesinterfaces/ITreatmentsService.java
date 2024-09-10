@@ -17,4 +17,6 @@ public interface ITreatmentsService {
     public void delete(int id);
     public List<String[]> cantidadUsuariosPorTratamiento();
     public  List<String[]> topTratamientos();
+    public List<String[]> obtenerPromedioDuracion();
+
 }

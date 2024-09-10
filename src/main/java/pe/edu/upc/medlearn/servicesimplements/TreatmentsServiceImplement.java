@@ -47,4 +47,9 @@ public class TreatmentsServiceImplement implements ITreatmentsService {
     public List<String[]> topTratamientos() {
         return tR.topTratamientos();
     }
+    @Override
+    public List<String[]> obtenerPromedioDuracion(){
+        return tR.obtenerPromedioDuracion();
+    }
+
 }

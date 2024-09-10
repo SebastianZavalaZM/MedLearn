@@ -10,7 +10,7 @@ public class Users {
     private int idUser;
     @Column(name = "username",nullable = false,length = 30)
     private String username;
-    @Column(name = "nameIllness",nullable = false,length = 30)
+    @Column(name = "password",nullable = false,length = 30)
     private String password;
     @Column(name = "enabled",nullable = false)
     private boolean enabled;
