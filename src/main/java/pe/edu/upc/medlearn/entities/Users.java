@@ -27,7 +27,7 @@ public class Users implements Serializable {
 
     @JsonIgnore
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "idUser")
+    @JoinColumn(name = "user_id")
     private List<Role> roles;
 
     public Users() {
