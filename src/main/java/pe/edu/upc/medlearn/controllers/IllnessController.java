@@ -52,4 +52,15 @@ public class IllnessController {
         return iS.findIllnessSymptoms();
     }
 
+
+
+    @GetMapping("/Busqueda")
+    public List<IllnessDTO>buscar(@RequestParam() String nombre){
+        return iS.buscarNombre(nombre).stream().map(x->{
+            ModelMapper m = new ModelMapper();
+            return m.map(x, IllnessDTO.class);
+        }).collect(Collectors.toList());
+
+    }
+
 }

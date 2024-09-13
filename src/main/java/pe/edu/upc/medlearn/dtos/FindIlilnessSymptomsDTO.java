@@ -19,4 +19,5 @@ public class FindIlilnessSymptomsDTO {
     public void setNameSymptom(String nameSymptom) {
         this.nameSymptom = nameSymptom;
     }
+
 }

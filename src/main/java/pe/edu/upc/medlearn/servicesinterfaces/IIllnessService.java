@@ -13,4 +13,5 @@ public interface IIllnessService {
     public List<String[]> findIllnessSymptoms();
 
 
+    List<Illness> buscarNombre(String nombre);
 }

@@ -34,5 +34,9 @@ public class IllnessServiceImplement implements IIllnessService {
         return illnessRepository.findIllnessSymptoms();
     }
 
+    @Override
+    public List<Illness> buscarNombre(String nombre) {
+        return illnessRepository.buscarNombre(nombre);
+    }
 
 }
