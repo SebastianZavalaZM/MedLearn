@@ -15,7 +15,7 @@ public class Users implements Serializable {
 
     @Column(name = "username",nullable = false,length = 30)
     private String username;
-    @Column(name = "nameIllness",nullable = false,length = 200)
+    @Column(name = "password",nullable = false,length = 200)
     private String password;
     @Column(name = "enabled",nullable = false)
     private boolean enabled;
@@ -27,7 +27,7 @@ public class Users implements Serializable {
 
     @JsonIgnore
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "idUser")
+    @JoinColumn(name = "user_id")
     private List<Role> roles;
 
     public Users() {
