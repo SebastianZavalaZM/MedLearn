@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="habilitando swagger con seguridad">
+    <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="Backend MedLearn">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/IIllnessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/IIllnessService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Users.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +20,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -44,28 +44,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.MedLearnApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;realises&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/hidalgoCano&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.MedLearnApplication.executor": "Run",
+    "git-widget-placeholder": "realises",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/JetBrainsFabrizio/src/main/java/pe/edu/upc/medlearn",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\JetBrainsFabrizio\src\main\java\pe\edu\upc\medlearn" />
@@ -109,9 +109,6 @@
       <workItem from="1725580452657" duration="683000" />
       <workItem from="1725581404885" duration="10033000" />
       <workItem from="1725913167872" duration="2477000" />
-      <workItem from="1725928151106" duration="7059000" />
-      <workItem from="1726205968119" duration="411000" />
-      <workItem from="1726435041326" duration="1226000" />
     </task>
     <task id="LOCAL-00001" summary="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan">
       <option name="closed" value="true" />
@@ -153,15 +150,127 @@
       <option name="project" value="LOCAL" />
       <updated>1725914954326</updated>
     </task>
-    <task id="LOCAL-00006" summary="habilitando swagger con seguridad">
+    <task id="LOCAL-00006" summary="Backend MedLearn">
       <option name="closed" value="true" />
-      <created>1725922363661</created>
+      <created>1725924193122</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1725922363661</updated>
+      <updated>1725924193122</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725924448217</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725924448217</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725924558363</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725924558363</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725924794710</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725924794710</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725925040742</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725925040742</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725925069965</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725925069965</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725925677166</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1725925677166</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725925907084</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1725925907084</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725926510234</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1725926510234</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725927379603</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1725927379603</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725927714212</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1725927714212</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725927897072</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1725927897072</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725928075852</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1725928075852</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725930472970</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1725930472970</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725932342816</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1725932342816</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +291,7 @@
     <MESSAGE value="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan" />
     <MESSAGE value="arreglado el service implement" />
     <MESSAGE value="security Implement" />
-    <MESSAGE value="habilitando swagger con seguridad" />
-    <option name="LAST_COMMIT_MESSAGE" value="habilitando swagger con seguridad" />
+    <MESSAGE value="Backend MedLearn" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backend MedLearn" />
   </component>
 </project>
