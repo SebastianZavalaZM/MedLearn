@@ -8,6 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.QuantityUsersByRolDTO;
 import pe.edu.upc.medlearn.dtos.UserDTO;
+import pe.edu.upc.medlearn.dtos.UserListDTO;
 import pe.edu.upc.medlearn.entities.Users;
 import pe.edu.upc.medlearn.servicesinterfaces.IUserService;
 
@@ -25,10 +26,10 @@ public class UserController {
     private PasswordEncoder passwordEncoder;
 
     @GetMapping("/listado")
-    public List<UserDTO> listar() {
+    public List<UserListDTO> listar() {
         return uS.list().stream().map(x -> {
             ModelMapper m = new ModelMapper();
-            return m.map(x, UserDTO.class);
+            return m.map(x, UserListDTO.class);
         }).collect(Collectors.toList());
     }
 
@@ -41,16 +42,16 @@ public class UserController {
         uS.insert(user);
     }
     @GetMapping("/{id}")
-    public UserDTO listId(@PathVariable("id") Integer id) {
+    public UserListDTO listId(@PathVariable("id") Integer id) {
         ModelMapper m = new ModelMapper();
-        UserDTO dto = m.map(uS.listId(id), UserDTO.class);
+        UserListDTO dto = m.map(uS.listId(id), UserListDTO.class);
         return dto;
     }
     @GetMapping("/buscarpornombre")
-    public List<UserDTO>buscar(@RequestParam String name){
+    public List<UserListDTO>buscar(@RequestParam String name){
         return uS.search(name).stream().map(x->{
             ModelMapper m=new ModelMapper();
-            return m.map(x,UserDTO.class);
+            return m.map(x,UserListDTO.class);
         }).collect(Collectors.toList());
     }
 
