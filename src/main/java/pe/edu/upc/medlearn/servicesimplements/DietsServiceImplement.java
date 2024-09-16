@@ -1,7 +1,7 @@
 package pe.edu.upc.medlearn.servicesimplements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upc.medlearn.entities.Diets;
+import pe.edu.upc.medlearn.entities.Diet;
 import pe.edu.upc.medlearn.repositories.IDietsRepository;
 import pe.edu.upc.medlearn.servicesinterfaces.IDietsService;
 
@@ -13,27 +13,27 @@ public class DietsServiceImplement implements IDietsService {
     private IDietsRepository dR;
 
     @Override
-    public List<Diets> list() {
+    public List<Diet> list() {
         return dR.findAll();
     }
 
     @Override
-    public void insert(Diets diets) { dR.save(diets);}
+    public void insert(Diet diet) { dR.save(diet);}
 
     @Override
-    public Diets listId(int id) {return dR.findById(id).orElse(new Diets());}
+    public Diet listId(int id) {return dR.findById(id).orElse(new Diet());}
 
     @Override
-    public void update(Diets a) {dR.save(a); }
+    public void update(Diet a) {dR.save(a); }
 
     @Override
     public void delete(int id) { dR.deleteById(id);}
 
-    public List<Diets> findByQualification(int qualification) {
+    public List<Diet> findByQualification(int qualification) {
         return dR.findByQualification(qualification);
     }
 
-    public List<Diets> findByDescription(String description) {
+    public List<Diet> findByDescription(String description) {
         return dR.findByDescription(description);
     }
 

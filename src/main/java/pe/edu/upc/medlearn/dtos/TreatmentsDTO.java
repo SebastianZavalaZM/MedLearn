@@ -1,74 +1,65 @@
 package pe.edu.upc.medlearn.dtos;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import pe.edu.upc.medlearn.entities.Users;
 
 import java.time.LocalDate;
 
 public class TreatmentsDTO {
-    private int treatments_id;
-    private String description;
-    private int duration;
-    private int qualification;
-    private LocalDate start_day;
-    private LocalDate finish_day;
-
+    private int idTreatment;
+    private String descriptionTreatment;
+    private int durationTreatment;
+    private LocalDate startDayTreatment;
+    private LocalDate finishDay;
     private Users users;
 
-    // Getters y Setters
-
-    public int getTreatmentsId() {
-        return treatments_id;
+    public int getIdTreatment() {
+        return idTreatment;
     }
 
-    public void setTreatmentsId(int treatments_id) {
-        this.treatments_id = treatments_id;
+    public void setIdTreatment(int idTreatment) {
+        this.idTreatment = idTreatment;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescriptionTreatment() {
+        return descriptionTreatment;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescriptionTreatment(String descriptionTreatment) {
+        this.descriptionTreatment = descriptionTreatment;
     }
 
-    public int getDuration() {
-        return duration;
+    public int getDurationTreatment() {
+        return durationTreatment;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setDurationTreatment(int durationTreatment) {
+        this.durationTreatment = durationTreatment;
     }
 
-    public int getQualification() {
-        return qualification;
+    public LocalDate getStartDayTreatment() {
+        return startDayTreatment;
     }
 
-    public void setQualification(int qualification) {
-        this.qualification = qualification;
-    }
-
-    public LocalDate getStartDay() {
-        return start_day;
-    }
-
-    public void setStartDay(LocalDate start_day) {
-        this.start_day = start_day;
+    public void setStartDayTreatment(LocalDate startDayTreatment) {
+        this.startDayTreatment = startDayTreatment;
     }
 
     public LocalDate getFinishDay() {
-        return finish_day;
+        return finishDay;
     }
 
-    public void setFinishDay(LocalDate finish_day) {
-        this.finish_day = finish_day;
+    public void setFinishDay(LocalDate finishDay) {
+        this.finishDay = finishDay;
     }
 
-    public Users getUser() {
+    public Users getUsers() {
         return users;
     }
 
-    public void setUser(Users users) {
+    public void setUsers(Users users) {
         this.users = users;
     }
 }

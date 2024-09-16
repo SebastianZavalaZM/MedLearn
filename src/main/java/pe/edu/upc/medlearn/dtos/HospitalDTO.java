@@ -8,12 +8,12 @@ import pe.edu.upc.medlearn.entities.Users;
 public class HospitalDTO {
     private int idHospital;
     private String nameHospital;
-    private double latitud;
-    private double longitud;
-    private String direccionHospital;
+    private double latitudHospital;
+    private double longitudHospital;
+    private String addressHospital;
     private String contactHospital;
-
-    private Users us;
+    private int counterViewsHospital;
+    private Users user;
 
     public int getIdHospital() {
         return idHospital;
@@ -31,28 +31,28 @@ public class HospitalDTO {
         this.nameHospital = nameHospital;
     }
 
-    public double getLatitud() {
-        return latitud;
+    public double getLatitudHospital() {
+        return latitudHospital;
     }
 
-    public void setLatitud(double latitud) {
-        this.latitud = latitud;
+    public void setLatitudHospital(double latitudHospital) {
+        this.latitudHospital = latitudHospital;
     }
 
-    public double getLongitud() {
-        return longitud;
+    public double getLongitudHospital() {
+        return longitudHospital;
     }
 
-    public void setLongitud(double longitud) {
-        this.longitud = longitud;
+    public void setLongitudHospital(double longitudHospital) {
+        this.longitudHospital = longitudHospital;
     }
 
-    public String getDireccionHospital() {
-        return direccionHospital;
+    public String getAddressHospital() {
+        return addressHospital;
     }
 
-    public void setDireccionHospital(String direccionHospital) {
-        this.direccionHospital = direccionHospital;
+    public void setAddressHospital(String addressHospital) {
+        this.addressHospital = addressHospital;
     }
 
     public String getContactHospital() {
@@ -63,11 +63,19 @@ public class HospitalDTO {
         this.contactHospital = contactHospital;
     }
 
-    public Users getUs() {
-        return us;
+    public int getCounterViewsHospital() {
+        return counterViewsHospital;
     }
 
-    public void setUs(Users us) {
-        this.us = us;
+    public void setCounterViewsHospital(int counterViewsHospital) {
+        this.counterViewsHospital = counterViewsHospital;
+    }
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
     }
 }

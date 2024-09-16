@@ -6,8 +6,7 @@ import java.util.List;
 
 public class UserListDTO {
     private int idUser;
-    private String username;
-    private boolean enabled;
+    private String fullnameUser;
     private String email;
     private String certificationUser;
 
@@ -19,20 +18,12 @@ public class UserListDTO {
         this.idUser = idUser;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFullnameUser() {
+        return fullnameUser;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
+    public void setFullnameUser(String fullnameUser) {
+        this.fullnameUser = fullnameUser;
     }
 
     public String getEmail() {

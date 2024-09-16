@@ -4,11 +4,98 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="Backend MedLearn">
+    <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="habilitando swagger con seguridad">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/DietDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Diet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/MedLearnApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/MedLearnApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/DietsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/DietsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/ExercisesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/ExercisesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/FoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/FoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/HospitalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/HospitalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/IllnessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/IllnessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/MedicineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/MedicineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/SympthomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/SympthomsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/TreatmentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/TreatmentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/DietsDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/ExercisesDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/ExercisesDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/FoodDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/FoodDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/HospitalDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/HospitalDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/IllnessDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/IllnessDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/MedicineDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/MedicineDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/SympthomsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/SympthomsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/TreatmentsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/TreatmentsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/UserListDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/UserListDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Diets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Exercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Exercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Hospital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Illness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Illness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Medicine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Medicine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Sympthoms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Symptom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Treatments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Treatment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IDietsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IDietsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IExercisesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IExercisesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IHospitalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IHospitalRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/ISympthomsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/ISympthomsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/ITreatmentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/ITreatmentsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/DietsServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/DietsServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/IExercisesImplements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/IExercisesImplements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/SympthomsServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/SympthomsServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/TreatmentsServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/TreatmentsServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/IDietsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/IDietsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/IExercisesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/IExercisesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/ISympthomsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/ISympthomsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/ITreatmentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesinterfaces/ITreatmentsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/MedLearnApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/MedLearnApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/DietsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/DietsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/ExercisesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/ExercisesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/FoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/FoodController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/HospitalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/HospitalController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/IllnessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/IllnessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/MedicineController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/SympthomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/SympthomsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/TreatmentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/TreatmentsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/DietsDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/ExercisesDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/ExercisesDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/FoodDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/FoodDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/HospitalDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/HospitalDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/IllnessDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/IllnessDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/MedicineDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/MedicineDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/SympthomsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/SympthomsDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/TreatmentsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/TreatmentsDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/UserListDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/UserListDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Diets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Exercises.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Food.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Hospital.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Hospital.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Illness.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Illness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Medicine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Medicine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Sympthoms.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Treatments.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/entities/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IDietsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IDietsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IExercisesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IExercisesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IHospitalRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IHospitalRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/ISympthomsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/ISympthomsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/ITreatmentsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/ITreatmentsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/securities/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/securities/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/DietsServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/DietsServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/IExercisesImplements.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/IExercisesImplements.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/SympthomsServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/SympthomsServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/TreatmentsServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/TreatmentsServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IDietsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IDietsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IExercisesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IExercisesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/ISympthomsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/ISympthomsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/ITreatmentsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/ITreatmentsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +112,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="realises" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="DevFabian" />
@@ -56,7 +156,7 @@
     "Spring Boot.MedLearnApplication.executor": "Run",
     "git-widget-placeholder": "realises",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/JetBrainsFabrizio/src/main/java/pe/edu/upc/medlearn",
+    "last_opened_file_path": "C:/2024-02/arqWeb/intellijproyects/seguridad/boot-mysql-crud-basic-basic-swagger/boot-mysql-crud-basic-basic-swagger",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -270,7 +370,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725932342816</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="habilitando swagger con seguridad">
+      <option name="closed" value="true" />
+      <created>1726454144512</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1726454144513</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +400,7 @@
     <MESSAGE value="arreglado el service implement" />
     <MESSAGE value="security Implement" />
     <MESSAGE value="Backend MedLearn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backend MedLearn" />
+    <MESSAGE value="habilitando swagger con seguridad" />
+    <option name="LAST_COMMIT_MESSAGE" value="habilitando swagger con seguridad" />
   </component>
 </project>

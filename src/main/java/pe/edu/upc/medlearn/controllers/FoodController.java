@@ -1,5 +1,6 @@
 package pe.edu.upc.medlearn.controllers;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/alimentos")
+@SecurityRequirement(name = "javainuseapi")
 public class FoodController {
     @Autowired
     private IFoodServiceInterfaces iFoodService;

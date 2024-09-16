@@ -7,6 +7,7 @@ import java.util.List;
 
 public class UserDTO {
     private int idUser;
+    private String fullnameUser;
     private String username;
     private String password;
     private boolean enabled;
@@ -19,6 +20,14 @@ public class UserDTO {
 
     public void setIdUser(int idUser) {
         this.idUser = idUser;
+    }
+
+    public String getFullnameUser() {
+        return fullnameUser;
+    }
+
+    public void setFullnameUser(String fullnameUser) {
+        this.fullnameUser = fullnameUser;
     }
 
     public String getUsername() {
@@ -60,5 +69,4 @@ public class UserDTO {
     public void setCertificationUser(String certificationUser) {
         this.certificationUser = certificationUser;
     }
-
 }

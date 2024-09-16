@@ -12,20 +12,20 @@ public class Illness {
     private String nameIllness;
     @Column(name = "descriptionIllness",nullable = false,length = 300)
     private String descriptionIllness;
-    @Column(name = "imageIllness",nullable = false,length = 150)
+    @Column(name = "imageIllness",nullable = false,length = 200)
     private String imageIllness;
-    @Column(name = "pointsIllness",nullable = false)
-    private int pointsIllness;
+    @Column(name = "searchesIllnesess",nullable = false)
+    private int searchesIllnesess;
 
     public Illness() {
     }
 
-    public Illness(int idIllness, String nameIllness, String descriptionIllness, String imageIllness, int pointsIllness) {
+    public Illness(int idIllness, String nameIllness, String descriptionIllness, String imageIllness, int searchesIllnesess) {
         this.idIllness = idIllness;
         this.nameIllness = nameIllness;
         this.descriptionIllness = descriptionIllness;
         this.imageIllness = imageIllness;
-        this.pointsIllness = pointsIllness;
+        this.searchesIllnesess = searchesIllnesess;
     }
 
     public int getIdIllness() {
@@ -60,11 +60,11 @@ public class Illness {
         this.imageIllness = imageIllness;
     }
 
-    public int getPointsIllness() {
-        return pointsIllness;
+    public int getSearchesIllnesess() {
+        return searchesIllnesess;
     }
 
-    public void setPointsIllness(int pointsIllness) {
-        this.pointsIllness = pointsIllness;
+    public void setSearchesIllnesess(int searchesIllnesess) {
+        this.searchesIllnesess = searchesIllnesess;
     }
 }

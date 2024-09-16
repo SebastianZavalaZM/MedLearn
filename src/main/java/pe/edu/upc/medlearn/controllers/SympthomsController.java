@@ -1,11 +1,11 @@
 package pe.edu.upc.medlearn.controllers;
 
-import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.SympthomsDTO;
-import pe.edu.upc.medlearn.entities.Sympthoms;
+import pe.edu.upc.medlearn.entities.Symptom;
 import pe.edu.upc.medlearn.servicesinterfaces.ISympthomsService;
 
 import java.util.List;
@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/Sintomas")
+@SecurityRequirement(name = "javainuseapi")
 public class SympthomsController {
 
     @Autowired
@@ -29,7 +30,7 @@ public class SympthomsController {
     @PostMapping("/insertar")
     public void insertar(@RequestBody SympthomsDTO dto) {
         ModelMapper m = new ModelMapper();
-        Sympthoms si = m.map(dto, Sympthoms.class);
+        Symptom si = m.map(dto, Symptom.class);
 
         iS.insert(si);
     }
@@ -43,7 +44,7 @@ public class SympthomsController {
     @PutMapping
     public void modificar(@RequestBody SympthomsDTO dto) {
         ModelMapper m = new ModelMapper();
-        Sympthoms ci=m.map(dto,Sympthoms.class);
+        Symptom ci=m.map(dto, Symptom.class);
         iS.update(ci);
 
     }

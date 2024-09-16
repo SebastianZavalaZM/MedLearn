@@ -1,17 +1,19 @@
 package pe.edu.upc.medlearn.controllers;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.TreatmentsDTO;
-import pe.edu.upc.medlearn.entities.Treatments;
+import pe.edu.upc.medlearn.entities.Treatment;
 import pe.edu.upc.medlearn.servicesinterfaces.ITreatmentsService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/treatments")
+@RequestMapping("/tratamientos")
+@SecurityRequirement(name = "javainuseapi")
 public class TreatmentsController {
 
     @Autowired
@@ -28,15 +30,15 @@ public class TreatmentsController {
     @PostMapping
     public void insertar(@RequestBody TreatmentsDTO dto) {
         ModelMapper m = new ModelMapper();
-        Treatments tr = m.map(dto, Treatments.class);
+        Treatment tr = m.map(dto, Treatment.class);
         tS.insert(tr);
     }
 
     @PutMapping("/actualizar")
     public void actualizar(@PathVariable("id") int id, @RequestBody TreatmentsDTO dto) {
         ModelMapper m = new ModelMapper();
-        Treatments tr = m.map(dto, Treatments.class);
-        tr.setTreatmentsId(id);
+        Treatment tr = m.map(dto, Treatment.class);
+        tr.setIdTreatment(id);
         tS.update(tr);
     }
 
@@ -48,7 +50,7 @@ public class TreatmentsController {
     @GetMapping("/{id}")
     public TreatmentsDTO listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
-        Treatments tr = tS.listId(id);
+        Treatment tr = tS.listId(id);
         return m.map(tr, TreatmentsDTO.class);
     }
 }

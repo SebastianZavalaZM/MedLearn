@@ -1,48 +1,49 @@
 package pe.edu.upc.medlearn.controllers;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.medlearn.dtos.DietsDTO;
-import pe.edu.upc.medlearn.entities.Diets;
+import pe.edu.upc.medlearn.dtos.DietDTO;
+import pe.edu.upc.medlearn.entities.Diet;
 import pe.edu.upc.medlearn.servicesinterfaces.IDietsService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/Diets")
+@RequestMapping("/dietas")
+@SecurityRequirement(name = "javainuseapi")
 public class DietsController {
     @Autowired
     private IDietsService dS;
 
     @GetMapping
-    public List<DietsDTO>list(){
+    public List<DietDTO>list(){
         return dS.list().stream().map(x->{
             ModelMapper m= new ModelMapper();
-            return  m.map(x,DietsDTO.class);
+            return  m.map(x, DietDTO.class);
         }).collect(Collectors.toList());
     }
 
     @PostMapping
-    public void insertar(@RequestBody DietsDTO dto){
+    public void insertar(@RequestBody DietDTO dto){
         ModelMapper m=new ModelMapper();
-        Diets ci=m.map(dto,Diets.class);
+        Diet ci=m.map(dto, Diet.class);
         dS.insert(ci);
     }
 
     @PutMapping("/{id}")
-    public DietsDTO listId(@PathVariable("id") Integer id){
+    public DietDTO listId(@PathVariable("id") Integer id){
         ModelMapper m= new ModelMapper();
-        DietsDTO dto=m.map(dS.listId(id),DietsDTO.class);
+        DietDTO dto=m.map(dS.listId(id), DietDTO.class);
         return dto;
     }
 
     @PutMapping
-    public void modify(@RequestBody DietsDTO dto){
+    public void modify(@RequestBody DietDTO dto){
         ModelMapper m=new ModelMapper();
-        Diets ci=m.map(dto,Diets.class);
+        Diet ci=m.map(dto, Diet.class);
         dS.update(ci);
     }
 
@@ -52,18 +53,18 @@ public class DietsController {
     }
 
     @GetMapping("/buscarcalificacion")
-    public List<DietsDTO> findByQualification(@RequestParam int qualification) {
+    public List<DietDTO> findByQualification(@RequestParam int qualification) {
         return dS.findByQualification(qualification).stream().map(x -> {
             ModelMapper m = new ModelMapper();
-            return m.map(x, DietsDTO.class);
+            return m.map(x, DietDTO.class);
         }).collect(Collectors.toList());
     }
 
     @GetMapping("/buscardescripcion")
-    public List<DietsDTO> findByDescription(@RequestParam String description) {
+    public List<DietDTO> findByDescription(@RequestParam String description) {
         return dS.findByDescription(description).stream().map(x -> {
             ModelMapper m = new ModelMapper();
-            return m.map(x, DietsDTO.class);
+            return m.map(x, DietDTO.class);
         }).collect(Collectors.toList());
     }
 

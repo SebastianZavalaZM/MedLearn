@@ -18,7 +18,7 @@ public interface IUserRepository extends JpaRepository<Users,Integer> {
     @Query(value = "" +
             "SELECT r.rol as rol, count(*) as usuarios\n" +
             "from users u inner join roles r\n" +
-            "on u.id_user = r.id_user\n" +
+            "on u.id_user = r.user_id\n" +
             "group by r.rol", nativeQuery = true)
     public List<String[]> cantidadUsuariosPorRol();
 }

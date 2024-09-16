@@ -13,7 +13,8 @@ public class Users implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUser;
-
+    @Column(name = "fullnameUser", nullable = false,length = 140)
+    private String fullnameUser;
     @Column(name = "username",nullable = false,length = 30)
     private String username;
     @Column(name = "password",nullable = false,length = 200)
@@ -34,13 +35,15 @@ public class Users implements Serializable {
     public Users() {
     }
 
-    public Users(int idUser, String username, String password, boolean enabled, String email, String certificationUser) {
+    public Users(int idUser, String fullnameUser, String username, String password, boolean enabled, String email, String certificationUser, List<Role> roles) {
         this.idUser = idUser;
+        this.fullnameUser = fullnameUser;
         this.username = username;
         this.password = password;
         this.enabled = enabled;
         this.email = email;
         this.certificationUser = certificationUser;
+        this.roles = roles;
     }
 
     public String getCertificationUser() {
@@ -49,6 +52,14 @@ public class Users implements Serializable {
 
     public void setCertificationUser(String certificationUser) {
         this.certificationUser = certificationUser;
+    }
+
+    public String getFullnameUser() {
+        return fullnameUser;
+    }
+
+    public void setFullnameUser(String fullnameUser) {
+        this.fullnameUser = fullnameUser;
     }
 
     public String getEmail() {

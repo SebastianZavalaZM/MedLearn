@@ -13,7 +13,7 @@ public interface IHospitalRepository extends JpaRepository<Hospital, Integer> {
     @Query("select h from Hospital h where h.nameHospital like %:nombre%")
     public List<Hospital> buscarNombre(@Param("nombre") String nombre);
 
-    @Query("select h from Hospital h order by h.counterviewsHospital DESC ")
+    @Query("select h from Hospital h order by h.counterViewsHospital DESC ")
     public List<Hospital> ordenarPorVistas();
 
 

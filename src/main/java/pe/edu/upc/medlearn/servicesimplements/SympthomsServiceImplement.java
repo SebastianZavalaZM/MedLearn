@@ -3,7 +3,7 @@ package pe.edu.upc.medlearn.servicesimplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upc.medlearn.entities.Sympthoms;
+import pe.edu.upc.medlearn.entities.Symptom;
 import pe.edu.upc.medlearn.repositories.ISympthomsRepository;
 import pe.edu.upc.medlearn.servicesinterfaces.ISympthomsService;
 
@@ -16,13 +16,13 @@ public class SympthomsServiceImplement implements ISympthomsService {
     private ISympthomsRepository sR;
 
     @Override
-    public List<Sympthoms> list() {
+    public List<Symptom> list() {
         return sR.findAll();
     }
 
     @Override
-    public void insert(Sympthoms sympthoms) {
-        sR.save(sympthoms);
+    public void insert(Symptom symptom) {
+        sR.save(symptom);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class SympthomsServiceImplement implements ISympthomsService {
     }
 
     @Override
-    public void update(Sympthoms ci) {
+    public void update(Symptom ci) {
         sR.save(ci);
     }
 

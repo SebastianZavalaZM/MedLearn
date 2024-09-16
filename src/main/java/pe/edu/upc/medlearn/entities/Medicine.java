@@ -9,74 +9,59 @@ public class Medicine {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int suple_id;
+    private int idMedicine;
 
-    @Column(name = "suple_description", nullable = false, length = 200)
-    private String supleDescription;
+    @Column(name = "descriptionMedicine", nullable = false, length = 200)
+    private String descriptionMedicine;
 
-    @Column(name = "suple_name", nullable = false, length = 30)
-    private String supleName;
-
-    @ManyToOne
-    @JoinColumn(name = "diet_id", nullable = false)
-    private Diets diet;
+    @Column(name = "nameMedicine", nullable = false, length = 100)
+    private String nameMedicine;
 
     @ManyToOne
-    @JoinColumn(name = "treatments_id", nullable = false)
-    private Treatments treatments;
+    @JoinColumn(name = "idTreatment")
+    private Treatment treatment;
 
     // Constructor vacío
     public Medicine() {
     }
 
-    // Constructor con parámetros
-    public Medicine(int suple_id, String supleDescription, String supleName, Diets diet, Treatments treatments) {
-        this.suple_id = suple_id;
-        this.supleDescription = supleDescription;
-        this.supleName = supleName;
-        this.diet = diet;
-        this.treatments = treatments;
+    public Medicine(int idMedicine, String descriptionMedicine, String nameMedicine, Treatment treatment) {
+        this.idMedicine = idMedicine;
+        this.descriptionMedicine = descriptionMedicine;
+        this.nameMedicine = nameMedicine;
+        this.treatment = treatment;
     }
 
-    // Getters y Setters
-    public int getSupleId() {
-        return suple_id;
+    public int getIdMedicine() {
+        return idMedicine;
     }
 
-    public void setSupleId(int suple_id) {
-        this.suple_id = suple_id;
+    public void setIdMedicine(int idMedicine) {
+        this.idMedicine = idMedicine;
     }
 
-    public String getSupleDescription() {
-        return supleDescription;
+    public String getDescriptionMedicine() {
+        return descriptionMedicine;
     }
 
-    public void setSupleDescription(String supleDescription) {
-        this.supleDescription = supleDescription;
+    public void setDescriptionMedicine(String descriptionMedicine) {
+        this.descriptionMedicine = descriptionMedicine;
     }
 
-    public String getSupleName() {
-        return supleName;
+    public String getNameMedicine() {
+        return nameMedicine;
     }
 
-    public void setSupleName(String supleName) {
-        this.supleName = supleName;
+    public void setNameMedicine(String nameMedicine) {
+        this.nameMedicine = nameMedicine;
     }
 
-    public Diets getDiet() {
-        return diet;
+    public Treatment getTreatment() {
+        return treatment;
     }
 
-    public void setDiet(Diets diet) {
-        this.diet = diet;
-    }
-
-    public Treatments getTreatments() {
-        return treatments;
-    }
-
-    public void setTreatments(Treatments treatments) {
-        this.treatments = treatments;
+    public void setTreatment(Treatment treatment) {
+        this.treatment = treatment;
     }
 }
 

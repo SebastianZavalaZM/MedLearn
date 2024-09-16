@@ -1,5 +1,6 @@
 package pe.edu.upc.medlearn.controllers;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/medicines")
+@RequestMapping("/medicinas")
+@SecurityRequirement(name = "javainuseapi")
 public class MedicineController {
 
     @Autowired
@@ -36,7 +38,7 @@ public class MedicineController {
     public void actualizar(@PathVariable("id") int id, @RequestBody MedicineDTO dto) {
         ModelMapper m = new ModelMapper();
         Medicine med = m.map(dto, Medicine.class);
-        med.setSupleId(id);
+        med.setIdMedicine(id);
         mS.update(med);
     }
 

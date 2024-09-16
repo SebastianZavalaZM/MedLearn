@@ -12,33 +12,33 @@ public class Hospital {
     private int idHospital;
     @Column(name = "nameHospital", nullable = false, length = 25)
     private String nameHospital;
-    @Column(name = "latitud", nullable = false)
-    private double latitud;
-    @Column(name = "longitud", nullable = false)
-    private double longitud;
-    @Column(name = "direccionHospital", nullable = false, length = 75)
-    private String direccionHospital;
+    @Column(name = "latitudHospital", nullable = false)
+    private double latitudHospital;
+    @Column(name = "longitudHospital", nullable = false)
+    private double longitudHospital;
+    @Column(name = "addressHospital", nullable = false, length = 75)
+    private String addressHospital;
     @Column(name = "contactHospital", nullable = false, length = 15)
     private String contactHospital;
-    @Column(name = "counterviewsHospital", nullable = false)
-    private int counterviewsHospital;
+    @Column(name = "counterViewsHospital", nullable = false)
+    private int counterViewsHospital;
 
     @OneToOne
-    @JoinColumn(name = "idUser")
-    private Users us;
+    @JoinColumn(name = "id_user")
+    private Users user;
 
     public Hospital() {
     }
 
-    public Hospital(int idHospital, String nameHospital, double latitud, double longitud, String direccionHospital, String contactHospital, int counterviewsHospital, Users us) {
+    public Hospital(int idHospital, String nameHospital, double latitudHospital, double longitudHospital, String addressHospital, String contactHospital, int counterViewsHospital, Users user) {
         this.idHospital = idHospital;
         this.nameHospital = nameHospital;
-        this.latitud = latitud;
-        this.longitud = longitud;
-        this.direccionHospital = direccionHospital;
+        this.latitudHospital = latitudHospital;
+        this.longitudHospital = longitudHospital;
+        this.addressHospital = addressHospital;
         this.contactHospital = contactHospital;
-        this.counterviewsHospital = counterviewsHospital;
-        this.us = us;
+        this.counterViewsHospital = counterViewsHospital;
+        this.user = user;
     }
 
     public int getIdHospital() {
@@ -57,28 +57,28 @@ public class Hospital {
         this.nameHospital = nameHospital;
     }
 
-    public double getLatitud() {
-        return latitud;
+    public double getLatitudHospital() {
+        return latitudHospital;
     }
 
-    public void setLatitud(double latitud) {
-        this.latitud = latitud;
+    public void setLatitudHospital(double latitudHospital) {
+        this.latitudHospital = latitudHospital;
     }
 
-    public double getLongitud() {
-        return longitud;
+    public double getLongitudHospital() {
+        return longitudHospital;
     }
 
-    public void setLongitud(double longitud) {
-        this.longitud = longitud;
+    public void setLongitudHospital(double longitudHospital) {
+        this.longitudHospital = longitudHospital;
     }
 
-    public String getDireccionHospital() {
-        return direccionHospital;
+    public String getAddressHospital() {
+        return addressHospital;
     }
 
-    public void setDireccionHospital(String direccionHospital) {
-        this.direccionHospital = direccionHospital;
+    public void setAddressHospital(String addressHospital) {
+        this.addressHospital = addressHospital;
     }
 
     public String getContactHospital() {
@@ -89,19 +89,19 @@ public class Hospital {
         this.contactHospital = contactHospital;
     }
 
-    public int getCounterviewsHospital() {
-        return counterviewsHospital;
+    public int getCounterViewsHospital() {
+        return counterViewsHospital;
     }
 
-    public void setCounterviewsHospital(int counterviewsHospital) {
-        this.counterviewsHospital = counterviewsHospital;
+    public void setCounterViewsHospital(int counterViewsHospital) {
+        this.counterViewsHospital = counterViewsHospital;
     }
 
-    public Users getUs() {
-        return us;
+    public Users getUser() {
+        return user;
     }
 
-    public void setUs(Users us) {
-        this.us = us;
+    public void setUser(Users user) {
+        this.user = user;
     }
 }

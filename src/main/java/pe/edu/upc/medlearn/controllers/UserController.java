@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.QuantityUsersByRolDTO;
 import pe.edu.upc.medlearn.dtos.UserDTO;
@@ -14,14 +15,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestController("/usuario")
+@RestController("/usuarios")
 @PreAuthorize("hasAuthority('ADMIN')")
 @SecurityRequirement(name = "javainuseapi")
 public class UserController {
     @Autowired
     private IUserService uS;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
-    @GetMapping
+    @GetMapping("/listado")
     public List<UserDTO> listar() {
         return uS.list().stream().map(x -> {
             ModelMapper m = new ModelMapper();
@@ -29,10 +32,12 @@ public class UserController {
         }).collect(Collectors.toList());
     }
 
-    @PostMapping
+    @PostMapping("/crear")
     public void insert(@RequestBody UserDTO dto) {
         ModelMapper m = new ModelMapper();
         Users user = m.map(dto, Users.class);
+        String encodedPassword = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encodedPassword);
         uS.insert(user);
     }
     @GetMapping("/{id}")
@@ -42,14 +47,14 @@ public class UserController {
         return dto;
     }
     @GetMapping("/buscarpornombre")
-    public List<UserDTO>buscar(String name){
+    public List<UserDTO>buscar(@RequestParam String name){
         return uS.search(name).stream().map(x->{
             ModelMapper m=new ModelMapper();
             return m.map(x,UserDTO.class);
         }).collect(Collectors.toList());
     }
 
-    //@GetMapping("controldeusuarios")
+    @GetMapping("/controldeusuarios")
     public List<QuantityUsersByRolDTO> usuariosPorRol(){
         List<String[]> filaLista = uS.cantidadUsuariosPorRol();
         List<QuantityUsersByRolDTO> dtoLista = new ArrayList<>();

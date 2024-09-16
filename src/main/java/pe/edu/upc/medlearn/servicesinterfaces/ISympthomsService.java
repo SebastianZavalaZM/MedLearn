@@ -1,16 +1,16 @@
 package pe.edu.upc.medlearn.servicesinterfaces;
 
 
-import pe.edu.upc.medlearn.entities.Sympthoms;
+import pe.edu.upc.medlearn.entities.Symptom;
 
 import java.util.List;
 
 public interface ISympthomsService {
-    public List<Sympthoms> list();
+    public List<Symptom> list();
 
-    public void insert(Sympthoms sympthoms);
+    public void insert(Symptom symptom);
 
     public void delete(int id);
 
-    void update(Sympthoms ci);
+    void update(Symptom ci);
 }

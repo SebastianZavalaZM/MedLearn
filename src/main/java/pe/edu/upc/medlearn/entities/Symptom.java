@@ -1,14 +1,32 @@
-package pe.edu.upc.medlearn.dtos;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import pe.edu.upc.medlearn.entities.Illness;
+package pe.edu.upc.medlearn.entities;
+import jakarta.persistence.*;
 
-public class SympthomsDTO {
+@Entity
+@Table(name = "Symptom")
+public class Symptom {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idSymptom;
+
+    @Column(name = "nameSymptom",nullable = false,length = 70)
     private String nameSymptom;
+
+    @Column(name = "searchesSymptom",nullable = false)
     private int searchesSymptom;
+
+    @ManyToOne
+    @JoinColumn(name = "idIllness")
     private Illness illness;
+
+    public Symptom() {
+    }
+
+    public Symptom(int idSymptom, String nameSymptom, int searchesSymptom, Illness illness) {
+        this.idSymptom = idSymptom;
+        this.nameSymptom = nameSymptom;
+        this.searchesSymptom = searchesSymptom;
+        this.illness = illness;
+    }
 
     public int getIdSymptom() {
         return idSymptom;

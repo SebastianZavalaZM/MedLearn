@@ -1,54 +1,46 @@
 package pe.edu.upc.medlearn.dtos;
 
-import pe.edu.upc.medlearn.entities.Diets;
-import pe.edu.upc.medlearn.entities.Treatments;
+import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import pe.edu.upc.medlearn.entities.Diet;
+import pe.edu.upc.medlearn.entities.Treatment;
 
 public class MedicineDTO {
-    private int suple_id;
-    private String suple_description;
-    private String suple_name;
-    private Diets diet;
-    private Treatments treatments;
+    private int idMedicine;
+    private String descriptionMedicine;
+    private String nameMedicine;
+    private Treatment treatment;
 
-    // Getters y Setters
-
-    public int getSupleId() {
-        return suple_id;
+    public int getIdMedicine() {
+        return idMedicine;
     }
 
-    public void setSupleId(int suple_id) {
-        this.suple_id = suple_id;
+    public void setIdMedicine(int idMedicine) {
+        this.idMedicine = idMedicine;
     }
 
-    public String getSupleDescription() {
-        return suple_description;
+    public String getDescriptionMedicine() {
+        return descriptionMedicine;
     }
 
-    public void setSupleDescription(String suple_description) {
-        this.suple_description = suple_description;
+    public void setDescriptionMedicine(String descriptionMedicine) {
+        this.descriptionMedicine = descriptionMedicine;
     }
 
-    public String getSupleName() {
-        return suple_name;
+    public String getNameMedicine() {
+        return nameMedicine;
     }
 
-    public void setSupleName(String suple_name) {
-        this.suple_name = suple_name;
+    public void setNameMedicine(String nameMedicine) {
+        this.nameMedicine = nameMedicine;
     }
 
-    public Diets getDiet() {
-        return diet;
+    public Treatment getTreatment() {
+        return treatment;
     }
 
-    public void setDiet(Diets diet) {
-        this.diet = diet;
-    }
-
-    public Treatments getTreatments() {
-        return treatments;
-    }
-
-    public void setTreatments(Treatments treatments) {
-        this.treatments = treatments;
+    public void setTreatment(Treatment treatment) {
+        this.treatment = treatment;
     }
 }
