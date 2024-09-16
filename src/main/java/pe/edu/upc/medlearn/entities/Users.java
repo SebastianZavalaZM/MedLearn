@@ -2,6 +2,7 @@ package pe.edu.upc.medlearn.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 import java.io.Serializable;
 import java.util.List;
