@@ -19,7 +19,7 @@ public class TreatmentsController {
     @Autowired
     private ITreatmentsService tS;
 
-    @GetMapping
+    @GetMapping("/listado")
     public List<TreatmentsDTO> listar() {
         return tS.list().stream().map(x -> {
             ModelMapper m = new ModelMapper();
@@ -27,7 +27,7 @@ public class TreatmentsController {
         }).collect(Collectors.toList());
     }
 
-    @PostMapping
+    @PostMapping("/registrar")
     public void insertar(@RequestBody TreatmentsDTO dto) {
         ModelMapper m = new ModelMapper();
         Treatment tr = m.map(dto, Treatment.class);
@@ -35,14 +35,13 @@ public class TreatmentsController {
     }
 
     @PutMapping("/actualizar")
-    public void actualizar(@PathVariable("id") int id, @RequestBody TreatmentsDTO dto) {
+    public void actualizar( @RequestBody TreatmentsDTO dto) {
         ModelMapper m = new ModelMapper();
         Treatment tr = m.map(dto, Treatment.class);
-        tr.setIdTreatment(id);
         tS.update(tr);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{id}")
     public void eliminar(@PathVariable("id") int id) {
         tS.delete(id);
     }

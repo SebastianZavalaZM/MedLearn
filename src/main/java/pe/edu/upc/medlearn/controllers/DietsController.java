@@ -33,7 +33,7 @@ public class DietsController {
         dS.insert(ci);
     }
 
-    @PutMapping("/{id}")
+    @GetMapping("/{id}")
     public DietDTO listId(@PathVariable("id") Integer id){
         ModelMapper m= new ModelMapper();
         DietDTO dto=m.map(dS.listId(id), DietDTO.class);

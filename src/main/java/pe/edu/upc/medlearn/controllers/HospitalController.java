@@ -19,14 +19,14 @@ public class HospitalController {
     private IHospitalService hS;
 
     //HUB04:Listar hospitales
-    @GetMapping
+    @GetMapping("/listado")
     public List<HospitalDTO>listar(){
         return hS.list().stream().map(x->{
             ModelMapper m = new ModelMapper();
             return m.map(x,HospitalDTO.class);
         }).collect(Collectors.toList());
     }
-    @PostMapping
+    @PostMapping("crear")
     public void insertar(@RequestBody HospitalDTO dto){
         ModelMapper m = new ModelMapper();
         Hospital ho=m.map(dto,Hospital.class);
@@ -38,7 +38,7 @@ public class HospitalController {
         HospitalDTO dto=m.map(hS.listId(id), HospitalDTO.class);
         return dto;
     }
-    @PutMapping
+    @PutMapping("/modificar")
     public void modificar(@RequestBody HospitalDTO dto){
         ModelMapper m=new ModelMapper();
         Hospital ho=m.map(dto,Hospital.class);
@@ -56,7 +56,7 @@ public class HospitalController {
         }).collect(Collectors.toList());
     }
 
-    @GetMapping("/listaordenada")
+    @GetMapping("/listaordenadaporvistas")
     public List<HospitalDTO>ordenadoporVistas(){
         return hS.ordenarPorVistas().stream().map(x->{
             ModelMapper m = new ModelMapper();

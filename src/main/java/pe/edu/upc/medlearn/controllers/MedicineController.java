@@ -34,11 +34,10 @@ public class MedicineController {
         mS.insert(med);
     }
 
-    @PutMapping("/actualizar/{id}")
-    public void actualizar(@PathVariable("id") int id, @RequestBody MedicineDTO dto) {
+    @PutMapping("/actualizar")
+    public void actualizar( @RequestBody MedicineDTO dto) {
         ModelMapper m = new ModelMapper();
         Medicine med = m.map(dto, Medicine.class);
-        med.setIdMedicine(id);
         mS.update(med);
     }
 

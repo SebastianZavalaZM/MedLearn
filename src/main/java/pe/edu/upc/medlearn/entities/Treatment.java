@@ -27,17 +27,22 @@ public class Treatment {
     @JoinColumn(name = "id_user")
     private Users users;
 
+    @ManyToOne
+    @JoinColumn(name = "idIllness")
+    private Illness illness;
+
 
     public Treatment() {
     }
 
-    public Treatment(int idTreatment, String descriptionTreatment, int durationTreatment, LocalDate startDayTreatment, LocalDate finishDay, Users users) {
+    public Treatment(int idTreatment, String descriptionTreatment, int durationTreatment, LocalDate startDayTreatment, LocalDate finishDay, Users users, Illness illness) {
         this.idTreatment = idTreatment;
         this.descriptionTreatment = descriptionTreatment;
         this.durationTreatment = durationTreatment;
         this.startDayTreatment = startDayTreatment;
         this.finishDay = finishDay;
         this.users = users;
+        this.illness = illness;
     }
 
     public int getIdTreatment() {
@@ -86,5 +91,13 @@ public class Treatment {
 
     public void setUsers(Users users) {
         this.users = users;
+    }
+
+    public Illness getIllness() {
+        return illness;
+    }
+
+    public void setIllness(Illness illness) {
+        this.illness = illness;
     }
 }
