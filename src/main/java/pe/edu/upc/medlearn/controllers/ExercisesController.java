@@ -5,6 +5,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.ExercisesDTO;
+import pe.edu.upc.medlearn.dtos.TotaldeexercisesbyDietas;
 import pe.edu.upc.medlearn.entities.Exercise;
 import pe.edu.upc.medlearn.servicesinterfaces.IExercisesService;
 

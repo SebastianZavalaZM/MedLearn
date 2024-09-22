@@ -13,18 +13,12 @@ public interface IExercisesRepository extends JpaRepository<Exercise,Integer> {
     @Query("Select e from Exercise e where e.nameExercise like %:nombre%")
     public List<Exercise> buscarNombre(@Param("nombre") String nombre);
 
-    public List<Exercises> buscarNombre(@Param("nombre") String nombre);
-    @Query(value="SELECT \n" +
-            "    d.id_diet,\n" +
-            "    d.description,\n" +
-            "    COUNT(e.id_exercises) AS total_ejercicios_by_dieta\n" +
-            "FROM \n" +
-            "    Exercises e\n" +
-            "JOIN \n" +
-            "    Diets d ON e.id_diet = d.id_diet\n" +
-            "GROUP BY \n" +
-            "    d.id_diet, d.description  -- Se añadió d.description al GROUP BY\n" +
-            "ORDER BY \n" +
-            "    d.description, total_ejercicios_by_dieta DESC;", nativeQuery=true)
+    @Query(value="" +
+            " SELECT d.diet_id, d.description_diet, \n" +
+            " COUNT(e.id_exercise) AS total_ejercicios_by_dieta\n" +
+            " FROM exercise e\n" +
+            " JOIN diet d ON d.diet_id = e.id_diet\n" +
+            " GROUP BY d.diet_id, d.description_diet  -- Se añadió d.description al GROUP BY\n" +
+            " ORDER BY d.description_diet DESC", nativeQuery=true)
     public List<String[]>totaldeexercisesbydiets();
 }
