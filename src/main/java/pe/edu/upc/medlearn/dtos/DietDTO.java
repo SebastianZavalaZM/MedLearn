@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 
 public class DietDTO {
-    private int dietId;
+    private int idDiet;
     private String descriptionDiet;
     private int durationDiet;
     private int qualificationDiet;
@@ -16,12 +16,12 @@ public class DietDTO {
     private Illness illness;
     private Users user;
 
-    public int getDietId() {
-        return dietId;
+    public int getIdDiet() {
+        return idDiet;
     }
 
-    public void setDietId(int dietId) {
-        this.dietId = dietId;
+    public void setIdDiet(int idDiet) {
+        this.idDiet = idDiet;
     }
 
     public String getDescriptionDiet() {

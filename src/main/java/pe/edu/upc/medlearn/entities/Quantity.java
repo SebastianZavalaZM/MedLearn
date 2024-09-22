@@ -10,25 +10,26 @@ public class Quantity {
     private int idQuantity;
     @Column(name = "quantity",nullable = false)
     private int quantity;
+
     @ManyToOne
     @JoinColumn(name = "idFood")
-    private Food foodId;
+    private Food food;
     @ManyToOne
-    @JoinColumn(name = "idExercises")
-    private Exercise exerciseId;
+    @JoinColumn(name = "idExercise")
+    private Exercise exercise;
     @ManyToOne
     @JoinColumn(name="idMedicine")
-    private Medicine idMedicine;
+    private Medicine medicine;
 
     public Quantity() {
     }
 
-    public Quantity(int idQuantity, int quantity, Food foodId, Exercise exerciseId, Medicine idMedicine) {
+    public Quantity(int idQuantity, int quantity, Food food, Exercise exercise, Medicine medicine) {
         this.idQuantity = idQuantity;
         this.quantity = quantity;
-        this.foodId = foodId;
-        this.exerciseId = exerciseId;
-        this.idMedicine = idMedicine;
+        this.food = food;
+        this.exercise = exercise;
+        this.medicine = medicine;
     }
 
     public int getIdQuantity() {
@@ -47,27 +48,27 @@ public class Quantity {
         this.quantity = quantity;
     }
 
-    public Food getFoodId() {
-        return foodId;
+    public Food getFood() {
+        return food;
     }
 
-    public void setFoodId(Food foodId) {
-        this.foodId = foodId;
+    public void setFood(Food food) {
+        this.food = food;
     }
 
-    public Exercise getExerciseId() {
-        return exerciseId;
+    public Exercise getExercise() {
+        return exercise;
     }
 
-    public void setExerciseId(Exercise exerciseId) {
-        this.exerciseId = exerciseId;
+    public void setExercise(Exercise exercise) {
+        this.exercise = exercise;
     }
 
-    public Medicine getIdMedicine() {
-        return idMedicine;
+    public Medicine getMedicine() {
+        return medicine;
     }
 
-    public void setIdMedicine(Medicine idMedicine) {
-        this.idMedicine = idMedicine;
+    public void setMedicine(Medicine medicine) {
+        this.medicine = medicine;
     }
 }

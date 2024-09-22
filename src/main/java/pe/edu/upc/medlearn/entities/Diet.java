@@ -11,7 +11,7 @@ public class Diet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int dietId;
+    private int idDiet;
 
     @Column(name = "descriptionDiet", nullable = false, length = 200)
     private String descriptionDiet;
@@ -35,8 +35,8 @@ public class Diet {
     public Diet() {
     }
 
-    public Diet(int dietId, String descriptionDiet, int durationDiet, int qualificationDiet, LocalDate startDayDiet, LocalDate finishdayDiet, Illness illness, Users user) {
-        this.dietId = dietId;
+    public Diet(int idDiet, String descriptionDiet, int durationDiet, int qualificationDiet, LocalDate startDayDiet, LocalDate finishdayDiet, Illness illness, Users user) {
+        this.idDiet = idDiet;
         this.descriptionDiet = descriptionDiet;
         this.durationDiet = durationDiet;
         this.qualificationDiet = qualificationDiet;
@@ -46,12 +46,12 @@ public class Diet {
         this.user = user;
     }
 
-    public int getDietId() {
-        return dietId;
+    public int getIdDiet() {
+        return idDiet;
     }
 
-    public void setDietId(int dietId) {
-        this.dietId = dietId;
+    public void setIdDiet(int dietId) {
+        this.idDiet = dietId;
     }
 
     public String getDescriptionDiet() {

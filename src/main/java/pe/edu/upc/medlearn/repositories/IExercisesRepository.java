@@ -14,11 +14,11 @@ public interface IExercisesRepository extends JpaRepository<Exercise,Integer> {
     public List<Exercise> buscarNombre(@Param("nombre") String nombre);
 
     @Query(value="" +
-            " SELECT d.diet_id, d.description_diet, \n" +
+            " SELECT d.id_diet, d.description_diet, \n" +
             " COUNT(e.id_exercise) AS total_ejercicios_by_dieta\n" +
             " FROM exercise e\n" +
-            " JOIN diet d ON d.diet_id = e.id_diet\n" +
-            " GROUP BY d.diet_id, d.description_diet  -- Se añadió d.description al GROUP BY\n" +
+            " JOIN diet d ON d.id_diet = e.id_diet\n" +
+            " GROUP BY d.id_diet, d.description_diet  -- Se añadió d.description al GROUP BY\n" +
             " ORDER BY d.description_diet DESC", nativeQuery=true)
     public List<String[]>totaldeexercisesbydiets();
 }
