@@ -1,6 +1,5 @@
 package pe.edu.upc.medlearn.entities;
 
-
 import jakarta.persistence.*;
 
 @Entity
@@ -18,50 +17,15 @@ public class Medicine {
     private String nameMedicine;
 
     @ManyToOne
-    @JoinColumn(name = "idTreatment")
+    @JoinColumn(name = "diet_id", nullable = false)
+    private Diet diet;
+
+    @ManyToOne
+    @JoinColumn(name = "treatments_id", nullable = false)
     private Treatment treatment;
 
     // Constructor vacío
     public Medicine() {
     }
 
-    public Medicine(int idMedicine, String descriptionMedicine, String nameMedicine, Treatment treatment) {
-        this.idMedicine = idMedicine;
-        this.descriptionMedicine = descriptionMedicine;
-        this.nameMedicine = nameMedicine;
-        this.treatment = treatment;
-    }
-
-    public int getIdMedicine() {
-        return idMedicine;
-    }
-
-    public void setIdMedicine(int idMedicine) {
-        this.idMedicine = idMedicine;
-    }
-
-    public String getDescriptionMedicine() {
-        return descriptionMedicine;
-    }
-
-    public void setDescriptionMedicine(String descriptionMedicine) {
-        this.descriptionMedicine = descriptionMedicine;
-    }
-
-    public String getNameMedicine() {
-        return nameMedicine;
-    }
-
-    public void setNameMedicine(String nameMedicine) {
-        this.nameMedicine = nameMedicine;
-    }
-
-    public Treatment getTreatment() {
-        return treatment;
-    }
-
-    public void setTreatment(Treatment treatment) {
-        this.treatment = treatment;
-    }
 }
-

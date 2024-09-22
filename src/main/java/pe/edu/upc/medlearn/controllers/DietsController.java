@@ -19,7 +19,7 @@ public class DietsController {
     private IDietsService dS;
 
     @GetMapping
-    public List<DietDTO>list(){
+    public List<DietDTO>listar(){
         return dS.list().stream().map(x->{
             ModelMapper m= new ModelMapper();
             return  m.map(x, DietDTO.class);
@@ -34,26 +34,26 @@ public class DietsController {
     }
 
     @GetMapping("/{id}")
-    public DietDTO listId(@PathVariable("id") Integer id){
+    public DietDTO listarId(@PathVariable("id") Integer id){
         ModelMapper m= new ModelMapper();
         DietDTO dto=m.map(dS.listId(id), DietDTO.class);
         return dto;
     }
 
     @PutMapping
-    public void modify(@RequestBody DietDTO dto){
+    public void modificar(@RequestBody DietDTO dto){
         ModelMapper m=new ModelMapper();
         Diet ci=m.map(dto, Diet.class);
         dS.update(ci);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") Integer id){
+    public void eliminar(@PathVariable("id") Integer id){
         dS.delete(id);
     }
 
     @GetMapping("/buscarcalificacion")
-    public List<DietDTO> findByQualification(@RequestParam int qualification) {
+    public List<DietDTO> buscarCalificacion(@RequestParam int qualification) {
         return dS.findByQualification(qualification).stream().map(x -> {
             ModelMapper m = new ModelMapper();
             return m.map(x, DietDTO.class);
@@ -61,7 +61,7 @@ public class DietsController {
     }
 
     @GetMapping("/buscardescripcion")
-    public List<DietDTO> findByDescription(@RequestParam String description) {
+    public List<DietDTO> buscarDescripcion(@RequestParam String description) {
         return dS.findByDescription(description).stream().map(x -> {
             ModelMapper m = new ModelMapper();
             return m.map(x, DietDTO.class);

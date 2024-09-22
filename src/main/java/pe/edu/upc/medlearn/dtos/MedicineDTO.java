@@ -10,6 +10,7 @@ public class MedicineDTO {
     private int idMedicine;
     private String descriptionMedicine;
     private String nameMedicine;
+    private Diet diet;
     private Treatment treatment;
 
     public int getIdMedicine() {
@@ -36,11 +37,19 @@ public class MedicineDTO {
         this.nameMedicine = nameMedicine;
     }
 
-    public Treatment getTreatment() {
+    public Diet getDiet() {
+        return diet;
+    }
+
+    public void setDiet(Diet diet) {
+        this.diet = diet;
+    }
+
+    public Treatment getTreatments() {
         return treatment;
     }
 
-    public void setTreatment(Treatment treatment) {
+    public void setTreatments(Treatment treatment) {
         this.treatment = treatment;
     }
 }

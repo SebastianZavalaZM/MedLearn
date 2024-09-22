@@ -5,7 +5,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.MedicineDTO;
+import pe.edu.upc.medlearn.entities.Diet;
 import pe.edu.upc.medlearn.entities.Medicine;
+import pe.edu.upc.medlearn.repositories.IDietRepository;
 import pe.edu.upc.medlearn.servicesinterfaces.IMedicineService;
 
 import java.util.List;
@@ -18,6 +20,8 @@ public class MedicineController {
 
     @Autowired
     private IMedicineService mS;
+    @Autowired
+    private IDietRepository dietRepository;
 
     @GetMapping
     public List<MedicineDTO> listar() {
@@ -31,6 +35,14 @@ public class MedicineController {
     public void insertar(@RequestBody MedicineDTO dto) {
         ModelMapper m = new ModelMapper();
         Medicine med = m.map(dto, Medicine.class);
+
+        // Verificar que el Diet en el DTO no sea null
+        if (dto.getDiet() != null && dto.getDiet().getId_Diet() > 0) {
+            Diet diet = dietRepository.findById(dto.getDiet().getId_Diet())
+                    .orElseThrow(() -> new RuntimeException("Diet not found"));
+            med.setDiet(diet);
+        }
+
         mS.insert(med);
     }
 
