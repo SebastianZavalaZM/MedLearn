@@ -28,12 +28,12 @@ public class Food {
     private int sodiumFood;
     @ManyToOne
     @JoinColumn(name = "id_diet")
-    private Diets idDiet;
+    private Diet idDiet;
 
     public Food() {
     }
 
-    public Food(int idFood, String nameFood, int portionFood, String typeQuantityFood, int proteinsFood, int fatsFood, int carbohydratesFood, int fiberFood, int cholesterolFood, int sodiumFood, Diets idDiet) {
+    public Food(int idFood, String nameFood, int portionFood, String typeQuantityFood, int proteinsFood, int fatsFood, int carbohydratesFood, int fiberFood, int cholesterolFood, int sodiumFood, Diet idDiet) {
         this.idFood = idFood;
         this.nameFood = nameFood;
         this.portionFood = portionFood;
@@ -127,11 +127,11 @@ public class Food {
         this.sodiumFood = sodiumFood;
     }
 
-    public Diets getIdDiet() {
+    public Diet getIdDiet() {
         return idDiet;
     }
 
-    public void setIdDiet(Diets idDiet) {
+    public void setIdDiet(Diet idDiet) {
         this.idDiet = idDiet;
     }
 }

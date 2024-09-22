@@ -15,7 +15,7 @@ public class Quantity {
     private Food foodId;
     @ManyToOne
     @JoinColumn(name = "idExercises")
-    private Exercises exerciseId;
+    private Exercise exerciseId;
     @ManyToOne
     @JoinColumn(name="idMedicine")
     private Medicine idMedicine;
@@ -23,7 +23,7 @@ public class Quantity {
     public Quantity() {
     }
 
-    public Quantity(int idQuantity, int quantity, Food foodId, Exercises exerciseId, Medicine idMedicine) {
+    public Quantity(int idQuantity, int quantity, Food foodId, Exercise exerciseId, Medicine idMedicine) {
         this.idQuantity = idQuantity;
         this.quantity = quantity;
         this.foodId = foodId;
@@ -55,11 +55,11 @@ public class Quantity {
         this.foodId = foodId;
     }
 
-    public Exercises getExerciseId() {
+    public Exercise getExerciseId() {
         return exerciseId;
     }
 
-    public void setExerciseId(Exercises exerciseId) {
+    public void setExerciseId(Exercise exerciseId) {
         this.exerciseId = exerciseId;
     }
 

@@ -1,18 +1,18 @@
 package pe.edu.upc.medlearn.dtos;
 
-import pe.edu.upc.medlearn.entities.Diets;
+import pe.edu.upc.medlearn.entities.Diet;
 
 public class ExercisesDTO {
     private int idExercises;
     private String nameExercises;
     private int setsExercises;
-    private Diets di;
+    private Diet di;
 
-    public Diets getDi() {
+    public Diet getDi() {
         return di;
     }
 
-    public void setDi(Diets di) {
+    public void setDi(Diet di) {
         this.di = di;
     }
 

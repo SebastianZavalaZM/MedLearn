@@ -1,5 +1,5 @@
 package pe.edu.upc.medlearn.dtos;
-import pe.edu.upc.medlearn.entities.Diets;
+import pe.edu.upc.medlearn.entities.Diet;
 
 public class FoodDTO {
     private int idFood;
@@ -12,7 +12,7 @@ public class FoodDTO {
     private int fiberFood;
     private int cholesterolFood;
     private int sodiumFood;
-    private Diets idDiet;
+    private Diet idDiet;
 
     public int getIdFood() {
         return idFood;
@@ -94,11 +94,11 @@ public class FoodDTO {
         this.sodiumFood = sodiumFood;
     }
 
-    public Diets getIdDiet() {
+    public Diet getIdDiet() {
         return idDiet;
     }
 
-    public void setIdDiet(Diets idDiet) {
+    public void setIdDiet(Diet idDiet) {
         this.idDiet = idDiet;
     }
 }

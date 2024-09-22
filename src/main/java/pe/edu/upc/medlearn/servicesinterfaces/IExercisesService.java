@@ -1,15 +1,14 @@
 package pe.edu.upc.medlearn.servicesinterfaces;
 
-import org.springframework.data.repository.query.Param;
-import pe.edu.upc.medlearn.entities.Exercises;
+import pe.edu.upc.medlearn.entities.Exercise;
 
 import java.util.List;
 
 public interface IExercisesService  {
-    public List<Exercises> list();
-    public void insert(Exercises exercises);
-    public Exercises listId(int id);
+    public List<Exercise> list();
+    public void insert(Exercise exercise);
+    public Exercise listId(int id);
     public void delete(int id);
-    public List<Exercises> buscarNombre(String nombre);
+    public List<Exercise> buscarNombre(String nombre);
     public List<String[]>totaldeexercisesbyDietas();
 }

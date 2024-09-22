@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "Diets")
-public class Diets {
+public class Diet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idDiet;
@@ -21,10 +21,10 @@ public class Diets {
     @Column(name = "end_day",nullable = false)
     private LocalDate end_day;
 
-    public Diets() {
+    public Diet() {
     }
 
-    public Diets(int idDiet, String description, int duration, int qualification, LocalDate start_day, LocalDate end_day) {
+    public Diet(int idDiet, String description, int duration, int qualification, LocalDate start_day, LocalDate end_day) {
         this.idDiet = idDiet;
         this.description = description;
         this.duration = duration;

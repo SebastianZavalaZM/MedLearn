@@ -1,6 +1,6 @@
 package pe.edu.upc.medlearn.dtos;
 
-import pe.edu.upc.medlearn.entities.Exercises;
+import pe.edu.upc.medlearn.entities.Exercise;
 import pe.edu.upc.medlearn.entities.Food;
 import pe.edu.upc.medlearn.entities.Medicine;
 
@@ -8,7 +8,7 @@ public class QuantityDTO {
     private int idQuantity;
     private int quantity;
     private Food foodId;
-    private Exercises exerciseId;
+    private Exercise exerciseId;
     private Medicine idMedicine;
 
     public int getIdQuantity() {
@@ -35,11 +35,11 @@ public class QuantityDTO {
         this.foodId = foodId;
     }
 
-    public Exercises getExerciseId() {
+    public Exercise getExerciseId() {
         return exerciseId;
     }
 
-    public void setExerciseId(Exercises exerciseId) {
+    public void setExerciseId(Exercise exerciseId) {
         this.exerciseId = exerciseId;
     }
 
