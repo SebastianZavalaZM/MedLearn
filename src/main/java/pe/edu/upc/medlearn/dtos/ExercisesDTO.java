@@ -1,31 +1,42 @@
 package pe.edu.upc.medlearn.dtos;
 
+import pe.edu.upc.medlearn.entities.Diet;
+
 public class ExercisesDTO {
-    private int idExercises;
-    private String nameExercises;
-    private int setsExercises;
+    private int idExercise;
+    private String nameExercise;
+    private int setsExercise;
+    private Diet diet;
 
-    public int getIdExercises() {
-        return idExercises;
+    public int getIdExercise() {
+        return idExercise;
     }
 
-    public void setIdExercises(int idExercises) {
-        this.idExercises = idExercises;
+    public void setIdExercise(int idExercise) {
+        this.idExercise = idExercise;
     }
 
-    public String getNameExercises() {
-        return nameExercises;
+    public String getNameExercise() {
+        return nameExercise;
     }
 
-    public void setNameExercises(String nameExercises) {
-        this.nameExercises = nameExercises;
+    public void setNameExercise(String nameExercise) {
+        this.nameExercise = nameExercise;
     }
 
-    public int getSetsExercises() {
-        return setsExercises;
+    public int getSetsExercise() {
+        return setsExercise;
     }
 
-    public void setSetsExercises(int setsExercises) {
-        this.setsExercises = setsExercises;
+    public void setSetsExercise(int setsExercise) {
+        this.setsExercise = setsExercise;
+    }
+
+    public Diet getDiet() {
+        return diet;
+    }
+
+    public void setDiet(Diet diet) {
+        this.diet = diet;
     }
 }

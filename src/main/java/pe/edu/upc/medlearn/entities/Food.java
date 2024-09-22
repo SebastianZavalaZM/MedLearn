@@ -10,20 +10,43 @@ public class Food {
     private int idFood;
     @Column(name = "nameFood",nullable = false,length = 100)
     private String nameFood;
-    @Column(name = "quantityFood",nullable = false)
-    private int quantityFood;
-    @Column(name = "nutricionalFactsFood",nullable = false)
-    private int nutricionalFactsFood;
-    //private Diets idDiet;
+    @Column(name = "portionFood", nullable = false)
+    private int portionFood;
+    @Column(name = "typeQuantityFood", nullable = false, length = 10)
+    private String typeQuantityFood;
+    @Column(name = "proteinsFood", nullable = false)
+    private int proteinsFood;
+    @Column(name = "fatsFood",nullable = false)
+    private int fatsFood;
+    @Column(name = "carbohydratesFood", nullable = false)
+    private int carbohydratesFood;
+    @Column(name = "fiberFood", nullable = false)
+    private int fiberFood;
+    @Column(name = "cholesterolFood", nullable = false)
+    private int cholesterolFood;
+    @Column(name = ("sodiumFood"), nullable = false)
+    private int sodiumFood;
+
+    @ManyToOne
+    @JoinColumn(name = "idDiet")
+    private Diet diet;
+
 
     public Food() {
     }
 
-    public Food(int idFood, String nameFood, int quantityFood, int nutricionalFactsFood) {
+    public Food(int idFood, String nameFood, int portionFood, String typeQuantityFood, int proteinsFood, int fatsFood, int carbohydratesFood, int fiberFood, int cholesterolFood, int sodiumFood, Diet diet) {
         this.idFood = idFood;
         this.nameFood = nameFood;
-        this.quantityFood = quantityFood;
-        this.nutricionalFactsFood = nutricionalFactsFood;
+        this.portionFood = portionFood;
+        this.typeQuantityFood = typeQuantityFood;
+        this.proteinsFood = proteinsFood;
+        this.fatsFood = fatsFood;
+        this.carbohydratesFood = carbohydratesFood;
+        this.fiberFood = fiberFood;
+        this.cholesterolFood = cholesterolFood;
+        this.sodiumFood = sodiumFood;
+        this.diet = diet;
     }
 
     public int getIdFood() {
@@ -42,19 +65,75 @@ public class Food {
         this.nameFood = nameFood;
     }
 
-    public int getQuantityFood() {
-        return quantityFood;
+    public int getPortionFood() {
+        return portionFood;
     }
 
-    public void setQuantityFood(int quantityFood) {
-        this.quantityFood = quantityFood;
+    public void setPortionFood(int portionFood) {
+        this.portionFood = portionFood;
     }
 
-    public int getNutricionalFactsFood() {
-        return nutricionalFactsFood;
+    public String getTypeQuantityFood() {
+        return typeQuantityFood;
     }
 
-    public void setNutricionalFactsFood(int nutricionalFactsFood) {
-        this.nutricionalFactsFood = nutricionalFactsFood;
+    public void setTypeQuantityFood(String typeQuantityFood) {
+        this.typeQuantityFood = typeQuantityFood;
+    }
+
+    public int getProteinsFood() {
+        return proteinsFood;
+    }
+
+    public void setProteinsFood(int proteinsFood) {
+        this.proteinsFood = proteinsFood;
+    }
+
+    public int getFatsFood() {
+        return fatsFood;
+    }
+
+    public void setFatsFood(int fatsFood) {
+        this.fatsFood = fatsFood;
+    }
+
+    public int getCarbohydratesFood() {
+        return carbohydratesFood;
+    }
+
+    public void setCarbohydratesFood(int carbohydratesFood) {
+        this.carbohydratesFood = carbohydratesFood;
+    }
+
+    public int getFiberFood() {
+        return fiberFood;
+    }
+
+    public void setFiberFood(int fiberFood) {
+        this.fiberFood = fiberFood;
+    }
+
+    public int getCholesterolFood() {
+        return cholesterolFood;
+    }
+
+    public void setCholesterolFood(int cholesterolFood) {
+        this.cholesterolFood = cholesterolFood;
+    }
+
+    public int getSodiumFood() {
+        return sodiumFood;
+    }
+
+    public void setSodiumFood(int sodiumFood) {
+        this.sodiumFood = sodiumFood;
+    }
+
+    public Diet getDiet() {
+        return diet;
+    }
+
+    public void setDiet(Diet diet) {
+        this.diet = diet;
     }
 }

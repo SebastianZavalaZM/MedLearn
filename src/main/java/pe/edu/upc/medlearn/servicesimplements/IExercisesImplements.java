@@ -2,7 +2,7 @@ package pe.edu.upc.medlearn.servicesimplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upc.medlearn.entities.Exercises;
+import pe.edu.upc.medlearn.entities.Exercise;
 import pe.edu.upc.medlearn.repositories.IExercisesRepository;
 import pe.edu.upc.medlearn.servicesinterfaces.IExercisesService;
 
@@ -13,18 +13,18 @@ public class IExercisesImplements implements IExercisesService {
     @Autowired
     private IExercisesRepository  exercisesRepository;
     @Override
-    public List<Exercises> list() {
+    public List<Exercise> list() {
         return exercisesRepository.findAll();
     }
 
     @Override
-    public void insert(Exercises exercises) {
-        exercisesRepository.save(exercises);
+    public void insert(Exercise exercise) {
+        exercisesRepository.save(exercise);
     }
 
     @Override
-    public Exercises listId(int id) {
-        return exercisesRepository.findById(id).orElse(new Exercises());
+    public Exercise listId(int id) {
+        return exercisesRepository.findById(id).orElse(new Exercise());
     }
 
     @Override
@@ -33,7 +33,7 @@ public class IExercisesImplements implements IExercisesService {
     }
 
     @Override
-    public List<Exercises> buscarNombre(String nombre) {
+    public List<Exercise> buscarNombre(String nombre) {
         return exercisesRepository.buscarNombre(nombre);
     }
 }

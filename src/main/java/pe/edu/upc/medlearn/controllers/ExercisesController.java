@@ -1,17 +1,19 @@
 package pe.edu.upc.medlearn.controllers;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.ExercisesDTO;
-import pe.edu.upc.medlearn.entities.Exercises;
+import pe.edu.upc.medlearn.entities.Exercise;
 import pe.edu.upc.medlearn.servicesinterfaces.IExercisesService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/Ejercicios")
+@RequestMapping("/ejercicios")
+@SecurityRequirement(name = "javainuseapi")
 public class ExercisesController {
     @Autowired
     private IExercisesService exercisesService;
@@ -28,8 +30,8 @@ public class ExercisesController {
     @PostMapping
     public void insertar(@RequestBody ExercisesDTO dto){
         ModelMapper m=new ModelMapper();
-        Exercises exercises=m.map(dto,Exercises.class);
-        exercisesService.insert(exercises);
+        Exercise exercise =m.map(dto, Exercise.class);
+        exercisesService.insert(exercise);
     }
     @GetMapping("/{id}")
     public ExercisesDTO listarId(@PathVariable("id") Integer id){
@@ -41,8 +43,8 @@ public class ExercisesController {
     @PutMapping
     public void modificar(@RequestBody ExercisesDTO dto){
         ModelMapper m=new ModelMapper();
-        Exercises exercises=m.map(dto,Exercises.class);
-        exercisesService.insert(exercises);
+        Exercise exercise =m.map(dto, Exercise.class);
+        exercisesService.insert(exercise);
     }
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") Integer id){
