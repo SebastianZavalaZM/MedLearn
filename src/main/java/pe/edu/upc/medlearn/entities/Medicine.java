@@ -1,8 +1,6 @@
 package pe.edu.upc.medlearn.entities;
 
 import jakarta.persistence.*;
-import pe.edu.upc.medlearn.entities.Diets;
-import pe.edu.upc.medlearn.entities.Treatments;
 
 @Entity
 @Table(name = "Medicine")
@@ -21,23 +19,23 @@ public class Medicine {
 
     @ManyToOne
     @JoinColumn(name = "Diets_diet_id", nullable = false)
-    private Diets diet;
+    private Diet diet;
 
     @ManyToOne
     @JoinColumn(name = "Treatments_treatments_id", nullable = false)
-    private Treatments treatments;
+    private Treatment treatment;
 
     // Constructor vacío
     public Medicine() {
     }
 
     // Constructor con parámetros
-    public Medicine(int supleId, String supleDescription, String supleName, Diets diet, Treatments treatments) {
+    public Medicine(int supleId, String supleDescription, String supleName, Diet diet, Treatment treatment) {
         this.supleId = supleId;
         this.supleDescription = supleDescription;
         this.supleName = supleName;
         this.diet = diet;
-        this.treatments = treatments;
+        this.treatment = treatment;
     }
 
     // Getters y Setters
@@ -65,19 +63,19 @@ public class Medicine {
         this.supleName = supleName;
     }
 
-    public Diets getDiet() {
+    public Diet getDiet() {
         return diet;
     }
 
-    public void setDiet(Diets diet) {
+    public void setDiet(Diet diet) {
         this.diet = diet;
     }
 
-    public Treatments getTreatments() {
-        return treatments;
+    public Treatment getTreatments() {
+        return treatment;
     }
 
-    public void setTreatments(Treatments treatments) {
-        this.treatments = treatments;
+    public void setTreatments(Treatment treatment) {
+        this.treatment = treatment;
     }
 }

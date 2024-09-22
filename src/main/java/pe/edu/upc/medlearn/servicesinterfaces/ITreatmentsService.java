@@ -1,18 +1,18 @@
 package pe.edu.upc.medlearn.servicesinterfaces;
 
-import pe.edu.upc.medlearn.entities.Treatments;
+import pe.edu.upc.medlearn.entities.Treatment;
 
 import java.util.List;
 
 public interface ITreatmentsService {
 
-    public List<Treatments> list();
+    public List<Treatment> list();
 
-    public void insert(Treatments treatments);
+    public void insert(Treatment treatment);
 
-    public Treatments listId(int id);
+    public Treatment listId(int id);
 
-    public void update(Treatments treatments);
+    public void update(Treatment treatment);
 
     public void delete(int id);
     public List<String[]> cantidadUsuariosPorTratamiento();

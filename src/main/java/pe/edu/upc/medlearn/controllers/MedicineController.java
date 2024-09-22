@@ -4,7 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.MedicineDTO;
-import pe.edu.upc.medlearn.entities.Diets;
+import pe.edu.upc.medlearn.entities.Diet;
 import pe.edu.upc.medlearn.entities.Medicine;
 import pe.edu.upc.medlearn.repositories.IDietRepository;
 import pe.edu.upc.medlearn.servicesinterfaces.IMedicineService;
@@ -36,7 +36,7 @@ public class MedicineController {
 
         // Verificar que el Diet en el DTO no sea null
         if (dto.getDiet() != null && dto.getDiet().getId_Diet() > 0) {
-            Diets diet = dietRepository.findById(dto.getDiet().getId_Diet())
+            Diet diet = dietRepository.findById(dto.getDiet().getId_Diet())
                     .orElseThrow(() -> new RuntimeException("Diet not found"));
             med.setDiet(diet);
         } 

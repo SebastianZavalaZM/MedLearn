@@ -1,14 +1,14 @@
 package pe.edu.upc.medlearn.dtos;
 
-import pe.edu.upc.medlearn.entities.Diets;
-import pe.edu.upc.medlearn.entities.Treatments;
+import pe.edu.upc.medlearn.entities.Diet;
+import pe.edu.upc.medlearn.entities.Treatment;
 
 public class MedicineDTO {
     private int suple_id;
     private String suple_description;
     private String suple_name;
-    private Diets diet;
-    private Treatments treatments;
+    private Diet diet;
+    private Treatment treatment;
 
     // Getters y Setters
 
@@ -36,19 +36,19 @@ public class MedicineDTO {
         this.suple_name = suple_name;
     }
 
-    public Diets getDiet() {
+    public Diet getDiet() {
         return diet;
     }
 
-    public void setDiet(Diets diet) {
+    public void setDiet(Diet diet) {
         this.diet = diet;
     }
 
-    public Treatments getTreatments() {
-        return treatments;
+    public Treatment getTreatments() {
+        return treatment;
     }
 
-    public void setTreatments(Treatments treatments) {
-        this.treatments = treatments;
+    public void setTreatments(Treatment treatment) {
+        this.treatment = treatment;
     }
 }

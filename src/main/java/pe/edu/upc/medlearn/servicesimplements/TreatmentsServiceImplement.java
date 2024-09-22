@@ -2,7 +2,7 @@ package pe.edu.upc.medlearn.servicesimplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upc.medlearn.entities.Treatments;
+import pe.edu.upc.medlearn.entities.Treatment;
 import pe.edu.upc.medlearn.repositories.ITreatmentsRepository;
 import pe.edu.upc.medlearn.servicesinterfaces.ITreatmentsService;
 
@@ -15,23 +15,23 @@ public class TreatmentsServiceImplement implements ITreatmentsService {
     private ITreatmentsRepository tR;
 
     @Override
-    public List<Treatments> list() {
+    public List<Treatment> list() {
         return tR.findAll();
     }
 
     @Override
-    public void insert(Treatments treatments) {
-        tR.save(treatments);
+    public void insert(Treatment treatment) {
+        tR.save(treatment);
     }
 
     @Override
-    public Treatments listId(int id) {
-        return tR.findById(id).orElse(new Treatments());
+    public Treatment listId(int id) {
+        return tR.findById(id).orElse(new Treatment());
     }
 
     @Override
-    public void update(Treatments treatments) {
-        tR.save(treatments);
+    public void update(Treatment treatment) {
+        tR.save(treatment);
     }
 
     @Override

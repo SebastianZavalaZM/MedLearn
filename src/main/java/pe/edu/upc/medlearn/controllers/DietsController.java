@@ -4,7 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.DietsDTO;
-import pe.edu.upc.medlearn.entities.Diets;
+import pe.edu.upc.medlearn.entities.Diet;
 import pe.edu.upc.medlearn.servicesinterfaces.IDietsService;
 
 import java.util.List;
@@ -27,7 +27,7 @@ public class DietsController {
     @PostMapping
     public void insertar(@RequestBody DietsDTO dto){
         ModelMapper m=new ModelMapper();
-        Diets ci=m.map(dto,Diets.class);
+        Diet ci=m.map(dto, Diet.class);
         dS.insert(ci);
     }
     @PutMapping("/{id}")
@@ -39,7 +39,7 @@ public class DietsController {
     @PutMapping
     public void modify(@RequestBody DietsDTO dto){
         ModelMapper m=new ModelMapper();
-        Diets ci=m.map(dto,Diets.class);
+        Diet ci=m.map(dto, Diet.class);
         dS.update(ci);
     }
     @DeleteMapping("/{id}")

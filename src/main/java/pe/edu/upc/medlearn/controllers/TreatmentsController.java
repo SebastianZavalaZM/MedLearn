@@ -7,7 +7,7 @@ import pe.edu.upc.medlearn.dtos.AverageDurationByTreatmentTypeDTO;
 import pe.edu.upc.medlearn.dtos.QuantitysUserxTreatmentsDTO;
 import pe.edu.upc.medlearn.dtos.TopTreatmentsDTO;
 import pe.edu.upc.medlearn.dtos.TreatmentsDTO;
-import pe.edu.upc.medlearn.entities.Treatments;
+import pe.edu.upc.medlearn.entities.Treatment;
 import pe.edu.upc.medlearn.servicesinterfaces.ITreatmentsService;
 
 import java.util.ArrayList;
@@ -32,14 +32,14 @@ public class TreatmentsController {
     @PostMapping
     public void insertar(@RequestBody TreatmentsDTO dto) {
         ModelMapper m = new ModelMapper();
-        Treatments tr = m.map(dto, Treatments.class);
+        Treatment tr = m.map(dto, Treatment.class);
         tS.insert(tr);
     }
 
     @PutMapping("/actualizar")
     public void actualizar(@PathVariable("id") int id, @RequestBody TreatmentsDTO dto) {
         ModelMapper m = new ModelMapper();
-        Treatments tr = m.map(dto, Treatments.class);
+        Treatment tr = m.map(dto, Treatment.class);
         tr.setTreatmentsId(id);
         tS.update(tr);
     }
@@ -52,7 +52,7 @@ public class TreatmentsController {
     @GetMapping("/{id}")
     public TreatmentsDTO listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
-        Treatments tr = tS.listId(id);
+        Treatment tr = tS.listId(id);
         return m.map(tr, TreatmentsDTO.class);
     }
     @GetMapping("/cantidades")
