@@ -8,6 +8,7 @@ import pe.edu.upc.medlearn.dtos.ExercisesDTO;
 import pe.edu.upc.medlearn.entities.Exercise;
 import pe.edu.upc.medlearn.servicesinterfaces.IExercisesService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -57,5 +58,18 @@ public class ExercisesController {
             ModelMapper m= new ModelMapper();
             return  m.map(x,ExercisesDTO.class);
         }).collect(Collectors.toList());
+    }
+    @GetMapping("/totalejerciciospordieta")
+    public List<TotaldeexercisesbyDietas> totalEjerciciosporDieta(){
+        List<String[]> filaLista=exercisesService.totaldeexercisesbyDietas();
+        List<TotaldeexercisesbyDietas> dtoLista=new ArrayList<>();
+        for(String[] columna:filaLista){
+            TotaldeexercisesbyDietas dtos=new TotaldeexercisesbyDietas();
+            dtos.setIdDiet(Integer.parseInt(columna[0]));
+            dtos.setDescription((columna[1]));
+            dtos.setTotalExercisesporDieta(Integer.parseInt(columna[2]));
+            dtoLista.add(dtos);
+        }
+        return dtoLista;
     }
 }

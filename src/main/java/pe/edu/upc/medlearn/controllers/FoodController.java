@@ -5,9 +5,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.FoodDTO;
+import pe.edu.upc.medlearn.dtos.TotaldecaloriesbydietDTO;
+import pe.edu.upc.medlearn.dtos.TotaldeexercisesbyDietas;
 import pe.edu.upc.medlearn.entities.Food;
 import pe.edu.upc.medlearn.servicesinterfaces.IFoodServiceInterfaces;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -58,5 +61,19 @@ public class FoodController {
             ModelMapper mapper=new ModelMapper();
             return mapper.map(x, FoodDTO.class);
         }).collect(Collectors.toList());
+    }
+
+    @GetMapping("/totaldecolesterolpordieta")
+    public List<TotaldecaloriesbydietDTO> totalCaloriasporDieta(){
+        List<String[]> filaLista=iFoodService.totaldecaloriesbydiet();
+        List<TotaldecaloriesbydietDTO> dtoLista=new ArrayList<>();
+        for(String[] columna:filaLista){
+            TotaldecaloriesbydietDTO dtos=new TotaldecaloriesbydietDTO();
+            dtos.setIdDiet(Integer.parseInt(columna[0]));
+            dtos.setDescription((columna[1]));
+            dtos.setTotalCaloriesPorDieta(Integer.parseInt(columna[2]));
+            dtoLista.add(dtos);
+        }
+        return dtoLista;
     }
 }
