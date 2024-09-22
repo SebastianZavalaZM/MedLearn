@@ -15,23 +15,18 @@ public class Diet {
 
     @Column(name = "descriptionDiet", nullable = false, length = 200)
     private String descriptionDiet;
-
     @Column(name = "durationDiet", nullable = false)
     private int durationDiet;
-
     @Column(name = "qualificationDiet", nullable = false)
     private int qualificationDiet;
-
     @Column(name = "startDayDiet", nullable = false)
     private LocalDate startDayDiet;
-
     @Column(name = "finishdayDiet", nullable = false)
     private LocalDate finishdayDiet;
 
     @ManyToOne
     @JoinColumn(name = "idIllneses", nullable = false)
     private Illness illness;
-
     @ManyToOne
     @JoinColumn(name = "idUser", nullable = false) //client
     private Users user;
