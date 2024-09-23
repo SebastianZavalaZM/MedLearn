@@ -6,23 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="my commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/ExercisesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/ExercisesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Diets.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Exercises.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IExercisesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IExercisesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/IExercisesImplements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/servicesimplements/ExercisesImplements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/DietsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/DietsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/ExercisesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/ExercisesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/FoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/FoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/MedicineController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/TreatmentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/TreatmentsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/TreatmentsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/dtos/TreatmentsDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IExercisesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IExercisesRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IFoodRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/repositories/IFoodRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/IExercisesImplements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/IFoodServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesimplements/IFoodServiceImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IExercisesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IExercisesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IFoodServiceInterfaces.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/servicesinterfaces/IFoodServiceInterfaces.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.MedLearnApplication.executor": "Run",
-    "git-widget-placeholder": "release2",
+    "git-widget-placeholder": "DevFabrizio",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/JetBrainsFabrizio",
     "node.js.detected.package.eslint": "true",
