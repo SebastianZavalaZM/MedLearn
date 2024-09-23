@@ -76,4 +76,16 @@ public class FoodController {
         }
         return dtoLista;
     }
+      @GetMapping("/caloriassemanales")
+    public List<WeeklyCaloriesByDietDTO> obtenerCaloriasSemanales() {
+        List<String[]> lista = iFoodService.calculateWeeklyCaloriesByDiet();
+        List<WeeklyCaloriesByDietDTO> listaDTO = new ArrayList<>();
+        for (String[] columna : lista) {
+            WeeklyCaloriesByDietDTO dto = new WeeklyCaloriesByDietDTO();
+            dto.setDietDescription(columna[0]);
+            dto.setWeeklyCalories(Double.parseDouble(columna[1]));
+            listaDTO.add(dto);
+        }
+        return listaDTO;
+    }
 }
