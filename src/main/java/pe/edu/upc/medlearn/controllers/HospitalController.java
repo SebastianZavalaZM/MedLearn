@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/hospitales")
+@RequestMapping("/Hospitales")
 @SecurityRequirement(name = "javainuseapi")
 public class HospitalController {
     @Autowired

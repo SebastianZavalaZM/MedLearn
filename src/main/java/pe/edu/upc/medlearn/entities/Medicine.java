@@ -1,6 +1,5 @@
 package pe.edu.upc.medlearn.entities;
 
-
 import jakarta.persistence.*;
 
 @Entity
@@ -11,14 +10,14 @@ public class Medicine {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idMedicine;
 
-    @Column(name = "descriptionMedicine", nullable = false, length = 200)
+    @Column(name = "descriptionMedicine", nullable = false, length = 400)
     private String descriptionMedicine;
 
-    @Column(name = "nameMedicine", nullable = false, length = 100)
+    @Column(name = "nameMedicine", nullable = false, length = 150)
     private String nameMedicine;
 
     @ManyToOne
-    @JoinColumn(name = "idTreatment")
+    @JoinColumn(name = "treatmentId")
     private Treatment treatment;
 
     // Constructor vacío
@@ -64,4 +63,3 @@ public class Medicine {
         this.treatment = treatment;
     }
 }
-

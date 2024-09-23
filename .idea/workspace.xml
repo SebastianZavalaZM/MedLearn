@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="my commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/HospitalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/HospitalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/MedicineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/MedicineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/TreatmentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/controllers/TreatmentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/TreatmentsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/dtos/TreatmentsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Treatment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/entities/Treatment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/HospitalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/HospitalController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/medlearn/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IDietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IDietRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +16,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="package.json" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,11 +37,23 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="DevFabian" />
+        <entry key="$PROJECT_DIR$" value="DevFabrizio" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;HidalgoFabrizio7&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DelasDream/MedLearn.git&quot;,
+    &quot;accountId&quot;: &quot;f0057088-3930-4b5d-981d-c8c10d266420&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -71,7 +76,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.MedLearnApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;DevFabrizio&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;release2&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/JetBrainsFabrizio&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -79,6 +84,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -305,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726469231584</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="my commit">
+      <option name="closed" value="true" />
+      <created>1727051206758</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1727051206758</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

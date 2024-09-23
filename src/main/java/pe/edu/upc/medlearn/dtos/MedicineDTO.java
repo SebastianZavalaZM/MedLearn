@@ -1,9 +1,5 @@
 package pe.edu.upc.medlearn.dtos;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import pe.edu.upc.medlearn.entities.Diet;
 import pe.edu.upc.medlearn.entities.Treatment;
 
 public class MedicineDTO {

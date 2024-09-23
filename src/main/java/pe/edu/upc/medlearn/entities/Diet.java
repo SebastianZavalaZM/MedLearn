@@ -11,27 +11,22 @@ public class Diet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int dietId;
+    private int idDiet;
 
-    @Column(name = "descriptionDiet", nullable = false, length = 200)
+    @Column(name = "descriptionDiet", nullable = false, length = 400)
     private String descriptionDiet;
-
     @Column(name = "durationDiet", nullable = false)
     private int durationDiet;
-
     @Column(name = "qualificationDiet", nullable = false)
     private int qualificationDiet;
-
     @Column(name = "startDayDiet", nullable = false)
     private LocalDate startDayDiet;
-
-    @Column(name = "finishdayDiet", nullable = false)
-    private LocalDate finishdayDiet;
+    @Column(name = "finishDayDiet", nullable = false)
+    private LocalDate finishDayDiet;
 
     @ManyToOne
     @JoinColumn(name = "idIllneses", nullable = false)
     private Illness illness;
-
     @ManyToOne
     @JoinColumn(name = "idUser", nullable = false) //client
     private Users user;
@@ -40,23 +35,23 @@ public class Diet {
     public Diet() {
     }
 
-    public Diet(int dietId, String descriptionDiet, int durationDiet, int qualificationDiet, LocalDate startDayDiet, LocalDate finishdayDiet, Illness illness, Users user) {
-        this.dietId = dietId;
+    public Diet(int idDiet, String descriptionDiet, int durationDiet, int qualificationDiet, LocalDate startDayDiet, LocalDate finishDayDiet, Illness illness, Users user) {
+        this.idDiet = idDiet;
         this.descriptionDiet = descriptionDiet;
         this.durationDiet = durationDiet;
         this.qualificationDiet = qualificationDiet;
         this.startDayDiet = startDayDiet;
-        this.finishdayDiet = finishdayDiet;
+        this.finishDayDiet = finishDayDiet;
         this.illness = illness;
         this.user = user;
     }
 
-    public int getDietId() {
-        return dietId;
+    public int getIdDiet() {
+        return idDiet;
     }
 
-    public void setDietId(int dietId) {
-        this.dietId = dietId;
+    public void setIdDiet(int idDiet) {
+        this.idDiet = idDiet;
     }
 
     public String getDescriptionDiet() {
@@ -91,12 +86,12 @@ public class Diet {
         this.startDayDiet = startDayDiet;
     }
 
-    public LocalDate getFinishdayDiet() {
-        return finishdayDiet;
+    public LocalDate getFinishDayDiet() {
+        return finishDayDiet;
     }
 
-    public void setFinishdayDiet(LocalDate finishdayDiet) {
-        this.finishdayDiet = finishdayDiet;
+    public void setFinishDayDiet(LocalDate finishDayDiet) {
+        this.finishDayDiet = finishDayDiet;
     }
 
     public Illness getIllness() {

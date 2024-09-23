@@ -11,18 +11,14 @@ public class Treatment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTreatment;
 
-    @Column(name = "descriptionTreatment", nullable = false, length = 200)
+    @Column(name = "descriptionTreatment", nullable = false, length = 400)
     private String descriptionTreatment;
-
     @Column(name = "durationTreatment", nullable = false)
     private int durationTreatment;
-
     @Column(name = "startDayTreatment", nullable = false)
     private LocalDate startDayTreatment;
-
-    @Column(name = "finish_day", nullable = false)
-    private LocalDate finishDay;
-
+    @Column(name = "finishDayTreatment", nullable = false)
+    private LocalDate finishDayTreatment;
     @ManyToOne
     @JoinColumn(name = "id_user")
     private Users users;
@@ -35,12 +31,12 @@ public class Treatment {
     public Treatment() {
     }
 
-    public Treatment(int idTreatment, String descriptionTreatment, int durationTreatment, LocalDate startDayTreatment, LocalDate finishDay, Users users, Illness illness) {
+    public Treatment(int idTreatment, String descriptionTreatment, int durationTreatment, LocalDate startDayTreatment, LocalDate finishDayTreatment, Users users, Illness illness) {
         this.idTreatment = idTreatment;
         this.descriptionTreatment = descriptionTreatment;
         this.durationTreatment = durationTreatment;
         this.startDayTreatment = startDayTreatment;
-        this.finishDay = finishDay;
+        this.finishDayTreatment = finishDayTreatment;
         this.users = users;
         this.illness = illness;
     }
@@ -77,12 +73,12 @@ public class Treatment {
         this.startDayTreatment = startDayTreatment;
     }
 
-    public LocalDate getFinishDay() {
-        return finishDay;
+    public LocalDate getFinishDayTreatment() {
+        return finishDayTreatment;
     }
 
-    public void setFinishDay(LocalDate finishDay) {
-        this.finishDay = finishDay;
+    public void setFinishDayTreatment(LocalDate finishDayTreatment) {
+        this.finishDayTreatment = finishDayTreatment;
     }
 
     public Users getUsers() {

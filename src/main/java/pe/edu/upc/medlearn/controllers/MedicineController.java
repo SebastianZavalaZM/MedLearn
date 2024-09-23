@@ -6,18 +6,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.MedicineDTO;
 import pe.edu.upc.medlearn.entities.Medicine;
+import pe.edu.upc.medlearn.repositories.ITreatmentsRepository;
 import pe.edu.upc.medlearn.servicesinterfaces.IMedicineService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/medicinas")
+@RequestMapping("/Medicinas")
 @SecurityRequirement(name = "javainuseapi")
 public class MedicineController {
 
     @Autowired
     private IMedicineService mS;
+    @Autowired
+    private ITreatmentsRepository treatmentsRepository;
 
     @GetMapping
     public List<MedicineDTO> listar() {

@@ -61,6 +61,7 @@ public class WebSecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req -> req
                         .requestMatchers(antMatcher("/login")).permitAll()
+                        .requestMatchers(antMatcher("/crearcuenta")).permitAll()
                         .requestMatchers(antMatcher("/v3/api-docs/**")).permitAll()  // Permitir acceso a la especificación OpenAPI
                         .requestMatchers(antMatcher("/swagger-ui/**")).permitAll()  // Permitir acceso a Swagger UI
                         .requestMatchers(antMatcher("/swagger-ui.html")).permitAll()  // Permitir acceso al HTML de Swagger UI

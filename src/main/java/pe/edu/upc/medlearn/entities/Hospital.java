@@ -10,15 +10,15 @@ public class Hospital {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idHospital;
-    @Column(name = "nameHospital", nullable = false, length = 25)
+    @Column(name = "nameHospital", nullable = false, length = 150)
     private String nameHospital;
-    @Column(name = "latitudHospital", nullable = false)
-    private double latitudHospital;
-    @Column(name = "longitudHospital", nullable = false)
-    private double longitudHospital;
-    @Column(name = "addressHospital", nullable = false, length = 75)
+    @Column(name = "latitudeHospital", nullable = false)
+    private double latitudeHospital;
+    @Column(name = "longitudeHospital", nullable = false)
+    private double longitudeHospital;
+    @Column(name = "addressHospital", nullable = false, length = 175)
     private String addressHospital;
-    @Column(name = "contactHospital", nullable = false, length = 15)
+    @Column(name = "contactHospital", nullable = false, length = 25)
     private String contactHospital;
     @Column(name = "counterViewsHospital", nullable = false)
     private int counterViewsHospital;
@@ -30,11 +30,11 @@ public class Hospital {
     public Hospital() {
     }
 
-    public Hospital(int idHospital, String nameHospital, double latitudHospital, double longitudHospital, String addressHospital, String contactHospital, int counterViewsHospital, Users user) {
+    public Hospital(int idHospital, String nameHospital, double latitudeHospital, double longitudeHospital, String addressHospital, String contactHospital, int counterViewsHospital, Users user) {
         this.idHospital = idHospital;
         this.nameHospital = nameHospital;
-        this.latitudHospital = latitudHospital;
-        this.longitudHospital = longitudHospital;
+        this.latitudeHospital = latitudeHospital;
+        this.longitudeHospital = longitudeHospital;
         this.addressHospital = addressHospital;
         this.contactHospital = contactHospital;
         this.counterViewsHospital = counterViewsHospital;
@@ -57,20 +57,20 @@ public class Hospital {
         this.nameHospital = nameHospital;
     }
 
-    public double getLatitudHospital() {
-        return latitudHospital;
+    public double getLatitudeHospital() {
+        return latitudeHospital;
     }
 
-    public void setLatitudHospital(double latitudHospital) {
-        this.latitudHospital = latitudHospital;
+    public void setLatitudeHospital(double latitudeHospital) {
+        this.latitudeHospital = latitudeHospital;
     }
 
-    public double getLongitudHospital() {
-        return longitudHospital;
+    public double getLongitudeHospital() {
+        return longitudeHospital;
     }
 
-    public void setLongitudHospital(double longitudHospital) {
-        this.longitudHospital = longitudHospital;
+    public void setLongitudeHospital(double longitudeHospital) {
+        this.longitudeHospital = longitudeHospital;
     }
 
     public String getAddressHospital() {

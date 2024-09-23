@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.SympthomsDTO;
 import pe.edu.upc.medlearn.entities.Symptom;
-import pe.edu.upc.medlearn.servicesinterfaces.ISympthomsService;
+import pe.edu.upc.medlearn.servicesinterfaces.ISymptomService;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,10 +14,10 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/Sintomas")
 @SecurityRequirement(name = "javainuseapi")
-public class SympthomsController {
+public class SymptomController {
 
     @Autowired
-    private ISympthomsService iS;
+    private ISymptomService iS;
 
     @GetMapping("/listar")
     public List<SympthomsDTO>listar(){
