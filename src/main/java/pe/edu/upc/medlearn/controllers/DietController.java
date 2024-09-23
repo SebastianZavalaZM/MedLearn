@@ -68,5 +68,12 @@ public class DietController {
         }).collect(Collectors.toList());
     }
 
+    @GetMapping("/listarporenfermedad")
+    public List<DietDTO>listarPorEnfermedad(@PathVariable("id") Integer id){
+        return dS.listByIllness(id).stream().map(x->{
+            ModelMapper m= new ModelMapper();
+            return  m.map(x, DietDTO.class);
+        }).collect(Collectors.toList());
+    }
 
 }

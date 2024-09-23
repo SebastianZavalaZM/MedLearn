@@ -18,5 +18,7 @@ public interface ITreatmentService {
     public List<String[]> cantidadUsuariosPorTratamiento();
     public  List<String[]> topTratamientos();
     public List<String[]> obtenerPromedioDuracion();
+    List<Treatment> listByIllness(Integer idillness);
+
 
 }

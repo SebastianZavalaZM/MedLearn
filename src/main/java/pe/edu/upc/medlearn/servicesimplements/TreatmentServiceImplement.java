@@ -52,4 +52,9 @@ public class TreatmentServiceImplement implements ITreatmentService {
         return tR.obtenerPromedioDuracion();
     }
 
+    @Override
+    public List<Treatment> listByIllness(Integer idillness) {
+        return tR.listByIllness(idillness);
+    }
+
 }

@@ -102,4 +102,11 @@ public class TreatmentController {
         }
         return listaDTO;
     }
+    @GetMapping("/listaporenfermedad")
+    public List<TreatmentDTO> listarPorEnfermedead(@PathVariable("id") Integer id ) {
+        return tS.listByIllness(id).stream().map(x -> {
+            ModelMapper m = new ModelMapper();
+            return m.map(x, TreatmentDTO.class);
+        }).collect(Collectors.toList());
+    }
 }
