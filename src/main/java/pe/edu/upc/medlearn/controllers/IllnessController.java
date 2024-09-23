@@ -5,10 +5,12 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.medlearn.dtos.FindIlilnessSymptomsDTO;
 import pe.edu.upc.medlearn.dtos.IllnessDTO;
 import pe.edu.upc.medlearn.entities.Illness;
 import pe.edu.upc.medlearn.servicesinterfaces.IIllnessService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -50,14 +52,19 @@ public class IllnessController {
         iS.insert(illness);
     }
     @GetMapping("/findIllnessSymptoms")
-    public List<String[]> findIllnessSymptoms(){
-        return iS.findIllnessSymptoms();
+    public List<FindIlilnessSymptomsDTO> findIllnessSymptoms(@RequestParam Integer idIllness){
+        List<String[]> filaLista=iS.findIllnessSymptoms(idIllness);
+        List<FindIlilnessSymptomsDTO> dtoLista=new ArrayList<>();
+        for (String[] columna:filaLista) {
+            FindIlilnessSymptomsDTO dtos=new FindIlilnessSymptomsDTO();
+            dtos.setNameSymptom((columna[0]));
+            dtoLista.add(dtos);
+        }
+        return dtoLista;
     }
 
-
-
-    @GetMapping("/Busqueda")
-    public List<IllnessDTO>buscar(@RequestParam() String nombre){
+    @GetMapping("/busqueda")
+    public List<IllnessDTO>buscar(@RequestParam String nombre){
         return iS.buscarNombre(nombre).stream().map(x->{
             ModelMapper m = new ModelMapper();
             return m.map(x, IllnessDTO.class);

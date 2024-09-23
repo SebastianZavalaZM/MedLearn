@@ -10,7 +10,7 @@ public interface IIllnessService {
     public void insert(Illness illness);
     public void delete(Integer Id); // UH 648
     public Illness listId(int id);
-    public List<String[]> findIllnessSymptoms();
+    public List<String[]> findIllnessSymptoms(int idIllness);
 
 
     List<Illness> buscarNombre(String nombre);

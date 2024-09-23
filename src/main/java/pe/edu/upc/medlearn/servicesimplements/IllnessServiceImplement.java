@@ -30,8 +30,8 @@ public class IllnessServiceImplement implements IIllnessService {
     }
 
     @Override
-    public List<String[]> findIllnessSymptoms() {
-        return illnessRepository.findIllnessSymptoms();
+    public List<String[]> findIllnessSymptoms(int idIllness) {
+        return illnessRepository.findIllnessSymptoms( idIllness);
     }
 
     @Override
