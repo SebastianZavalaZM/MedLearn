@@ -3,15 +3,15 @@ package pe.edu.upc.medlearn.servicesimplements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.medlearn.entities.Exercise;
-import pe.edu.upc.medlearn.repositories.IExercisesRepository;
-import pe.edu.upc.medlearn.servicesinterfaces.IExercisesService;
+import pe.edu.upc.medlearn.repositories.IExerciseRepository;
+import pe.edu.upc.medlearn.servicesinterfaces.IExerciseService;
 
 import java.util.List;
 
 @Service
-public class ExercisesImplements implements IExercisesService {
+public class ExerciseImplements implements IExerciseService {
     @Autowired
-    private IExercisesRepository  exercisesRepository;
+    private IExerciseRepository exercisesRepository;
     @Override
     public List<Exercise> list() {
         return exercisesRepository.findAll();

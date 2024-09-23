@@ -1,45 +1,18 @@
-package pe.edu.upc.medlearn.entities;
+package pe.edu.upc.medlearn.dtos;
 
-import jakarta.persistence.*;
+import pe.edu.upc.medlearn.entities.Illness;
+import pe.edu.upc.medlearn.entities.Users;
+
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "Treatment")
-public class Treatment {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class TreatmentDTO {
     private int idTreatment;
-
-    @Column(name = "descriptionTreatment", nullable = false, length = 400)
     private String descriptionTreatment;
-    @Column(name = "durationTreatment", nullable = false)
     private int durationTreatment;
-    @Column(name = "startDayTreatment", nullable = false)
     private LocalDate startDayTreatment;
-    @Column(name = "finishDayTreatment", nullable = false)
     private LocalDate finishDayTreatment;
-    @ManyToOne
-    @JoinColumn(name = "id_user")
     private Users users;
-
-    @ManyToOne
-    @JoinColumn(name = "idIllness")
     private Illness illness;
-
-
-    public Treatment() {
-    }
-
-    public Treatment(int idTreatment, String descriptionTreatment, int durationTreatment, LocalDate startDayTreatment, LocalDate finishDayTreatment, Users users, Illness illness) {
-        this.idTreatment = idTreatment;
-        this.descriptionTreatment = descriptionTreatment;
-        this.durationTreatment = durationTreatment;
-        this.startDayTreatment = startDayTreatment;
-        this.finishDayTreatment = finishDayTreatment;
-        this.users = users;
-        this.illness = illness;
-    }
 
     public int getIdTreatment() {
         return idTreatment;

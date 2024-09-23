@@ -6,7 +6,7 @@ import pe.edu.upc.medlearn.entities.Medicine;
 
 public class QuantityDTO {
     private int idQuantity;
-    private int quantity;
+    private int quantityQuantity;
     private Food foodId;
     private Exercise exerciseId;
     private Medicine idMedicine;
@@ -19,12 +19,12 @@ public class QuantityDTO {
         this.idQuantity = idQuantity;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getQuantityQuantity() {
+        return quantityQuantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantityQuantity(int quantityQuantity) {
+        this.quantityQuantity = quantityQuantity;
     }
 
     public Food getFoodId() {

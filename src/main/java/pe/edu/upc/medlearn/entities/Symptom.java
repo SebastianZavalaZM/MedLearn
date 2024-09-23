@@ -7,10 +7,8 @@ public class Symptom {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idSymptom;
-
-    @Column(name = "nameSymptom",nullable = false,length = 70)
+    @Column(name = "nameSymptom",nullable = false,length = 100)
     private String nameSymptom;
-
     @Column(name = "searchesSymptom",nullable = false)
     private int searchesSymptom;
 

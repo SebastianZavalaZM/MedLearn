@@ -5,7 +5,7 @@ import pe.edu.upc.medlearn.entities.Symptom;
 
 import java.util.List;
 
-public interface ISympthomsService {
+public interface ISymptomService {
     public List<Symptom> list();
 
     public void insert(Symptom symptom);

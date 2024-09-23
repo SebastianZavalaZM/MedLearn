@@ -14,18 +14,18 @@ public class Users implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUser;
 
-    @Column(name = "fullnameUser", nullable = false,length = 140)
+    @Column(name = "fullnameUser", nullable = false,length = 150)
     private String fullnameUser;
 
-    @Column(name = "username",nullable = false,length = 30)
+    @Column(name = "username",nullable = false,length = 50)
     private String username;
     @Column(name = "password",nullable = false,length = 200)
     private String password;
     @Column(name = "enabled",nullable = false)
     private boolean enabled;
 
-    @Column(name = "email",nullable = false,length = 70)
-    private String email;
+    @Column(name = "emailUser",nullable = false,length = 150)
+    private String emailUser;
     @Column(name = "certificationUser",nullable = false,length = 200)
     private String certificationUser;
 
@@ -37,23 +37,23 @@ public class Users implements Serializable {
     public Users() {
     }
 
-    public Users(int idUser, String fullnameUser, String username, String password, boolean enabled, String email, String certificationUser, List<Role> roles) {
+    public Users(int idUser, String fullnameUser, String username, String password, boolean enabled, String emailUser, String certificationUser, List<Role> roles) {
         this.idUser = idUser;
         this.fullnameUser = fullnameUser;
         this.username = username;
         this.password = password;
         this.enabled = enabled;
-        this.email = email;
+        this.emailUser = emailUser;
         this.certificationUser = certificationUser;
         this.roles = roles;
     }
 
-    public String getCertificationUser() {
-        return certificationUser;
+    public int getIdUser() {
+        return idUser;
     }
 
-    public void setCertificationUser(String certificationUser) {
-        this.certificationUser = certificationUser;
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 
     public String getFullnameUser() {
@@ -64,20 +64,12 @@ public class Users implements Serializable {
         this.fullnameUser = fullnameUser;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -88,20 +80,28 @@ public class Users implements Serializable {
         this.password = password;
     }
 
-    public String getUsername() {
-        return username;
+    public boolean getEnabled() {
+        return enabled;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 
-    public int getIdUser() {
-        return idUser;
+    public String getEmailUser() {
+        return emailUser;
     }
 
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
+    public void setEmailUser(String emailUser) {
+        this.emailUser = emailUser;
+    }
+
+    public String getCertificationUser() {
+        return certificationUser;
+    }
+
+    public void setCertificationUser(String certificationUser) {
+        this.certificationUser = certificationUser;
     }
 
     public List<Role> getRoles() {

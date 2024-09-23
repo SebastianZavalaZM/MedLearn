@@ -6,17 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.DietDTO;
 import pe.edu.upc.medlearn.entities.Diet;
-import pe.edu.upc.medlearn.servicesinterfaces.IDietsService;
+import pe.edu.upc.medlearn.servicesinterfaces.IDietService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/dietas")
+@RequestMapping("/Dietas")
 @SecurityRequirement(name = "javainuseapi")
-public class DietsController {
+public class DietController {
     @Autowired
-    private IDietsService dS;
+    private IDietService dS;
 
     @GetMapping
     public List<DietDTO>listar(){

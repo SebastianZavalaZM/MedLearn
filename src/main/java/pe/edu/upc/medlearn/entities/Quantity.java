@@ -8,8 +8,8 @@ public class Quantity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idQuantity;
-    @Column(name = "quantity",nullable = false)
-    private int quantity;
+    @Column(name = "quantityQuantity",nullable = false)
+    private int quantityQuantity;
 
     @ManyToOne
     @JoinColumn(name = "idFood")
@@ -24,14 +24,6 @@ public class Quantity {
     public Quantity() {
     }
 
-    public Quantity(int idQuantity, int quantity, Food food, Exercise exercise, Medicine medicine) {
-        this.idQuantity = idQuantity;
-        this.quantity = quantity;
-        this.food = food;
-        this.exercise = exercise;
-        this.medicine = medicine;
-    }
-
     public int getIdQuantity() {
         return idQuantity;
     }
@@ -40,12 +32,12 @@ public class Quantity {
         this.idQuantity = idQuantity;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getQuantityQuantity() {
+        return quantityQuantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantityQuantity(int quantityQuantity) {
+        this.quantityQuantity = quantityQuantity;
     }
 
     public Food getFood() {

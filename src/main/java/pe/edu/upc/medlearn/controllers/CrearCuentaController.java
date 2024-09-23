@@ -13,7 +13,7 @@ import pe.edu.upc.medlearn.servicesinterfaces.IUserService;
 
 @RestController
 @CrossOrigin
-public class CrearCuenta {
+public class CrearCuentaController {
     @Autowired
     private IUserService uS;
     @Autowired

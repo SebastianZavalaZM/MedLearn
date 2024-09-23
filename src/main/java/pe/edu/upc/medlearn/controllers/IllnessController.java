@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/enfermedades")
+@RequestMapping("/Enfermedades")
 @SecurityRequirement(name = "javainuseapi")
 public class IllnessController {
     @Autowired

@@ -9,7 +9,7 @@ import pe.edu.upc.medlearn.servicesinterfaces.IQuantityService;
 import java.util.List;
 
 @Service
-public class QuantityImplement implements IQuantityService {
+public class QuantityServiceImplement implements IQuantityService {
     @Autowired
     private IQuantityRepository quantitysRepository;
     @Override

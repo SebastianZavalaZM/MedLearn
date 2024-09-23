@@ -9,19 +9,21 @@ import java.util.List;
 
 @Repository
 public interface ITreatmentsRepository extends JpaRepository<Treatment, Integer> {
-    @Query("SELECT t.description, COUNT(u) FROM Treatment t " +
+    @Query("SELECT t.descriptionTreatment, COUNT(u) " +
+            "FROM Treatment t " +
             "JOIN t.users u " +
-            "GROUP BY t.description")
+            "GROUP BY t.descriptionTreatment")
     public List<String[]> cantidadUsuariosPorTratamiento();
 
-    @Query("SELECT t.description, COUNT(u) as user_count FROM Treatment t " +
+    @Query("SELECT t.descriptionTreatment, COUNT(u) as user_count " +
+            "FROM Treatment t " +
             "JOIN t.users u " +
-            "GROUP BY t.description " +
+            "GROUP BY t.descriptionTreatment " +
             "ORDER BY user_count DESC")
     public List<String[]> topTratamientos();
-    @Query("SELECT t.description, AVG(t.duration) " +
+    @Query("SELECT t.descriptionTreatment, AVG(t.durationTreatment) " +
             "FROM Treatment t " +
-            "GROUP BY t.description")
+            "GROUP BY t.descriptionTreatment")
     public List<String[]> obtenerPromedioDuracion();
 
 

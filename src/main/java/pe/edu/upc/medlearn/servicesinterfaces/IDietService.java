@@ -4,7 +4,7 @@ import pe.edu.upc.medlearn.entities.Diet;
 
 import java.util.List;
 
-public interface IDietsService {
+public interface IDietService {
     public List<Diet> list();
     public void insert(Diet diet);
     public Diet listId(int id);

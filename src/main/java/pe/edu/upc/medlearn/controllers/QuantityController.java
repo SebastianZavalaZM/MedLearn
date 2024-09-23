@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/quantity")
+@RequestMapping("/Cantidades")
 @SecurityRequirement(name = "javainuseapi")
-public class QuantitysController {
+public class QuantityController {
     @Autowired
     private IQuantityService quantityService;
     @GetMapping

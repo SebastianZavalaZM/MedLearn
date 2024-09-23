@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/alimentos")
+@RequestMapping("/Alimentos")
 @SecurityRequirement(name = "javainuseapi")
 public class FoodController {
     @Autowired

@@ -1,15 +1,12 @@
 package pe.edu.upc.medlearn.dtos;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
 import pe.edu.upc.medlearn.entities.Users;
 
 public class HospitalDTO {
     private int idHospital;
     private String nameHospital;
-    private double latitudHospital;
-    private double longitudHospital;
+    private double latitudeHospital;
+    private double longitudeHospital;
     private String addressHospital;
     private String contactHospital;
     private int counterViewsHospital;
@@ -31,20 +28,20 @@ public class HospitalDTO {
         this.nameHospital = nameHospital;
     }
 
-    public double getLatitudHospital() {
-        return latitudHospital;
+    public double getLatitudeHospital() {
+        return latitudeHospital;
     }
 
-    public void setLatitudHospital(double latitudHospital) {
-        this.latitudHospital = latitudHospital;
+    public void setLatitudeHospital(double latitudeHospital) {
+        this.latitudeHospital = latitudeHospital;
     }
 
-    public double getLongitudHospital() {
-        return longitudHospital;
+    public double getLongitudeHospital() {
+        return longitudeHospital;
     }
 
-    public void setLongitudHospital(double longitudHospital) {
-        this.longitudHospital = longitudHospital;
+    public void setLongitudeHospital(double longitudeHospital) {
+        this.longitudeHospital = longitudeHospital;
     }
 
     public String getAddressHospital() {

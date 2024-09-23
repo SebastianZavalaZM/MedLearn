@@ -1,16 +1,11 @@
 package pe.edu.upc.medlearn.dtos;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import pe.edu.upc.medlearn.entities.Diet;
 import pe.edu.upc.medlearn.entities.Treatment;
 
 public class MedicineDTO {
     private int idMedicine;
     private String descriptionMedicine;
     private String nameMedicine;
-    private Diet diet;
     private Treatment treatment;
 
     public int getIdMedicine() {
@@ -37,19 +32,11 @@ public class MedicineDTO {
         this.nameMedicine = nameMedicine;
     }
 
-    public Diet getDiet() {
-        return diet;
-    }
-
-    public void setDiet(Diet diet) {
-        this.diet = diet;
-    }
-
-    public Treatment getTreatments() {
+    public Treatment getTreatment() {
         return treatment;
     }
 
-    public void setTreatments(Treatment treatment) {
+    public void setTreatment(Treatment treatment) {
         this.treatment = treatment;
     }
 }

@@ -12,7 +12,7 @@ public class DietDTO {
     private int durationDiet;
     private int qualificationDiet;
     private LocalDate startDayDiet;
-    private LocalDate finishdayDiet;
+    private LocalDate finishDayDiet;
     private Illness illness;
     private Users user;
 
@@ -56,12 +56,12 @@ public class DietDTO {
         this.startDayDiet = startDayDiet;
     }
 
-    public LocalDate getFinishdayDiet() {
-        return finishdayDiet;
+    public LocalDate getFinishDayDiet() {
+        return finishDayDiet;
     }
 
-    public void setFinishdayDiet(LocalDate finishdayDiet) {
-        this.finishdayDiet = finishdayDiet;
+    public void setFinishDayDiet(LocalDate finishDayDiet) {
+        this.finishDayDiet = finishDayDiet;
     }
 
     public Illness getIllness() {
