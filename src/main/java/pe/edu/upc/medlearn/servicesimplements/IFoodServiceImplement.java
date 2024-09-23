@@ -41,4 +41,7 @@ public class IFoodServiceImplement implements IFoodServiceInterfaces {
     public List<String[]> totaldecaloriesbydiet() {
         return iFoodRepository.totalbycaloriesbydiet();
     }
+    @Override
+    public List<String[]> calculateWeeklyCaloriesByDiet(){return iFoodRepository.calculateWeeklyCaloriesByDiet();}
+
 }
