@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="my commit">
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IDietRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/medlearn/repositories/IDietRepository.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="package.json" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="realises" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="DevFabrizio" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;HidalgoFabrizio7&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DelasDream/MedLearn.git&quot;,
+    &quot;accountId&quot;: &quot;f0057088-3930-4b5d-981d-c8c10d266420&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2kzigL8IpvJgH5WV1isy3IhEUxh" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MedLearnApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;release2&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JetBrainsFabrizio&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\JetBrainsFabrizio\src\main\java\pe\edu\upc\medlearn" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pe.edu.upc.medlearn.servicesimplements" />
+      <recent name="pe.edu.upc.medlearn.controllers" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MedLearnApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="MedLearn" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pe.edu.upc.medlearn.MedLearnApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d398348-95da-4413-94ac-aadedc28c3cd" name="Changes" comment="" />
+      <created>1724292915726</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724292915726</updated>
+      <workItem from="1724292916758" duration="1546000" />
+      <workItem from="1724300515636" duration="2743000" />
+      <workItem from="1724945856807" duration="1846000" />
+      <workItem from="1724990520146" duration="5865000" />
+      <workItem from="1725402684882" duration="784000" />
+      <workItem from="1725580452657" duration="683000" />
+      <workItem from="1725581404885" duration="10033000" />
+      <workItem from="1725913167872" duration="2477000" />
+      <workItem from="1726540025687" duration="1596000" />
+      <workItem from="1726949304366" duration="7341000" />
+    </task>
+    <task id="LOCAL-00001" summary="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan">
+      <option name="closed" value="true" />
+      <created>1724998331933</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724998331933</updated>
+    </task>
+    <task id="LOCAL-00002" summary="arreglado el service implement">
+      <option name="closed" value="true" />
+      <created>1725581773368</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725581773368</updated>
+    </task>
+    <task id="LOCAL-00003" summary="security Implement">
+      <option name="closed" value="true" />
+      <created>1725914903672</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725914903672</updated>
+    </task>
+    <task id="LOCAL-00004" summary="security Implement">
+      <option name="closed" value="true" />
+      <created>1725914942394</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725914942394</updated>
+    </task>
+    <task id="LOCAL-00005" summary="security Implement">
+      <option name="closed" value="true" />
+      <created>1725914954326</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725914954326</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725924193122</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725924193122</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725924448217</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725924448217</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725924558363</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725924558363</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725924794710</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725924794710</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725925040742</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725925040742</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725925069965</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725925069965</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725925677166</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1725925677166</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725925907084</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1725925907084</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725926510234</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1725926510234</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725927379603</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1725927379603</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725927714212</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1725927714212</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725927897072</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1725927897072</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725928075852</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1725928075852</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725930472970</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1725930472970</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Backend MedLearn">
+      <option name="closed" value="true" />
+      <created>1725932342816</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1725932342816</updated>
+    </task>
+    <task id="LOCAL-00021" summary="habilitando swagger con seguridad">
+      <option name="closed" value="true" />
+      <created>1726454144512</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1726454144513</updated>
+    </task>
+    <task id="LOCAL-00022" summary="my commit">
+      <option name="closed" value="true" />
+      <created>1726469231584</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1726469231584</updated>
+    </task>
+    <task id="LOCAL-00023" summary="my commit">
+      <option name="closed" value="true" />
+      <created>1727051206758</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1727051206758</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="añadi, eliminar y modificar de illines, pero los comandos cs y cr no estan" />
+    <MESSAGE value="arreglado el service implement" />
+    <MESSAGE value="security Implement" />
+    <MESSAGE value="Backend MedLearn" />
+    <MESSAGE value="habilitando swagger con seguridad" />
+    <MESSAGE value="estandarizando tablas" />
+    <MESSAGE value="my commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="my commit" />
+  </component>
+</project>

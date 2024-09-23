@@ -1,62 +1,82 @@
 package pe.edu.upc.medlearn.dtos;
 
-import java.util.Date;
+import pe.edu.upc.medlearn.entities.Illness;
+import pe.edu.upc.medlearn.entities.Users;
+
+import java.time.LocalDate;
+
 
 public class DietDTO {
-    private int id_Diet;
-    private String description;
-    private int duration;
-    private int qualification;
-    public Date start_day;
-    public Date end_day;
+    private int idDiet;
+    private String descriptionDiet;
+    private int durationDiet;
+    private int qualificationDiet;
+    private LocalDate startDayDiet;
+    private LocalDate finishDayDiet;
+    private Illness illness;
+    private Users user;
 
-    public Date getEnd_day() {
-        return end_day;
+    public int getIdDiet() {
+        return idDiet;
     }
 
-    public void setEnd_day(Date end_day) {
-        this.end_day = end_day;
+    public void setIdDiet(int idDiet) {
+        this.idDiet = idDiet;
     }
 
-    public Date getStart_day() {
-        return start_day;
+    public String getDescriptionDiet() {
+        return descriptionDiet;
     }
 
-    public void setStart_day(Date start_day) {
-        this.start_day = start_day;
+    public void setDescriptionDiet(String descriptionDiet) {
+        this.descriptionDiet = descriptionDiet;
     }
 
-    public int getQualification() {
-        return qualification;
+    public int getDurationDiet() {
+        return durationDiet;
     }
 
-    public void setQualification(int qualification) {
-        this.qualification = qualification;
+    public void setDurationDiet(int durationDiet) {
+        this.durationDiet = durationDiet;
     }
 
-    public int getDuration() {
-        return duration;
+    public int getQualificationDiet() {
+        return qualificationDiet;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setQualificationDiet(int qualificationDiet) {
+        this.qualificationDiet = qualificationDiet;
     }
 
-    public String getDescription() {
-        return description;
+    public LocalDate getStartDayDiet() {
+        return startDayDiet;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setStartDayDiet(LocalDate startDayDiet) {
+        this.startDayDiet = startDayDiet;
     }
 
-    public int getId_Diet() {
-        return id_Diet;
+    public LocalDate getFinishDayDiet() {
+        return finishDayDiet;
     }
 
-    public void setId_Diet(int id_Diet) {
-        this.id_Diet = id_Diet;
+    public void setFinishDayDiet(LocalDate finishDayDiet) {
+        this.finishDayDiet = finishDayDiet;
     }
 
+    public Illness getIllness() {
+        return illness;
+    }
 
+    public void setIllness(Illness illness) {
+        this.illness = illness;
+    }
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
 }

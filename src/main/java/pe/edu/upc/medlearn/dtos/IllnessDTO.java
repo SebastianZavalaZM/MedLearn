@@ -7,7 +7,7 @@ public class IllnessDTO {
     private String nameIllness;
     private String descriptionIllness;
     private String imageIllness;
-    private int pointsIllness;
+    private int searchesIllnesess;
 
     public int getIdIllness() {
         return idIllness;
@@ -41,11 +41,11 @@ public class IllnessDTO {
         this.imageIllness = imageIllness;
     }
 
-    public int getPointsIllness() {
-        return pointsIllness;
+    public int getSearchesIllnesess() {
+        return searchesIllnesess;
     }
 
-    public void setPointsIllness(int pointsIllness) {
-        this.pointsIllness = pointsIllness;
+    public void setSearchesIllnesess(int searchesIllnesess) {
+        this.searchesIllnesess = searchesIllnesess;
     }
 }

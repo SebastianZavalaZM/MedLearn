@@ -8,8 +8,7 @@ public interface IUserService {
     public List<Users> list();
     public void insert(Users user);
     public Users listId(int id);
-
-    Users buscarUsers(String name);
-
+    public List<Users> search(String name);
+    public List<String[]> cantidadUsuariosPorRol();
 
 }

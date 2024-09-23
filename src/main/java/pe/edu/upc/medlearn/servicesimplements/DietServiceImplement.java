@@ -37,5 +37,10 @@ public class DietServiceImplement implements IDietService {
         return dR.findByDescription(description);
     }
 
+    @Override
+    public List<Diet> listByIllness(int idillness) {
+        return dR.listByIllness(idillness);
+    }
+
 
 }
