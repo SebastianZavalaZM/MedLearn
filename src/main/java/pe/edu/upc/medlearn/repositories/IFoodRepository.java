@@ -25,4 +25,12 @@ public interface IFoodRepository extends JpaRepository<Food, Integer> {
             "    d.id_diet, \n" +
             "    d.description_diet;", nativeQuery=true)
     public List<String[]>totalbycaloriesbydiet();
+
+        @Query(value = "SELECT d.id_diet, d.description_diet, \n" +
+            "       SUM(f.portionFood * (f.proteinsFood * 4 + f.fatsFood * 9 + f.carbohydratesFood * 4)) * 7 AS weekly_calories \n" +
+            "FROM diet d \n" +
+            "JOIN food f ON d.id_diet = f.id_diet \n" +
+            "GROUP BY d.id_diet, d.description_diet \n" +
+            "ORDER BY weekly_calories DESC", nativeQuery = true)
+    public List<String[]> calculateWeeklyCaloriesByDiet();
 }
