@@ -1,12 +1,11 @@
 package pe.edu.upc.medlearn.entities;
 
 import jakarta.persistence.*;
-import org.springframework.aop.framework.adapter.DefaultAdvisorAdapterRegistry;
 
 import java.util.Date;
 @Entity
 @Table(name = "Diets")
-public class Diets {
+public class Diet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_Diet;
@@ -21,9 +20,9 @@ public class Diets {
     @Column(name = "end_day",nullable = false)
     private Date end_day;
 
-    public Diets() {
+    public Diet() {
     }
-    public Diets(int id_Diet,String description, int duration, int qualification, Date start_day, Date end_day) {
+    public Diet(int id_Diet, String description, int duration, int qualification, Date start_day, Date end_day) {
         this.id_Diet = id_Diet;
         this.description = description;
         this.duration = duration;

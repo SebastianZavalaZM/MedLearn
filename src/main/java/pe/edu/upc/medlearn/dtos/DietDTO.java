@@ -2,7 +2,7 @@ package pe.edu.upc.medlearn.dtos;
 
 import java.util.Date;
 
-public class DietsDTO {
+public class DietDTO {
     private int id_Diet;
     private String description;
     private int duration;
