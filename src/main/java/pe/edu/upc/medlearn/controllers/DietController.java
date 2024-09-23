@@ -3,6 +3,7 @@ package pe.edu.upc.medlearn.controllers;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.DietDTO;
 import pe.edu.upc.medlearn.dtos.QuantityBydietsinicidasydietsfinalizadasbyuser;
@@ -16,11 +17,13 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/Dietas")
+@PreAuthorize("hasRole('ADMIN')")
 @SecurityRequirement(name = "javainuseapi")
 public class DietController {
     @Autowired
     private IDietService dS;
 
+    @PreAuthorize("hasAnyRole('USER','NUTRICIONISTA')")
     @GetMapping
     public List<DietDTO>listar(){
         return dS.list().stream().map(x->{
@@ -29,6 +32,7 @@ public class DietController {
         }).collect(Collectors.toList());
     }
 
+    @PreAuthorize("hasRole('NUTRICIONISTA')")
     @PostMapping
     public void insertar(@RequestBody DietDTO dto){
         ModelMapper m=new ModelMapper();
@@ -36,6 +40,7 @@ public class DietController {
         dS.insert(ci);
     }
 
+    @PreAuthorize("hasAnyRole('USER','NUTRICIONISTA')")
     @GetMapping("/{id}")
     public DietDTO listarId(@PathVariable("id") Integer id){
         ModelMapper m= new ModelMapper();
@@ -43,6 +48,7 @@ public class DietController {
         return dto;
     }
 
+    @PreAuthorize("hasRole('NUTRICIONISTA')")
     @PutMapping
     public void modificar(@RequestBody DietDTO dto){
         ModelMapper m=new ModelMapper();
@@ -55,6 +61,7 @@ public class DietController {
         dS.delete(id);
     }
 
+    @PreAuthorize("hasAnyRole('USER','NUTRICIONISTA')")
     @GetMapping("/buscarcalificacion")
     public List<DietDTO> buscarCalificacion(@RequestParam int qualification) {
         return dS.findByQualification(qualification).stream().map(x -> {
@@ -63,6 +70,7 @@ public class DietController {
         }).collect(Collectors.toList());
     }
 
+    @PreAuthorize("hasRole('USER')")
     @GetMapping("/buscardescripcion")
     public List<DietDTO> buscarDescripcion(@RequestParam String description) {
         return dS.findByDescription(description).stream().map(x -> {
@@ -71,6 +79,7 @@ public class DietController {
         }).collect(Collectors.toList());
     }
 
+    @PreAuthorize("hasAnyRole('USER','NUTRICIONISTA')")
     @GetMapping("/listarporenfermedad")
     public List<DietDTO>listarPorEnfermedad(@PathVariable("id") Integer id){
         return dS.listByIllness(id).stream().map(x->{
@@ -79,6 +88,7 @@ public class DietController {
         }).collect(Collectors.toList());
     }
 
+    @PreAuthorize("hasRole('USER')")
     @GetMapping("/cantidaddedietasiniciadasandfinalizadasporusuario")
     public List<QuantityBydietsinicidasydietsfinalizadasbyuser> cantidaddedietasiniciadasandfinalizadasporusuario(){
         List<String[]> filaLista=dS.quantityBydietsinicidasandfinalizadasporusuario();

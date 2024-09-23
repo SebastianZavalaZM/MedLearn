@@ -3,6 +3,7 @@ package pe.edu.upc.medlearn.controllers;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.SympthomsDTO;
 import pe.edu.upc.medlearn.entities.Symptom;
@@ -27,6 +28,7 @@ public class SymptomController {
         }).collect(Collectors.toList());
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/insertar")
     public void insertar(@RequestBody SympthomsDTO dto) {
         ModelMapper m = new ModelMapper();
@@ -41,6 +43,7 @@ public class SymptomController {
         iS.delete(id);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public void modificar(@RequestBody SympthomsDTO dto) {
         ModelMapper m = new ModelMapper();

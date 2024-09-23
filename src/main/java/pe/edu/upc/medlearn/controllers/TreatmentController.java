@@ -3,6 +3,7 @@ package pe.edu.upc.medlearn.controllers;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.AverageDurationByTreatmentTypeDTO;
 import pe.edu.upc.medlearn.dtos.QuantitysUserxTreatmentsDTO;
@@ -31,6 +32,7 @@ public class TreatmentController {
         }).collect(Collectors.toList());
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN','DOCTOR')")
     @PostMapping("/registrar")
     public void insertar(@RequestBody TreatmentDTO dto) {
         ModelMapper m = new ModelMapper();
@@ -38,6 +40,7 @@ public class TreatmentController {
         tS.insert(tr);
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN','DOCTOR')")
     @PutMapping("/actualizar")
     public void actualizar( @RequestBody TreatmentDTO dto) {
         ModelMapper m = new ModelMapper();
@@ -45,6 +48,7 @@ public class TreatmentController {
         tS.update(tr);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public void eliminar(@PathVariable("id") int id) {
         tS.delete(id);
@@ -56,6 +60,8 @@ public class TreatmentController {
         Treatment tr = tS.listId(id);
         return m.map(tr, TreatmentDTO.class);
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/cantidades")
     public List<QuantitysUserxTreatmentsDTO> obtenerCantidadUsuariosPorTratamiento() {
         List<String[]> lista = tS.cantidadUsuariosPorTratamiento();
@@ -74,6 +80,7 @@ public class TreatmentController {
         }
         return listaDTO;
     }
+
     @GetMapping("/topTratamientos")
     public List<TopTreatmentsDTO> obtenerTopTratamientos() {
         List<String[]> lista = tS.topTratamientos();
@@ -90,6 +97,8 @@ public class TreatmentController {
         }
         return listaDTO;
     }
+
+    @PreAuthorize("hasAnyRole('ADMIN','DOCTOR')")
     @GetMapping("/promedioDuracion")
     public List<AverageDurationByTreatmentTypeDTO> obtenerPromedioDuracion() {
         List<String[]> lista = tS.obtenerPromedioDuracion();
@@ -102,6 +111,7 @@ public class TreatmentController {
         }
         return listaDTO;
     }
+
     @GetMapping("/listaporenfermedad")
     public List<TreatmentDTO> listarPorEnfermedead(@PathVariable("id") Integer id ) {
         return tS.listByIllness(id).stream().map(x -> {

@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.FindIlilnessSymptomsDTO;
 import pe.edu.upc.medlearn.dtos.IllnessDTO;
@@ -28,6 +29,8 @@ public class IllnessController {
             return m.map(y,IllnessDTO.class);
         }).collect(Collectors.toList());
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/insertar")
     public void insertar(@RequestBody IllnessDTO dto) {
         ModelMapper m = new ModelMapper();
@@ -41,10 +44,14 @@ public class IllnessController {
         IllnessDTO dto = m.map(iS.listId(id), IllnessDTO.class);
         return dto;
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") Integer id){
         iS.delete(id);
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public void editar(@RequestBody IllnessDTO illnessDTO){
         ModelMapper m=new ModelMapper();
