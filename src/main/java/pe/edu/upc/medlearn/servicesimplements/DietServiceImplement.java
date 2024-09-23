@@ -42,5 +42,10 @@ public class DietServiceImplement implements IDietService {
         return dR.listByIllness(idillness);
     }
 
+    @Override
+    public List<String[]> quantityBydietsinicidasandfinalizadasporusuario() {
+        return dR.quantityBydietsinicidasandfinalizadasbyuser();
+    }
+
 
 }
