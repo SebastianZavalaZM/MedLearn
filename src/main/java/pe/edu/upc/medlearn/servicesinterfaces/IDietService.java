@@ -15,6 +15,7 @@ public interface IDietService {
     List<Diet> findByQualification(int qualification);
     List<Diet> findByDescription(String description);
     List<Diet> listByIllness(int idillness);
-
+    //HUB60
+    List<String[]> quantityBydietsinicidasandfinalizadasporusuario();
 
 }

@@ -5,9 +5,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.DietDTO;
+import pe.edu.upc.medlearn.dtos.QuantityBydietsinicidasydietsfinalizadasbyuser;
+import pe.edu.upc.medlearn.dtos.TotaldecaloriesbydietDTO;
 import pe.edu.upc.medlearn.entities.Diet;
 import pe.edu.upc.medlearn.servicesinterfaces.IDietService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -76,4 +79,17 @@ public class DietController {
         }).collect(Collectors.toList());
     }
 
+    @GetMapping("/cantidaddedietasiniciadasandfinalizadasporusuario")
+    public List<QuantityBydietsinicidasydietsfinalizadasbyuser> cantidaddedietasiniciadasandfinalizadasporusuario(){
+        List<String[]> filaLista=dS.quantityBydietsinicidasandfinalizadasporusuario();
+        List<QuantityBydietsinicidasydietsfinalizadasbyuser> dtoLista=new ArrayList<>();
+        for(String[] columna:filaLista){
+            QuantityBydietsinicidasydietsfinalizadasbyuser dtos=new QuantityBydietsinicidasydietsfinalizadasbyuser();
+            dtos.setUsername(columna[0]);
+            dtos.setCantidadDeDietasIniciadas(Integer.parseInt(columna[1]));
+            dtos.setCantidadDietasFinalizadas(Integer.parseInt(columna[2]));
+            dtoLista.add(dtos);
+        }
+        return dtoLista;
+    }
 }
