@@ -1,43 +1,44 @@
 package pe.edu.upc.medlearn.dtos;
 import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import pe.edu.upc.medlearn.entities.Illness;
 
 public class SympthomsDTO {
+    private int idSymptom;
+    private String nameSymptom;
+    private int searchesSymptom;
+    private Illness illness;
 
-    private int idSympthoms;
-    private String nameSympthoms;
-    private String mostSearhCounter;
-    private Illness il;
-
-    public Illness getIl() {
-        return il;
+    public int getIdSymptom() {
+        return idSymptom;
     }
 
-    public void setIl(Illness il) {
-        this.il = il;
+    public void setIdSymptom(int idSymptom) {
+        this.idSymptom = idSymptom;
     }
 
-    public int getIdSympthoms() {
-        return idSympthoms;
+    public String getNameSymptom() {
+        return nameSymptom;
     }
 
-    public void setIdSympthoms(int idSympthoms) {
-        this.idSympthoms = idSympthoms;
+    public void setNameSymptom(String nameSymptom) {
+        this.nameSymptom = nameSymptom;
     }
 
-    public String getNameSympthoms() {
-        return nameSympthoms;
+    public int getSearchesSymptom() {
+        return searchesSymptom;
     }
 
-    public void setNameSympthoms(String nameSympthoms) {
-        this.nameSympthoms = nameSympthoms;
+    public void setSearchesSymptom(int searchesSymptom) {
+        this.searchesSymptom = searchesSymptom;
     }
 
-    public String getMostSearhCounter() {
-        return mostSearhCounter;
+    public Illness getIllness() {
+        return illness;
     }
 
-    public void setMostSearhCounter(String mostSearhCounter) {
-        this.mostSearhCounter = mostSearhCounter;
+    public void setIllness(Illness illness) {
+        this.illness = illness;
     }
 }

@@ -10,22 +10,22 @@ public class Illness {
     private int idIllness;
     @Column(name = "nameIllness",nullable = false,length = 70)
     private String nameIllness;
-    @Column(name = "descriptionIllness",nullable = false,length = 300)
+    @Column(name = "descriptionIllness",nullable = false,length = 400)
     private String descriptionIllness;
-    @Column(name = "imageIllness",nullable = false,length = 150)
+    @Column(name = "imageIllness",nullable = false,length = 250)
     private String imageIllness;
-    @Column(name = "pointsIllness",nullable = false)
-    private int pointsIllness;
+    @Column(name = "searchesIllneses",nullable = false)
+    private int searchesIllneses;
 
     public Illness() {
     }
 
-    public Illness(int idIllness, String nameIllness, String descriptionIllness, String imageIllness, int pointsIllness) {
+    public Illness(int idIllness, String nameIllness, String descriptionIllness, String imageIllness, int searchesIllneses) {
         this.idIllness = idIllness;
         this.nameIllness = nameIllness;
         this.descriptionIllness = descriptionIllness;
         this.imageIllness = imageIllness;
-        this.pointsIllness = pointsIllness;
+        this.searchesIllneses = searchesIllneses;
     }
 
     public int getIdIllness() {
@@ -60,11 +60,11 @@ public class Illness {
         this.imageIllness = imageIllness;
     }
 
-    public int getPointsIllness() {
-        return pointsIllness;
+    public int getSearchesIllneses() {
+        return searchesIllneses;
     }
 
-    public void setPointsIllness(int pointsIllness) {
-        this.pointsIllness = pointsIllness;
+    public void setSearchesIllneses(int searchesIllneses) {
+        this.searchesIllneses = searchesIllneses;
     }
 }
