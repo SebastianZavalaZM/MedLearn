@@ -12,4 +12,5 @@ public interface IFoodServiceInterfaces {
     public void delete(int id);
     public List<Food> findbyname(@Param("nombre") String nombre);
     public List<String[]>totaldecaloriesbydiet();
+    public List<String[]> calculateWeeklyCaloriesByDiet();
 }
