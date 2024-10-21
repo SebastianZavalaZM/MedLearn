@@ -1,6 +1,5 @@
 package pe.edu.upc.medlearn.controllers;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +13,6 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/Medicinas")
-@SecurityRequirement(name = "javainuseapi")
 public class MedicineController {
 
     @Autowired
@@ -30,6 +28,7 @@ public class MedicineController {
         }).collect(Collectors.toList());
     }
 
+    //@PreAuthorize("hasAnyRole('DOCTOR','ADMIN')")
     @PostMapping
     public void insertar(@RequestBody MedicineDTO dto) {
         ModelMapper m = new ModelMapper();
@@ -37,6 +36,7 @@ public class MedicineController {
         mS.insert(med);
     }
 
+    //@PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/actualizar")
     public void actualizar( @RequestBody MedicineDTO dto) {
         ModelMapper m = new ModelMapper();
@@ -44,6 +44,7 @@ public class MedicineController {
         mS.update(med);
     }
 
+    //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public void eliminar(@PathVariable("id") int id) {
         mS.delete(id);

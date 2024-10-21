@@ -1,7 +1,5 @@
 package pe.edu.upc.medlearn.dtos;
 
-import jakarta.persistence.Column;
-
 public class IllnessDTO {
     private int idIllness;
     private String nameIllness;

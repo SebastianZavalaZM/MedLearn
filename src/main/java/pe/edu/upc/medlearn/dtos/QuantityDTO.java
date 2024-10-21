@@ -7,9 +7,9 @@ import pe.edu.upc.medlearn.entities.Medicine;
 public class QuantityDTO {
     private int idQuantity;
     private int quantityQuantity;
-    private Food foodId;
-    private Exercise exerciseId;
-    private Medicine idMedicine;
+    private Food food;
+    private Exercise exercise;
+    private Medicine medicine;
 
     public int getIdQuantity() {
         return idQuantity;
@@ -27,27 +27,27 @@ public class QuantityDTO {
         this.quantityQuantity = quantityQuantity;
     }
 
-    public Food getFoodId() {
-        return foodId;
+    public Food getFood() {
+        return food;
     }
 
-    public void setFoodId(Food foodId) {
-        this.foodId = foodId;
+    public void setFood(Food food) {
+        this.food = food;
     }
 
-    public Exercise getExerciseId() {
-        return exerciseId;
+    public Exercise getExercise() {
+        return exercise;
     }
 
-    public void setExerciseId(Exercise exerciseId) {
-        this.exerciseId = exerciseId;
+    public void setExercise(Exercise exercise) {
+        this.exercise = exercise;
     }
 
-    public Medicine getIdMedicine() {
-        return idMedicine;
+    public Medicine getMedicine() {
+        return medicine;
     }
 
-    public void setIdMedicine(Medicine idMedicine) {
-        this.idMedicine = idMedicine;
+    public void setMedicine(Medicine medicine) {
+        this.medicine = medicine;
     }
 }

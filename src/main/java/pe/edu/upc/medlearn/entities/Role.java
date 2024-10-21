@@ -2,11 +2,10 @@ package pe.edu.upc.medlearn.entities;
 
 import jakarta.persistence.*;
 
-import java.io.Serializable;
 
 @Entity
 @Table(name = "roles", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "rol"})})
-public class Role implements Serializable {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -24,6 +24,14 @@ public class Quantity {
     public Quantity() {
     }
 
+    public Quantity(int idQuantity, int quantityQuantity, Food food, Exercise exercise, Medicine medicine) {
+        this.idQuantity = idQuantity;
+        this.quantityQuantity = quantityQuantity;
+        this.food = food;
+        this.exercise = exercise;
+        this.medicine = medicine;
+    }
+
     public int getIdQuantity() {
         return idQuantity;
     }

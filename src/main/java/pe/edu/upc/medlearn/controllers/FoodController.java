@@ -1,12 +1,10 @@
 package pe.edu.upc.medlearn.controllers;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.FoodDTO;
 import pe.edu.upc.medlearn.dtos.TotaldecaloriesbydietDTO;
-import pe.edu.upc.medlearn.dtos.TotaldeexercisesbyDietas;
 import pe.edu.upc.medlearn.entities.Food;
 import pe.edu.upc.medlearn.servicesinterfaces.IFoodServiceInterfaces;
 
@@ -16,7 +14,6 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/Alimentos")
-@SecurityRequirement(name = "javainuseapi")
 public class FoodController {
     @Autowired
     private IFoodServiceInterfaces iFoodService;
@@ -29,12 +26,14 @@ public class FoodController {
         }).collect(Collectors.toList());
     }
 
+    //@PreAuthorize("hasRole('NUTRICIONISTAS')")
     @PostMapping
     public void insertar(@RequestBody FoodDTO foodDTO){
         ModelMapper mapper=new ModelMapper();
         Food food=mapper.map(foodDTO,Food.class);
         iFoodService.insert(food);
     }
+
 
     @GetMapping("/{id}")
     public FoodDTO listarId(@PathVariable("id") Integer id){
@@ -43,6 +42,7 @@ public class FoodController {
         return dto;
     }
 
+    //@PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public void modificar(@RequestBody FoodDTO foodDTO){
         ModelMapper mapper=new ModelMapper();
@@ -50,6 +50,7 @@ public class FoodController {
         iFoodService.insert(food);
     }
 
+    //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") Integer id){
         iFoodService.delete(id);
@@ -62,6 +63,7 @@ public class FoodController {
             return mapper.map(x, FoodDTO.class);
         }).collect(Collectors.toList());
     }
+
 
     @GetMapping("/totaldecolesterolpordieta")
     public List<TotaldecaloriesbydietDTO> totalCaloriasporDieta(){

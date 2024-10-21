@@ -1,6 +1,5 @@
 package pe.edu.upc.medlearn.controllers;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,9 +10,9 @@ import pe.edu.upc.medlearn.servicesinterfaces.IHospitalService;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//@PreAuthorize("hasAnyRole('ADMIN','NUTRICIONISTA', 'DOCTOR')")
 @RestController
 @RequestMapping("/Hospitales")
-@SecurityRequirement(name = "javainuseapi")
 public class HospitalController {
     @Autowired
     private IHospitalService hS;

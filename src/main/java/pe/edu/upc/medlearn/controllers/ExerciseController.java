@@ -1,6 +1,5 @@
 package pe.edu.upc.medlearn.controllers;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +14,6 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/Ejercicios")
-@SecurityRequirement(name = "javainuseapi")
 public class ExerciseController {
     @Autowired
     private IExerciseService exercisesService;
@@ -29,6 +27,7 @@ public class ExerciseController {
         }).collect(Collectors.toList());
     }
 
+    //@PreAuthorize("hasAnyRole('NUTRICIONISTA','ADMIN')")
     @PostMapping
     public void insertar(@RequestBody ExercisesDTO dto){
         ModelMapper m=new ModelMapper();
@@ -42,12 +41,15 @@ public class ExerciseController {
         return dto;
     }
 
+    //@PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public void modificar(@RequestBody ExercisesDTO dto){
         ModelMapper m=new ModelMapper();
         Exercise exercise =m.map(dto, Exercise.class);
         exercisesService.insert(exercise);
     }
+
+    //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") Integer id){
         exercisesService.delete(id);
@@ -60,6 +62,8 @@ public class ExerciseController {
             return  m.map(x,ExercisesDTO.class);
         }).collect(Collectors.toList());
     }
+
+
     @GetMapping("/totalejerciciospordieta")
     public List<TotaldeexercisesbyDietas> totalEjerciciosporDieta(){
         List<String[]> filaLista=exercisesService.totaldeexercisesbyDietas();

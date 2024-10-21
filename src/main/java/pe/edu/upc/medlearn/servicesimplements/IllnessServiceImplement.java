@@ -29,4 +29,14 @@ public class IllnessServiceImplement implements IIllnessService {
         return illnessRepository.findById(id).orElse(new Illness());
     }
 
+    @Override
+    public List<String[]> findIllnessSymptoms(int idIllness) {
+        return illnessRepository.findIllnessSymptoms( idIllness);
+    }
+
+    @Override
+    public List<Illness> buscarNombre(String nombre) {
+        return illnessRepository.buscarNombre(nombre);
+    }
+
 }

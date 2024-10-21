@@ -1,6 +1,5 @@
 package pe.edu.upc.medlearn.controllers;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +16,6 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/Tratamientos")
-@SecurityRequirement(name = "javainuseapi")
 public class TreatmentController {
 
     @Autowired
@@ -31,6 +29,7 @@ public class TreatmentController {
         }).collect(Collectors.toList());
     }
 
+    //@PreAuthorize("hasAnyRole('ADMIN','DOCTOR')")
     @PostMapping("/registrar")
     public void insertar(@RequestBody TreatmentDTO dto) {
         ModelMapper m = new ModelMapper();
@@ -38,6 +37,7 @@ public class TreatmentController {
         tS.insert(tr);
     }
 
+    //@PreAuthorize("hasAnyRole('ADMIN','DOCTOR')")
     @PutMapping("/actualizar")
     public void actualizar( @RequestBody TreatmentDTO dto) {
         ModelMapper m = new ModelMapper();
@@ -45,6 +45,7 @@ public class TreatmentController {
         tS.update(tr);
     }
 
+    //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public void eliminar(@PathVariable("id") int id) {
         tS.delete(id);
@@ -56,24 +57,21 @@ public class TreatmentController {
         Treatment tr = tS.listId(id);
         return m.map(tr, TreatmentDTO.class);
     }
+
+    //@PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/cantidades")
     public List<QuantitysUserxTreatmentsDTO> obtenerCantidadUsuariosPorTratamiento() {
         List<String[]> lista = tS.cantidadUsuariosPorTratamiento();
         List<QuantitysUserxTreatmentsDTO> listaDTO = new ArrayList<>();
-
-        for (Object[] columna : lista) {
+        for (String[] columna : lista) {
             QuantitysUserxTreatmentsDTO dto = new QuantitysUserxTreatmentsDTO();
-            dto.setTreatmentDescription((String) columna[0]);
-            if (columna[1] instanceof Long) {
-                dto.setUserCount(((Long) columna[1]).intValue());
-            }
-            else if (columna[1] instanceof String) {
-                dto.setUserCount(Integer.parseInt((String) columna[1]));
-            }
+            dto.setTreatmentDescription(columna[0]);
+            dto.setUserCount(Integer.parseInt(columna[1]));
             listaDTO.add(dto);
         }
         return listaDTO;
     }
+
     @GetMapping("/topTratamientos")
     public List<TopTreatmentsDTO> obtenerTopTratamientos() {
         List<String[]> lista = tS.topTratamientos();
@@ -82,28 +80,28 @@ public class TreatmentController {
         for (String[] columna : lista) {
             TopTreatmentsDTO dto = new TopTreatmentsDTO();
             dto.setTreatmentName(columna[0]);
-
-
-            int usersCount = Integer.parseInt(columna[1]);
-            dto.setUsersCount(usersCount);
+            dto.setUsersCount(Integer.parseInt(columna[1]));
             listaDTO.add(dto);
         }
         return listaDTO;
     }
+
+    //@PreAuthorize("hasAnyRole('ADMIN','DOCTOR')")
     @GetMapping("/promedioDuracion")
     public List<AverageDurationByTreatmentTypeDTO> obtenerPromedioDuracion() {
         List<String[]> lista = tS.obtenerPromedioDuracion();
         List<AverageDurationByTreatmentTypeDTO> listaDTO = new ArrayList<>();
         for (String[] columna : lista) {
             AverageDurationByTreatmentTypeDTO dto = new AverageDurationByTreatmentTypeDTO();
-            dto.setTreatmentDescription((String) columna[0]);
-            dto.setAverageDuration(Double.parseDouble((String) columna[1]));
+            dto.setTreatmentDescription(columna[0]);
+            dto.setAverageDuration(Double.parseDouble(columna[1]));
             listaDTO.add(dto);
         }
         return listaDTO;
     }
-    @GetMapping("/listaporenfermedad")
-    public List<TreatmentDTO> listarPorEnfermedead(@PathVariable("id") Integer id ) {
+
+    @GetMapping("/tratamientoslistaporenfermedad/{id}")
+    public List<TreatmentDTO> listarPorEnfermedead(@PathVariable("id") Integer id) {
         return tS.listByIllness(id).stream().map(x -> {
             ModelMapper m = new ModelMapper();
             return m.map(x, TreatmentDTO.class);

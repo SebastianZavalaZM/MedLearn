@@ -1,10 +1,5 @@
 package pe.edu.upc.medlearn.dtos;
 
-import jakarta.persistence.*;
-import pe.edu.upc.medlearn.entities.Role;
-
-import java.util.List;
-
 public class UserDTO {
     private int idUser;
     private String fullnameUser;

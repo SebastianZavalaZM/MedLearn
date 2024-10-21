@@ -1,7 +1,4 @@
 package pe.edu.upc.medlearn.dtos;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import pe.edu.upc.medlearn.entities.Illness;
 
 public class SympthomsDTO {

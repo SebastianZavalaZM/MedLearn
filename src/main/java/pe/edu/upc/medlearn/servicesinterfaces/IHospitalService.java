@@ -1,6 +1,5 @@
 package pe.edu.upc.medlearn.servicesinterfaces;
 
-import org.springframework.data.jpa.repository.Query;
 import pe.edu.upc.medlearn.entities.Hospital;
 
 import java.util.List;

@@ -2,14 +2,12 @@ package pe.edu.upc.medlearn.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import org.springframework.security.access.prepost.PreAuthorize;
 
-import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "users")
-public class Users implements Serializable {
+public class Users{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUser;

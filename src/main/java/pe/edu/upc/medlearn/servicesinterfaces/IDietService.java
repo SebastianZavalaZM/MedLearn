@@ -1,6 +1,5 @@
 package pe.edu.upc.medlearn.servicesinterfaces;
 
-import org.springframework.data.repository.query.Param;
 import pe.edu.upc.medlearn.entities.Diet;
 
 import java.util.List;
@@ -15,6 +14,7 @@ public interface IDietService {
     List<Diet> findByQualification(int qualification);
     List<Diet> findByDescription(String description);
     List<Diet> listByIllness(int idillness);
-
+    //HUB60
+    List<String[]> quantityBydietsinicidasandfinalizadasporusuario();
 
 }

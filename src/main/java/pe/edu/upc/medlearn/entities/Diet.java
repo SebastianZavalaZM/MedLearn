@@ -21,7 +21,7 @@ public class Diet {
     private int qualificationDiet;
     @Column(name = "startDayDiet", nullable = false)
     private LocalDate startDayDiet;
-    @Column(name = "finishDayDiet", nullable = false)
+    @Column(name = "finishDayDiet")
     private LocalDate finishDayDiet;
 
     @ManyToOne

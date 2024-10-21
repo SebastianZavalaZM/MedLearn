@@ -2,8 +2,6 @@ package pe.edu.upc.medlearn.entities;
 
 import jakarta.persistence.*;
 
-import javax.naming.Name;
-
 @Entity
 @Table(name = "Hospital")
 public class Hospital {

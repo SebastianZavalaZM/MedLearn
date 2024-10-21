@@ -1,6 +1,5 @@
 package pe.edu.upc.medlearn.controllers;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,9 +10,9 @@ import pe.edu.upc.medlearn.servicesinterfaces.IQuantityService;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//@PreAuthorize("hasRole('ADMIN')")
 @RestController
 @RequestMapping("/Cantidades")
-@SecurityRequirement(name = "javainuseapi")
 public class QuantityController {
     @Autowired
     private IQuantityService quantityService;
@@ -26,12 +25,14 @@ public class QuantityController {
         }).collect(Collectors.toList());
     }
 
+    //@PreAuthorize("hasRole('NUTRICIONISTA')")
     @PostMapping
     public void insertar(@RequestBody QuantityDTO dto){
         ModelMapper m=new ModelMapper();
         Quantity quantity=m.map(dto,Quantity.class);
         quantityService.insert(quantity);
     }
+
     @PutMapping
     public void modificar(@RequestBody QuantityDTO dto){
         ModelMapper m=new ModelMapper();

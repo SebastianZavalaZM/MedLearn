@@ -1,6 +1,7 @@
 package pe.edu.upc.medlearn.entities;
 
 import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
 @Entity

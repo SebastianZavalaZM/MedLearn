@@ -1,10 +1,7 @@
 package pe.edu.upc.medlearn.controllers;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.medlearn.dtos.QuantityUsersByRolDTO;
 import pe.edu.upc.medlearn.dtos.UserDTO;
@@ -16,14 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestController("/Usuarios")
-@PreAuthorize("hasAuthority('ADMIN')")
-@SecurityRequirement(name = "javainuseapi")
+@RestController
+@RequestMapping("/Usuarios")
 public class UserController {
     @Autowired
     private IUserService uS;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
     @GetMapping("/listado")
     public List<UserListDTO> listar() {
@@ -37,16 +31,16 @@ public class UserController {
     public void insert(@RequestBody UserDTO dto) {
         ModelMapper m = new ModelMapper();
         Users user = m.map(dto, Users.class);
-        String encodedPassword = passwordEncoder.encode(user.getPassword());
-        user.setPassword(encodedPassword);
         uS.insert(user);
     }
+
     @GetMapping("/{id}")
     public UserListDTO listId(@PathVariable("id") Integer id) {
         ModelMapper m = new ModelMapper();
         UserListDTO dto = m.map(uS.listId(id), UserListDTO.class);
         return dto;
     }
+
     @GetMapping("/buscarpornombre")
     public List<UserListDTO>buscar(@RequestParam String name){
         return uS.search(name).stream().map(x->{
